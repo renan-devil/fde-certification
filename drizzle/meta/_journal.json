@@ -8,6 +8,20 @@
       "when": 1791102198584,
       "tag": "0000_init",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791108442483,
+      "tag": "0001_humans",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791108484487,
+      "tag": "0002_seed_trainers",
+      "breakpoints": true
     }
   ]
 }

@@ -1,5 +1,7 @@
 import { sql } from 'drizzle-orm';
-import { boolean, index, integer, jsonb, numeric, pgTable, primaryKey, text, timestamp, unique, uuid } from 'drizzle-orm/pg-core';
+import { boolean, customType, index, integer, jsonb, numeric, pgTable, primaryKey, text, timestamp, unique, uuid } from 'drizzle-orm/pg-core';
+
+const bytea = customType<{ data: Buffer }>({ dataType: () => 'bytea' });
 
 export type DomainScores = Record<string, { correct: number; total: number }>;
 
@@ -69,3 +71,22 @@ export const bankGaps = pgTable('bank_gaps', {
   detail: text('detail').notNull(),
   at: timestamp('at', { withTimezone: true }).notNull().defaultNow(),
 });
+
+/** Community directory: one page per person, added by themselves (docs: README "Humans"). */
+export const humans = pgTable('humans', {
+  id: uuid('id').primaryKey().default(sql`gen_random_uuid()`),
+  slug: text('slug').notNull().unique(),
+  firstName: text('first_name').notNull(),
+  lastName: text('last_name').notNull(),
+  organization: text('organization').notNull(),
+  communityRole: text('community_role').notNull(),
+  bio: text('bio').notNull().default(''),
+  linkedinUrl: text('linkedin_url'),
+  email: text('email').notNull(), // private: links certificates, never shown
+  photo: bytea('photo'),
+  photoType: text('photo_type'),
+  editTokenHash: text('edit_token_hash').notNull(),
+  hidden: boolean('hidden').notNull().default(false),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+}, (t) => [index('humans_email_idx').on(t.email)]);

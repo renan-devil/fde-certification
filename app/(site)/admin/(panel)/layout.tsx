@@ -3,7 +3,7 @@ import { requireAdmin } from '@/lib/admin/guard';
 
 const LINKS = [
   ['/admin', 'Overview'], ['/admin/attempts', 'Attempts'], ['/admin/certificates', 'Certificates'],
-  ['/admin/questions', 'Questions'], ['/admin/data', 'Data'],
+  ['/admin/questions', 'Questions'], ['/admin/humans', 'Humans'], ['/admin/data', 'Data'],
 ];
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {

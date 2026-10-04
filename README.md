@@ -20,6 +20,8 @@ You change anything by asking Claude Code; it edits the files, pushes to `main`,
 - **Read question statistics.** Admin → Questions: times served, percent correct, last served. After 10 servings, a question below 25% correct is flagged "check the answer key or the wording", above 95% "too easy for its tier". Export the CSV and ask Claude Code to review the flagged items.
 - **Answer a deletion request.** Admin → Data → "Delete everything for an email" (type the email twice). For an access request, filter Admin → Attempts and Certificates by the email and export the CSVs.
 - **Reset a participant whose laptop died.** Admin → Attempts → Void attempt (with a reason). They can start again at once; a voided attempt does not count for the 24-hour cooldown.
+- **Moderate the Humans directory.** Admin → Humans: hide, edit or delete any page. To edit your own or Nicolas's page, sign in as admin and use "Edit this page".
+- **Change the Agents page.** Edit `content/agents.md`; `/agents` and `/agents.md` both update.
 - **Clean up after a rehearsal.** Use `@example.com` emails during rehearsals, then Admin → Data → "Delete test data".
 
 The admin area is at `/admin` (it asks for the site password first, then the admin password).

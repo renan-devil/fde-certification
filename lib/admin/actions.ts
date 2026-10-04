@@ -6,7 +6,7 @@ import { db, schema } from '@/lib/db/client';
 import { sendCertificateEmail } from '@/lib/email/send';
 import { normalizeEmail } from '@/lib/exam/attempts';
 
-const { attempts, attemptItems, certificates, certificateLookups } = schema;
+const { attempts, attemptItems, certificates, certificateLookups, humans } = schema;
 
 export async function voidAttempt(form: FormData) {
   await requireAdmin();
@@ -74,6 +74,21 @@ export async function deleteEverythingForEmail(form: FormData) {
   await deleteByEmails(eq(attempts.email, email));
   await db().delete(certificates).where(eq(certificates.email, email));
   await db().delete(certificateLookups).where(eq(certificateLookups.email, email));
+  await db().delete(humans).where(eq(humans.email, email));
   revalidatePath('/admin', 'layout');
 }
 
+
+export async function setHumanHidden(form: FormData) {
+  await requireAdmin();
+  await db().update(humans).set({ hidden: form.get('hidden') === 'true' }).where(eq(humans.id, String(form.get('id'))));
+  revalidatePath('/admin/humans');
+  revalidatePath('/humans');
+}
+
+export async function deleteHumanAdmin(form: FormData) {
+  await requireAdmin();
+  await db().delete(humans).where(eq(humans.id, String(form.get('id'))));
+  revalidatePath('/admin/humans');
+  revalidatePath('/humans');
+}

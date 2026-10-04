@@ -7,6 +7,8 @@ function isPublic(path: string): boolean {
   return (
     path === '/enter' ||
     path === '/privacy' ||
+    path === '/agents' ||
+    path === '/agents.md' ||
     path === '/verify' ||
     path.startsWith('/verify/') ||
     /^\/api\/certificates\/[^/]+\/pdf$/.test(path)

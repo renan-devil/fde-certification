@@ -16,6 +16,11 @@ export default function PrivacyPage() {
         no IP addresses, no analytics, no third-party scripts, no tracking cookies. The only cookies are functional: one
         remembers that you entered the site password, one ties an exam to your browser, and one keeps admins signed in.
       </Section>
+      <Section title="Humans directory">
+        If you add yourself to the Humans directory, your name, organization, role, picture, description and LinkedIn link
+        are shown to everyone with access to this site, with any valid certificate issued to your email. Your email itself is
+        never shown. You can edit or delete your page at any time.
+      </Section>
       <Section title="Why">To run the exams, and to issue and verify certificates.</Section>
       <Section title="Legal basis">{p.legalBasis}</Section>
       <Section title="What is public">

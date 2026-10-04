@@ -9,10 +9,12 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <header className="band bg-ink text-white">
         <div className="mx-auto flex min-h-16 max-w-[960px] flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-3 sm:px-6">
           <Link href="/" aria-label="FDE School certification, home"><Logos /></Link>
-          <nav aria-label="Main" className="flex items-center gap-5 text-15">
+          <nav aria-label="Main" className="flex flex-wrap items-center gap-x-5 gap-y-1 text-15">
             <span className="hidden font-semibold md:inline">{SITE.name}</span>
             <Link href="/resources" className="hover:underline">Resources</Link>
             <Link href="/#exams" className="hover:underline">Exams</Link>
+            <Link href="/humans" className="hover:underline">Humans</Link>
+            <Link href="/agents" className="hover:underline">Agents</Link>
             <Link href="/verify" className="hover:underline">Verify</Link>
           </nav>
         </div>

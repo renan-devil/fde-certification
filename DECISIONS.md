@@ -25,3 +25,13 @@ Every default taken or changed, one line each. The spec is docs/SPEC.md.
 ## First deployment (4 October 2026)
 
 - Renan's decision: Production serves the draft bank (`BANK_SERVE=all` on Production) so the three exams open now; he reviews and corrects questions afterwards. To serve only validated questions again, delete `BANK_SERVE` for Production in Vercel and redeploy.
+
+## Humans, Agents and the new homepage (4 October 2026)
+
+- Humans directory (`/humans`, behind the site password): anyone with access adds their own page (name, organization, self-declared community role, short bio, LinkedIn link, picture). "Certified" is never self-declared: a profile shows the valid certificates issued to its email (rehearsal certificates excluded). The email is never shown.
+- Edit rights without accounts: the browser that created a page keeps a signed cookie for a year, and the creator gets a private edit link (only its SHA-256 is stored). Admins can edit, hide or delete any page; "delete everything for an email" also deletes the page.
+- Pictures are cropped to a 400 px square JPEG in the browser and stored in Postgres (about 30 KB each): no file storage service to set up.
+- Known limit: without email verification, someone could create a page with another person's email and borrow their certifications. The directory is behind the shared password and admins can hide pages; email verification (spec "Later") would close it.
+- Renan and Nicolas are seeded as trainers by migration `drizzle/0002_seed_trainers.sql`. Nicolas's last name is unknown; admins can add it from his page.
+- Agents page (`/agents`, plus the same text as Markdown at `/agents.md`) is public on purpose, so AI assistants can read it without the password. Source: `content/agents.md`.
+- Homepage rewritten: what the FDE School is, then a map of the site, then the exams.
