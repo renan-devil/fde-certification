@@ -12,7 +12,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <nav aria-label="Main" className="flex flex-wrap items-center gap-x-5 gap-y-1 text-15">
             <span className="hidden font-semibold md:inline">{SITE.name}</span>
             <Link href="/resources" className="hover:underline">Resources</Link>
-            <Link href="/#exams" className="hover:underline">Exams</Link>
+            <Link href="/exams" className="hover:underline">Exams</Link>
             <Link href="/humans" className="hover:underline">Humans</Link>
             <Link href="/agents" className="hover:underline">Agents</Link>
             <Link href="/verify" className="hover:underline">Verify</Link>
