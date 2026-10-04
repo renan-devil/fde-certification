@@ -26,7 +26,7 @@ The admin area is at `/admin` (it asks for the site password first, then the adm
 
 ## Before the exams open: validate the question bank
 
-All 481 questions are drafts. Production serves only questions marked `validated`, so each exam shows "This exam opens soon" until enough of its questions are validated. Admin → Overview shows, per track, which cells are ready.
+All 481 questions are drafts. For the first deployment, Production serves the drafts (`BANK_SERVE=all` in Vercel), so all three exams are open. Once you have reviewed the bank, delete `BANK_SERVE` for Production and redeploy: from then on only questions marked `validated` are served, and Admin → Overview shows, per track, which cells are ready.
 
 1. Read `content/review/bank-review.md` (or the `.csv` next to it). Each question shows the key (✔), the explanation, the source and any flags. Flags include the question writers' own doubts.
 2. The review protocol in the spec: every tier-1 question (the executives see them), every flagged question, and a random 10% of the rest.

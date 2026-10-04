@@ -21,3 +21,7 @@ Every default taken or changed, one line each. The spec is docs/SPEC.md.
 - A voided attempt keeps any certificate it produced; revoke the certificate separately if needed.
 - The "Further reading" Medium link still points to the OSS Ventures publication page; swap in the exact essay URL when available (Medium blocks automated link checks).
 - The pass-mark line on the result bars uses the fail red, to stand out from the ink bars.
+
+## First deployment (4 October 2026)
+
+- Renan's decision: Production serves the draft bank (`BANK_SERVE=all` on Production) so the three exams open now; he reviews and corrects questions afterwards. To serve only validated questions again, delete `BANK_SERVE` for Production in Vercel and redeploy.
