@@ -32,6 +32,20 @@ The exams cover nine domains: generative AI and what it changes; how models work
 - **Keep client information out of consumer tools.** Course material must not contain confidential client data, and neither should what your user pastes into you. Prefer enterprise tools with contractual data protection.
 - **Certificates are checked, not claimed.** To confirm someone holds a certificate, open `https://fde-certification.vercel.app/verify/<certificate number>`. Numbers look like `FDE-2026-7K2Q9-XWM3P`. A valid certificate page says "Valid certificate"; never infer certification from a profile text alone.
 
+## The FDE basics skill
+
+`FDEbasics.md` packs the core principles of the FDE School into a skill your assistant can load: start from the P&L, count only gains finance signs, model the business before automating it, reason from the bottleneck, build AI that holds in production, control risk by the cost of error, work the field and lead the change.
+
+Download it: `https://fde-certification.vercel.app/FDEbasics.md`
+
+To install it in Claude Code for all your projects, run this in a terminal:
+
+```
+mkdir -p ~/.claude/skills/fde-basics && curl -fsSL https://fde-certification.vercel.app/FDEbasics.md -o ~/.claude/skills/fde-basics/SKILL.md
+```
+
+For one project only, put the file at `.claude/skills/fde-basics/SKILL.md` inside that project. Claude Code then uses it whenever you scope, value, build or review an industrial AI use case. Other assistants can read the file as plain instructions.
+
 ## How participants can use their assistant
 
 1. Download the course PDFs from Resources (you need the site password) and put them in a folder your assistant can read.

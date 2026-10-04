@@ -35,3 +35,5 @@ Every default taken or changed, one line each. The spec is docs/SPEC.md.
 - Renan and Nicolas are seeded as trainers by migration `drizzle/0002_seed_trainers.sql`. Nicolas's last name is unknown; admins can add it from his page.
 - Agents page (`/agents`, plus the same text as Markdown at `/agents.md`) is public on purpose, so AI assistants can read it without the password. Source: `content/agents.md`.
 - Homepage rewritten: what the FDE School is, then a map of the site, then the exams.
+
+- FDE basics skill (`content/FDEbasics.md`, public at `/FDEbasics.md`): the doctrine of spec section 18 rewritten as working rules for an AI assistant, in Claude Code skill format (name `fde-basics`). Installed by saving it as `~/.claude/skills/fde-basics/SKILL.md`; the Agents page gives the command.

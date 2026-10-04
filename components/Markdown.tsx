@@ -15,6 +15,7 @@ export function Markdown({ source }: { source: string }) {
     <div className="prose-width space-y-4">
       {blocks.map((b, i) => {
         const lines = b.split('\n');
+        if (b.startsWith('```')) return <pre key={i} className="overflow-x-auto bg-ink p-4 font-mono text-13 text-white"><code>{lines.slice(1, -1).join('\n')}</code></pre>;
         if (b.startsWith('# ')) return <h1 key={i} className="display text-44">{b.slice(2)}</h1>;
         if (b.startsWith('## ')) return <h2 key={i} className="display pt-6 text-27">{b.slice(3)}</h2>;
         if (lines.every((l) => l.startsWith('- '))) return <ul key={i} className="list-disc space-y-2 pl-6">{lines.map((l, j) => <li key={j}>{inline(l.slice(2))}</li>)}</ul>;

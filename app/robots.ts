@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  return { rules: { userAgent: '*', allow: ['/verify/', '/agents', '/agents.md'], disallow: '/' } };
+  return { rules: { userAgent: '*', allow: ['/verify/', '/agents', '/agents.md', '/FDEbasics.md'], disallow: '/' } };
 }
