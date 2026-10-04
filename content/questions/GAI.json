@@ -1,0 +1,800 @@
+[
+  {
+    "id": "GAI-1-001",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Two competitors license the same frontier model. Where does a lasting advantage come from, according to the FDE School?",
+    "options": {
+      "a": "Negotiating a lower price per token than the competitor",
+      "b": "Switching each quarter to whichever model leads the benchmarks",
+      "c": "Their ontology: a model of how their own operations run",
+      "d": "Training a foundation model of their own from scratch"
+    },
+    "answer": "c",
+    "explanation": "Frontier models converge and get cheaper, and anyone can rent them. The ontology captures your operations' facts and rules, belongs to you, and compounds with each use case.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-002",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "What is a hallucination in a large language model?",
+    "options": {
+      "a": "A fluent, confident answer that is factually wrong",
+      "b": "A leak of the data the model was originally trained on",
+      "c": "A refusal to answer a perfectly legitimate question",
+      "d": "A slowdown caused by an overly long prompt"
+    },
+    "answer": "a",
+    "explanation": "Fluency is not accuracy. Grounding the model in verified context reduces hallucinations; review where errors are expensive controls them.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-003",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "In the context versus cost-of-error matrix, where does 'build on your ontology' belong?",
+    "options": {
+      "a": "Little context needed, errors are cheap",
+      "b": "Little context needed, errors are expensive",
+      "c": "Deep operational context needed, errors are cheap",
+      "d": "Deep operational context needed, errors are expensive"
+    },
+    "answer": "d",
+    "explanation": "Scheduling, formulation, quality release and configuration need deep knowledge of your operations and punish mistakes. Generic tools fail there, which is why that is where margin sits.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-004",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Most staff say AI makes them more productive, yet few companies attribute meaningful EBIT to it. What does the course see as the main reason?",
+    "options": {
+      "a": "Current models are still not capable enough for real business work",
+      "b": "Freed time is rarely turned into decisions that change the P&L",
+      "c": "Employees greatly overstate how much they actually use AI tools",
+      "d": "Enterprise licences cost more than the time they save"
+    },
+    "answer": "b",
+    "explanation": "Generic copilots save minutes for individuals. Money appears when AI targets the decisions that move margin and someone decides what to do with the freed capacity.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-001",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Your team wants two months to choose 'the best model' before scoping any use case. What do you recommend?",
+    "options": {
+      "a": "Run the comparison first, because the model choice decides the outcome",
+      "b": "Sign a three-year exclusive contract to lock in the best price",
+      "c": "Start from the decision and its data, and design for swappable models",
+      "d": "Wait for the next model generation before starting anything"
+    },
+    "answer": "c",
+    "explanation": "Model choice is reversible and models leapfrog each other every few months. The decision, its euro value and the context the model needs are the hard, durable parts.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-001",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "Where does a small, inexpensive model usually belong in a production AI pipeline?",
+    "options": {
+      "a": "High-volume, narrow steps like routing or classification, proven by evals",
+      "b": "The hardest multi-step reasoning step, where any cost saving matters most",
+      "c": "Any step whose accuracy is not being measured yet",
+      "d": "Nowhere: production should always run the largest model that is available"
+    },
+    "answer": "a",
+    "explanation": "Match model size to task difficulty and volume. Small models handle narrow, frequent steps well when evals prove it; keep large models for the steps that need them.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-005",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "In plain terms, what does a large language model do when it writes an answer?",
+    "options": {
+      "a": "It looks up the answer in a database of verified facts",
+      "b": "It searches the internet and copies the best matching page",
+      "c": "It predicts likely next pieces of text, one token at a time",
+      "d": "It applies fixed rules that engineers wrote for each type of question"
+    },
+    "answer": "c",
+    "explanation": "A language model generates text by predicting likely continuations learned from very large datasets. It does not look facts up, which is why fluent answers can still be wrong.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-006",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Your purchasing team wants one AI model to summarize contracts, classify supplier emails and draft replies. Is that realistic?",
+    "options": {
+      "a": "No: each of these tasks needs its own model, trained from scratch",
+      "b": "No: language models can draft text but cannot classify it",
+      "c": "Only summarizing is mature enough; the rest needs another tool",
+      "d": "Yes: one general model handles these language tasks, with checks"
+    },
+    "answer": "d",
+    "explanation": "One general model can draft, summarize, classify, extract and translate. Its strength is language; its outputs still need checking where errors matter.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-007",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "A manager asks a public chatbot for your plant's changeover rules and gets a detailed, confident answer. How should she treat it?",
+    "options": {
+      "a": "As a guess: the model never saw your plant's rules",
+      "b": "As reliable, since the model learned from huge amounts of data",
+      "c": "As reliable, because the answer is detailed and well structured",
+      "d": "As reliable once a second chatbot gives the same answer"
+    },
+    "answer": "a",
+    "explanation": "A model knows nothing about your company's specifics unless they are put in its context. A detailed answer about rules it never saw is a plausible guess, not knowledge.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-008",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "A vendor says the next model generation will eliminate hallucinations. What is the course's view?",
+    "options": {
+      "a": "Right: each new generation removes most of the remaining errors",
+      "b": "They are inherent; grounding reduces them and review controls them",
+      "c": "Right, provided the company licenses the premium version of the model",
+      "d": "They matter only for creative writing, not for business documents"
+    },
+    "answer": "b",
+    "explanation": "Confident wrong answers are a property of the technology, not a bug the next release removes. Grounding in verified context reduces them; review where errors are expensive controls them.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-009",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Your team is impressed because the AI's reports read as if an expert wrote them. What does that say about their accuracy?",
+    "options": {
+      "a": "A lot: well-written answers are usually the correct ones",
+      "b": "That the model was trained on your company's own records",
+      "c": "That the reports are ready to go out without any review",
+      "d": "Very little: fluency and accuracy are separate things"
+    },
+    "answer": "d",
+    "explanation": "Fluency is not accuracy. A model writes equally well whether it is right or wrong, so quality of prose says nothing about quality of facts.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-010",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "The cost of a given level of AI capability fell more than 280-fold in about two years. What follows for an executive?",
+    "options": {
+      "a": "Lock in a long contract now, before prices start rising again",
+      "b": "Wait for prices to settle before starting any AI project at all",
+      "c": "Treat models as rented; invest in your context and deployment",
+      "d": "Train your own model, since outside models will lose their value"
+    },
+    "answer": "c",
+    "explanation": "Capability converges across labs and gets cheaper fast, so the model is a rented, interchangeable input. Advantage moves to your context (ontology, data) and to deployment.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-011",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Three vendors pitch AI tools built on different leading models. What should weigh most in your choice?",
+    "options": {
+      "a": "How well each fits your data, process and deployment",
+      "b": "Which vendor's model topped the public rankings this month",
+      "c": "Which underlying model is the largest, measured in parameters",
+      "d": "Which vendor offers the lowest price per query this quarter"
+    },
+    "answer": "a",
+    "explanation": "Leading models converge and leapfrog each other, so rankings and size change quickly. What lasts is fit with your context and the quality of the deployment.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-012",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "What does the course mean by an AI agent?",
+    "options": {
+      "a": "A chatbot that answers employees' questions about company policies",
+      "b": "A model trained on company data that replaces a whole job role",
+      "c": "A recommendation engine that ranks products for each customer on the website",
+      "d": "A system that carries out multi-step tasks with tools, under supervision"
+    },
+    "answer": "d",
+    "explanation": "An agent plans and executes several steps using tools, such as reading an order, checking capacity and drafting the supplier email, while people supervise.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-013",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "The length of tasks AI agents complete on their own has been doubling roughly every seven months. What follows for your AI plans?",
+    "options": {
+      "a": "Agents will soon need no supervision, so plan to remove all reviews",
+      "b": "Revisit often which tasks agents can take on, as their reach grows",
+      "c": "The trend is about to stop, so plan only around today's capabilities",
+      "d": "Wait until agents can run whole processes before starting any project"
+    },
+    "answer": "b",
+    "explanation": "The scope of what agents can do grows fast (METR), so the list of candidate tasks should be revisited regularly. Growth in reach does not remove the need for supervision.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-014",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Your AI rollout plan measures success by how many staff use the copilot each week. What is missing?",
+    "options": {
+      "a": "A larger number of licences spread across the company",
+      "b": "A survey of how productive staff feel using the tool",
+      "c": "A link to decisions that move margin, with euro targets",
+      "d": "A training session for every employee in the first month"
+    },
+    "answer": "c",
+    "explanation": "Usage and felt productivity are not P&L impact. Money appears when AI targets decisions that move margin and the gains are sized in euros.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-015",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Most enterprise AI pilots show no measurable P&L impact. What does the course see as the usual cause?",
+    "options": {
+      "a": "Deployment and missing context, not the model itself",
+      "b": "The models are not yet capable enough for business work",
+      "c": "Employees refuse to use AI tools in their daily work",
+      "d": "Pilot budgets are too small to pay for the best models"
+    },
+    "answer": "a",
+    "explanation": "In the MIT NANDA study, failure came mostly from how AI was deployed and from missing context. Better or pricier models do not fix a pilot that never reached real decisions.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-016",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Your board prefers building AI internally because it feels safer than a specialized partner. What does the evidence cited in the course suggest?",
+    "options": {
+      "a": "Internal builds succeed more often, because the team knows the business",
+      "b": "The two approaches showed about the same rate of success",
+      "c": "Internal builds fail less often but take longer to deliver",
+      "d": "Projects run with specialized partners succeeded more often"
+    },
+    "answer": "d",
+    "explanation": "In the MIT NANDA study, projects with specialized partners succeeded about twice as often as internal builds. Feeling safer is not the same as succeeding more.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-017",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Staff want help drafting routine emails and searching documents. Little company context is needed and errors are cheap. What fits?",
+    "options": {
+      "a": "Build a custom system on your ontology",
+      "b": "Automate it fully behind strict guardrails",
+      "c": "Buy an off-the-shelf tool such as a copilot",
+      "d": "Hire a team to train a dedicated model"
+    },
+    "answer": "c",
+    "explanation": "Little context and cheap errors is the buy-off-the-shelf box of the matrix. Building or training something custom there spends money where generic tools already work.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-018",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Matching supplier invoices to purchase orders needs little company context, but mistakes cost money. Where does it sit in the matrix?",
+    "options": {
+      "a": "Buy off the shelf",
+      "b": "Automate with guardrails",
+      "c": "Assist a person",
+      "d": "Build on your ontology"
+    },
+    "answer": "b",
+    "explanation": "Little context but expensive errors calls for automation with guardrails: rules and checks catch mistakes before they cost money. Deep context is not what makes it hard.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-019",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "All of a company's AI pilots are email drafting and document search. What does the context × cost-of-error matrix suggest about this portfolio?",
+    "options": {
+      "a": "It sits where pilots are common but little money is made",
+      "b": "It is well placed, since these tools are the easiest to scale",
+      "c": "It carries too much risk, since errors there are expensive",
+      "d": "It needs much more context data before these pilots can work"
+    },
+    "answer": "a",
+    "explanation": "Most pilots sit in the cheap-error, little-context box; most money sits where deep context meets expensive errors, such as scheduling or quality release.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-020",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Analysis has become cheap. What does that change for a purchasing department, according to the course?",
+    "options": {
+      "a": "Supplier negotiations can be handed over entirely to the AI tool",
+      "b": "Contracts can be summarized once and then filed away for good",
+      "c": "Purchasing can drop its yearly audit and rely on monthly reports instead",
+      "d": "Each purchase order can be checked against its contract, not a sample"
+    },
+    "answer": "d",
+    "explanation": "Checks once rationed by labor can now run on every order. The change is coverage, not removing buyers or audits.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-1-021",
+    "domain": "GAI",
+    "tier": 1,
+    "stem": "Your plant has always adapted its process to fit standard software. What has generative AI changed here?",
+    "options": {
+      "a": "Standard packages now adapt themselves to any process automatically",
+      "b": "Processes matter less, since the AI now decides how work is done",
+      "c": "Building and changing software got cheap, so tools can fit the process",
+      "d": "Little: standard packages remain the only sensible option for plants"
+    },
+    "answer": "c",
+    "explanation": "Software became cheap to build and change, so tools can be shaped around how the plant actually works instead of forcing the plant into the package.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-002",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "A model solved a hard contract-analysis task in a demo. Your team assumes it will also handle simple unit conversions. What is the risk?",
+    "options": {
+      "a": "Capability is uneven; test easy tasks on your own cases too",
+      "b": "None: a model that handles hard tasks will handle easy ones too",
+      "c": "Unit conversions need a separate model built for arithmetic",
+      "d": "It will work only if given much longer and more detailed instructions"
+    },
+    "answer": "a",
+    "explanation": "The capability frontier is jagged: excellent at some hard tasks, unreliable at some easy ones. Only tests on your own cases tell you where it fails.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-003",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Before rolling out a model to read your plant's quality reports, what evidence should Noor ask for?",
+    "options": {
+      "a": "A vendor demo on well-prepared sample reports",
+      "b": "Results on a sample of your own real reports",
+      "c": "Strong published benchmark scores for the model",
+      "d": "The model's own stated confidence in its answers"
+    },
+    "answer": "b",
+    "explanation": "Performance is uneven across tasks, so only your own cases show what the model does on your documents. Demos and benchmarks use someone else's data.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-004",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Two models pre-trained on similar data differ sharply in tone and in how well they follow instructions. What explains most of the difference?",
+    "options": {
+      "a": "Differences in the size of the web archives used during pre-training",
+      "b": "The programming language engineers used to write each model's code",
+      "c": "Post-training, such as instruction tuning and learning from feedback",
+      "d": "The type of hardware on which each model happens to be running"
+    },
+    "answer": "c",
+    "explanation": "Pre-training gives a model its knowledge of language; post-training (instruction tuning, reinforcement learning from feedback) shapes how it behaves and follows instructions.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-005",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Your team wants a reasoning model for every step, including simple sorting of incoming emails. What is the trade-off?",
+    "options": {
+      "a": "Reasoning models are cheaper per answer, so use them everywhere",
+      "b": "Reasoning models cannot sort text; they only solve math problems",
+      "c": "No real trade-off: reasoning models are the better choice for every task",
+      "d": "Better on multi-step problems, but slower and costlier on simple ones"
+    },
+    "answer": "d",
+    "explanation": "Reasoning models spend extra computation before answering. That pays on multi-step problems and wastes time and money on simple ones.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-006",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Your quality team keeps most of its knowledge in scanned PDFs and drawings, not databases. Does that rule out generative AI?",
+    "options": {
+      "a": "Yes: everything must first be retyped into structured tables",
+      "b": "No: multimodal models can read images, PDFs and drawings",
+      "c": "Yes: language models can read only plain text typed into a chat window",
+      "d": "No: scanned documents are now read with perfect accuracy"
+    },
+    "answer": "b",
+    "explanation": "Multimodal models read images, PDFs and drawings, which makes shop-floor documents usable. They still make mistakes, so outputs need verification.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-007",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "A multimodal model extracts dimensions from technical drawings. Its first ten results look right. What should you do next?",
+    "options": {
+      "a": "Verify it on a larger set of real drawings before relying on it",
+      "b": "Deploy it, since ten correct results show that it works",
+      "c": "Convert all drawings to text first, as models cannot read images",
+      "d": "Replace the drawings in the PLM with the model's extracted values"
+    },
+    "answer": "a",
+    "explanation": "Ten good results are an anecdote, not evidence. Multimodal extraction is useful but error-prone, so it must be checked on a representative set before anyone relies on it.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-008",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "A vendor's demo on your sample data looked flawless. What does it prove about production?",
+    "options": {
+      "a": "That the tool is ready to scale to every site in the group",
+      "b": "That integration with your ERP and plant systems will be straightforward",
+      "c": "That your teams will adopt it without much training or support",
+      "d": "Little: demos run on clean data, production on messy, changing data"
+    },
+    "answer": "d",
+    "explanation": "A demo on clean data proves nothing about production, where data is dirty, systems must connect and people must change how they work.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-009",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Your pilot succeeded on a cleaned spreadsheet export. Alex wants to announce a rollout date to all sites. What should come first?",
+    "options": {
+      "a": "Announce the date now to create momentum across the sites",
+      "b": "Test it on live, messy data with real integrations and users",
+      "c": "Switch to a larger model so that the rollout cannot fail at scale",
+      "d": "Ask the vendor to repeat the demo for each site manager"
+    },
+    "answer": "b",
+    "explanation": "Success on a cleaned export is a demo effect. Live data, integrations and real users are where deployments fail, so prove the tool there before committing dates.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-010",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "A manager expects agentic software to deploy faster than classic SaaS because it 'figures things out'. What does the course say?",
+    "options": {
+      "a": "It is faster, because agents learn and configure themselves on arrival",
+      "b": "It is about the same, provided the model is a top performer",
+      "c": "It is harder: it needs more context, integration and change",
+      "d": "It is faster, provided the vendor supplies a ready-made demo first"
+    },
+    "answer": "c",
+    "explanation": "Agentic software is harder to deploy than classic SaaS: it needs your context, connections to your systems and changes in how people work.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-011",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "Gartner expects more than 40% of agentic AI projects to be cancelled by the end of 2027. What should a manager take from this?",
+    "options": {
+      "a": "Fund agents only with clear value, known costs and risk controls",
+      "b": "Avoid agent projects altogether until the cancellation rate falls",
+      "c": "Expect the cancellations to come mainly from weak underlying models",
+      "d": "Launch many agent projects at once so that at least a few survive"
+    },
+    "answer": "a",
+    "explanation": "Gartner names cost, unclear value and weak risk controls as the causes. Settling those before funding avoids joining the cancelled share.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-2-012",
+    "domain": "GAI",
+    "tier": 2,
+    "stem": "A model you deployed six months ago is overtaken by a cheaper, better one, but your design makes switching costly. What was the mistake?",
+    "options": {
+      "a": "Not running a longer model comparison before choosing",
+      "b": "Tying the system to one model instead of designing for swaps",
+      "c": "Not waiting six months for the newer model before starting",
+      "d": "Deploying AI before the model market had settled down"
+    },
+    "answer": "b",
+    "explanation": "Models leapfrog each other, so no comparison picks a lasting winner. Designing so models can be swapped turns each new release into an option instead of a migration.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-002",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "A client requires that production data never leaves its own data center. What does choosing an open-weight model hosted on site imply?",
+    "options": {
+      "a": "Costs mostly disappear, since open-weight models are free to download",
+      "b": "Quality is sure to match or exceed the best closed models available",
+      "c": "Data residency is met, but your team carries hosting and maintenance",
+      "d": "Evals become unnecessary, since you control the weights yourself"
+    },
+    "answer": "c",
+    "explanation": "Open weights give control and residency, at the price of running, patching and upgrading the model yourselves. Free weights are not a free system.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-003",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "Sam compares a closed model through an API with an open-weight model on own servers for a low-volume internal tool. What often favors the API?",
+    "options": {
+      "a": "Stronger guarantees that data stays on company hardware",
+      "b": "Full control over when the model version changes",
+      "c": "Freedom to modify and fine-tune the model weights directly",
+      "d": "Lower maintenance burden for a small team at low volume"
+    },
+    "answer": "d",
+    "explanation": "At low volume, hosting and maintaining your own model costs more effort than it saves. Residency, version control and weight access are arguments for open weights, not for the API.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-004",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "A new model tops a public leaderboard. Your extraction pipeline runs on another model. What should decide whether you switch?",
+    "options": {
+      "a": "Its score on your task-specific eval set, with cost and latency",
+      "b": "Its leaderboard rank, which reflects overall ability across many tasks",
+      "c": "Whether other companies in your sector have already switched",
+      "d": "Whether its vendor advertises a larger context window"
+    },
+    "answer": "a",
+    "explanation": "Leaderboards measure general tasks, not your extraction. Task-specific evals, weighed with cost and latency, tell you whether a switch helps.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-005",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "Your eval set for invoice extraction holds 20 clean examples, and the model scores perfectly. What is the main weakness?",
+    "options": {
+      "a": "None: twenty clean cases are enough to check the main path",
+      "b": "It lacks the messy and edge cases seen in production",
+      "c": "It should be replaced by a public benchmark for extraction tasks",
+      "d": "The model should grade its own outputs to avoid human bias"
+    },
+    "answer": "b",
+    "explanation": "An eval set is only as good as its coverage of real inputs. Clean examples hide the scanned, partial and unusual invoices where production fails.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-006",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "A classification step runs at high reasoning effort and is slow. Evals show the same accuracy at low effort. What do you do?",
+    "options": {
+      "a": "Keep high effort, since more thinking adds safety",
+      "b": "Switch the step to the largest available model",
+      "c": "Add a second model that checks every answer",
+      "d": "Lower the reasoning effort for that step"
+    },
+    "answer": "d",
+    "explanation": "Reasoning effort is a cost and latency lever. When evals show no accuracy loss, the extra thinking buys nothing for that step.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-007",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "Every request to your agent repeats the same long system prompt and plant reference document. Which lever cuts cost and latency most directly?",
+    "options": {
+      "a": "Caching the repeated prompt prefix across requests",
+      "b": "Moving to a larger model with a longer context window",
+      "c": "Raising the temperature to shorten the answers",
+      "d": "Splitting the reference document across many more requests"
+    },
+    "answer": "a",
+    "explanation": "Caching reuses the processing of an identical prefix, so repeated long context stops being paid for in full on every call.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-008",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "Each night you classify tens of thousands of maintenance notes, and nobody reads the results before morning. Which lever fits?",
+    "options": {
+      "a": "Real-time calls to the largest model for the best accuracy",
+      "b": "A reasoning model at maximum effort for each single note",
+      "c": "Batch processing at lower cost, accepting slower turnaround",
+      "d": "Manual classification by planners to avoid model costs"
+    },
+    "answer": "c",
+    "explanation": "When nobody needs the answer immediately, batching trades turnaround time for lower cost per item.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "GAI-3-009",
+    "domain": "GAI",
+    "tier": 3,
+    "stem": "Your scheduling assistant calls a single model provider, which has an outage during the morning planning meeting. What design would have helped?",
+    "options": {
+      "a": "A longer timeout, waiting until the provider recovers",
+      "b": "Retries with backoff and a fallback to another model or provider",
+      "c": "Moving to the largest model offered by the same provider",
+      "d": "A higher rate limit purchased from the same provider in advance"
+    },
+    "answer": "b",
+    "explanation": "Providers have outages and rate limits. Retries handle short glitches; a fallback model or provider keeps the service running through a real outage.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]

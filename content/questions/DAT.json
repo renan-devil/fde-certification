@@ -1,0 +1,1123 @@
+[
+  {
+    "id": "DAT-1-001",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "What does the course recommend doing with the ERP when deploying AI?",
+    "options": {
+      "a": "Replace it first with a new AI-native ERP platform",
+      "b": "Keep it as system of record; add a thin layer on top",
+      "c": "Freeze every change to the ERP until the AI project is live everywhere",
+      "d": "Load all its data into the model's training set"
+    },
+    "answer": "b",
+    "explanation": "Big-bang migrations delay value for years. Agents and apps sit on top of existing systems, read from them and write decisions back.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-002",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "Across more than 100 agentic deployments, roughly how much of the data agents need lives in no system of record?",
+    "options": {
+      "a": "Less than 5%",
+      "b": "About 15%",
+      "c": "About 40%",
+      "d": "More than 80%"
+    },
+    "answer": "c",
+    "explanation": "Much of the needed data sits in people's heads and in spreadsheets. Someone has to extract it on site, which is a large part of an FDE's job.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-001",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "A scheduling tool is configured from ERP routings and standard rates only. What is its most likely first failure?",
+    "options": {
+      "a": "Plans that ignore real constraints, which the floor then overrides",
+      "b": "Reports that take far too long to load for the planners",
+      "c": "Exposure of confidential salary data to everyone on the planning team",
+      "d": "Licence costs that run well above the agreed budget"
+    },
+    "answer": "a",
+    "explanation": "ERP master data is often wrong or incomplete: identical rates for different machines, missing family constraints. Plans built on it look valid on screen and fail on the floor.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-001",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Two systems both claim to own machine status. What is the right design rule?",
+    "options": {
+      "a": "Average the two values every hour",
+      "b": "Let the AI pick whichever value looks more plausible each time",
+      "c": "Add a third system that reconciles both overnight",
+      "d": "One owner system per field; other sources are copies"
+    },
+    "answer": "d",
+    "explanation": "Each fact needs exactly one owner system. Two owners for the same fact is how a plant ends up with several OEE figures and no truth.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-002",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A nightly data load crashes halfway and is rerun. Which property prevents duplicate records?",
+    "options": {
+      "a": "Higher parallelism across all of the load jobs",
+      "b": "Idempotency, through stable keys and upserts",
+      "c": "Compression of the intermediate files",
+      "d": "A longer retention period for raw extracts"
+    },
+    "answer": "b",
+    "explanation": "An idempotent pipeline gives the same result however many times it runs. Stable business keys and upserts make reruns safe.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-003",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "An AI agent decides tomorrow's production sequence. Where should that decision end up?",
+    "options": {
+      "a": "Written back into the existing systems people already work in",
+      "b": "In a separate AI dashboard that planners can consult on the side when they wish",
+      "c": "In a new database meant to replace the ERP over the coming years",
+      "d": "In a report emailed to the plant manager every morning"
+    },
+    "answer": "a",
+    "explanation": "The thin layer reads from existing systems and writes decisions back to them. A side dashboard or a parallel database leaves the real process untouched.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-004",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "Your IT director says all the data an AI agent needs is already in your systems; only access is missing. What does the course say?",
+    "options": {
+      "a": "Correct: connecting the systems through APIs fully solves the data question for agents",
+      "b": "Much of it lives in heads and spreadsheets and must be gathered on site",
+      "c": "True for large plants, but rarely the case for small sites",
+      "d": "Correct, provided the data is first moved to the cloud"
+    },
+    "answer": "b",
+    "explanation": "Across more than 100 deployments, about 40% of the data agents need sat in no system of record. Access alone does not reach it; someone must extract it in the field.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-005",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "A planner keeps a spreadsheet of which machines really can run which products. How should an AI project treat it?",
+    "options": {
+      "a": "As noise, since only ERP data counts as official company data",
+      "b": "As shadow IT that should be shut down before the project starts",
+      "c": "As a real data source to capture and bring into the model",
+      "d": "As a temporary file to ignore until the ERP is updated"
+    },
+    "answer": "c",
+    "explanation": "Spreadsheets and people's heads hold much of the data agents need. Ignoring or banning them throws away the rules that make plans feasible.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-006",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "The first time AI runs on your plant data, it reveals many errors and gaps. How should leadership read this?",
+    "options": {
+      "a": "As proof that the vendor's tool is not working properly",
+      "b": "As a clear sign the project should pause until all the data has been cleaned",
+      "c": "As expected: data looks worse the day AI first runs on it",
+      "d": "As a reason to replace the ERP before going any further"
+    },
+    "answer": "c",
+    "explanation": "Data problems surface once AI uses the data, and that is normal. Budget for it rather than reading it as failure or as a reason to stop.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-007",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "Your COO wants all plant data fully cleaned before any AI project starts. What does the course suggest?",
+    "options": {
+      "a": "Agree, since AI running on imperfect data produces worthless results",
+      "b": "Start on one use case and fix the data it needs as you go",
+      "c": "Set up a data team to clean every system over the next two years",
+      "d": "Buy a tool that corrects all historical data automatically"
+    },
+    "answer": "b",
+    "explanation": "Cleaning everything first delays value indefinitely and cleans data nobody uses. A use case shows which data matters, and that data gets fixed.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-008",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "Before an AI agent is connected to company systems, who should decide what data it may see?",
+    "options": {
+      "a": "The AI vendor, based on what its tool needs to perform well",
+      "b": "IT alone, since access is a technical configuration choice",
+      "c": "The project team, which can open access as needs arise during the work",
+      "d": "Business owners, setting who sees what and on which terms"
+    },
+    "answer": "d",
+    "explanation": "Data access is a business decision. Who sees what, under which terms, is settled before connecting AI, not left to vendors or to configuration.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-1-009",
+    "domain": "DAT",
+    "tier": 1,
+    "stem": "A vendor asks for full read access to your ERP to see what its AI can find. What is the right first step?",
+    "options": {
+      "a": "Decide who sees which data, on what terms, before connecting anything",
+      "b": "Grant it, since read-only access cannot change or damage any data",
+      "c": "Grant it for one month, then review what was accessed",
+      "d": "Refuse all access until the AI has proven its value elsewhere"
+    },
+    "answer": "a",
+    "explanation": "Read access still exposes data. The terms of access are a business decision to take before connecting; refusing everything blocks the work instead.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-002",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "Your team needs the history of repairs and preventive work on each machine. Which system usually holds it?",
+    "options": {
+      "a": "The PLM",
+      "b": "The WMS",
+      "c": "The CMMS",
+      "d": "The plant historian"
+    },
+    "answer": "c",
+    "explanation": "The CMMS (computerized maintenance management system) records work orders, repairs and preventive maintenance. PLM holds product data, WMS the warehouse, APS the plan.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-003",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "An agent needs real cycle times and machine signals from the line. Where do these usually come from?",
+    "options": {
+      "a": "SCADA systems and historians",
+      "b": "The ERP's finance module",
+      "c": "The PLM's product records",
+      "d": "The ERP's routing and standard rate tables"
+    },
+    "answer": "a",
+    "explanation": "SCADA and historians capture machine signals at the source. The ERP holds standard times, which often differ from what machines actually do.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-004",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "An engineering change revises a product's drawings and specifications. Which system should own that revision?",
+    "options": {
+      "a": "The MES",
+      "b": "The PLM",
+      "c": "The WMS",
+      "d": "The CMMS"
+    },
+    "answer": "b",
+    "explanation": "PLM owns product data: drawings, specifications, revisions. Other systems receive copies of what PLM releases.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-005",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "The written procedure says changeovers take 45 minutes; operators say they vary widely. What should the team model?",
+    "options": {
+      "a": "The documented 45 minutes, since it is the official standard",
+      "b": "An average of the procedure and the operators' estimates",
+      "c": "Whatever value the quality manager confirms in writing",
+      "d": "Measured changeovers observed on the floor"
+    },
+    "answer": "d",
+    "explanation": "The documented process and the real one diverge. Models built on the official figure produce plans the floor cannot follow.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-006",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "ERP data shows every job starting on time, but operators book all starts at the end of their shift. What follows?",
+    "options": {
+      "a": "The timestamps record bookings, not when the work really started",
+      "b": "The plant's schedule adherence is excellent and needs no further work",
+      "c": "Operators should be disciplined for booking late",
+      "d": "The ERP clock is wrong and must be resynchronized before any analysis"
+    },
+    "answer": "a",
+    "explanation": "Data produced by the official process can mislead. Here it measures the booking routine, not the work, so it cannot train or judge a scheduler.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-007",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "Why can a model built only from process documentation give wrong recommendations on the floor?",
+    "options": {
+      "a": "Process documents are usually too short and vague for any model to learn from",
+      "b": "Documented and actual processes diverge, through workarounds and unwritten rules",
+      "c": "Documentation is usually written by consultants rather than staff",
+      "d": "Models need numeric machine data and handle text documents poorly"
+    },
+    "answer": "b",
+    "explanation": "How work actually happens differs from the official description. The workarounds and unwritten rules are what makes the real process work.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-008",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "The ERP lead time for a part is 10 days; the last 20 orders took 18 to 25 days. What should the planning model use?",
+    "options": {
+      "a": "The ERP value, since the ERP is the system of record",
+      "b": "The ERP value plus a fixed one-day safety margin on every order",
+      "c": "The shortest lead time recorded across those orders",
+      "d": "Measured lead times, with the ERP value flagged for correction"
+    },
+    "answer": "d",
+    "explanation": "ERP lead times and rates are often wrong. Plan on what actually happens and get the master data fixed at its source.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-009",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "All five presses share one standard rate in the ERP, but two are older and slower. What will an AI scheduler using it do?",
+    "options": {
+      "a": "Leave the older presses underused, with idle time on them",
+      "b": "Refuse to produce a plan until rates differ",
+      "c": "Overload the slow presses with plans the floor cannot meet",
+      "d": "Detect the slow presses itself and adjust their rates without help"
+    },
+    "answer": "c",
+    "explanation": "A tool trusts its inputs. Identical rates for different machines make plans that look valid on screen and fail on the slower presses.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-010",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "A dispatcher reassigns jobs at 2 pm using a dashboard fed by a nightly ERP batch. What is the problem?",
+    "options": {
+      "a": "The dashboard is too detailed for quick decisions",
+      "b": "Decisions are based on yesterday's plant, not today's",
+      "c": "Nightly batches overload the ERP during the day",
+      "d": "The dispatcher should not be reassigning jobs at all during a shift"
+    },
+    "answer": "b",
+    "explanation": "Information latency: a daily batch means deciding on yesterday's plant. Mid-shift decisions need data refreshed at the pace of the decision.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-011",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "Which decision suffers most if its data refreshes only once a day?",
+    "options": {
+      "a": "Reassigning jobs after a machine breaks down mid-shift",
+      "b": "Reviewing supplier prices at the end of each month",
+      "c": "Setting next year's capacity and investment plan",
+      "d": "Preparing the quarterly scrap report that goes to the board"
+    },
+    "answer": "a",
+    "explanation": "Latency matters when the decision is fast. A breakdown changes the plant within the hour; monthly and yearly decisions tolerate daily data.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-012",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "IT is wary of an AI project touching the ERP. What first step does the course recommend?",
+    "options": {
+      "a": "Escalate to the CEO so that IT's concerns are overruled quickly",
+      "b": "Ask for full write access so the pilot can show real value",
+      "c": "Start with read-only extracts, then earn APIs and write-back",
+      "d": "Wait until IT has finished building its own data platform"
+    },
+    "answer": "c",
+    "explanation": "The access ladder wins IT early: read-only extracts, then APIs, then write-back, each step earned by the one before.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-013",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "A pilot runs on read-only extracts and users now want it to update ERP orders. What comes next?",
+    "options": {
+      "a": "Grant write access now, since the users are asking for it",
+      "b": "Have users retype the suggestions into the ERP by hand, indefinitely",
+      "c": "Replace that ERP module with the pilot's own database",
+      "d": "Move to API access, then validated write-back once trust is earned"
+    },
+    "answer": "d",
+    "explanation": "Each rung of the access ladder is earned. Write-back comes after reliable API reads, with validation, not on demand.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-2-014",
+    "domain": "DAT",
+    "tier": 2,
+    "stem": "Your team plans to involve IT only after the pilot succeeds. What is the main risk?",
+    "options": {
+      "a": "IT claims the credit for the gains the project produces",
+      "b": "System access stalls just when the project needs to scale",
+      "c": "The pilot costs more because IT charges internal rates",
+      "d": "IT insists on replacing the ERP before any rollout can start"
+    },
+    "answer": "b",
+    "explanation": "IT holds the keys to every rung of the access ladder. Bringing it in late means the rollout waits for reviews that could have run in parallel.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-003",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "In the ISA-95 model, at which level does the MES sit?",
+    "options": {
+      "a": "Level 1",
+      "b": "Level 2",
+      "c": "Level 3",
+      "d": "Level 4"
+    },
+    "answer": "c",
+    "explanation": "Levels 0 to 2 cover sensing and control, level 3 manufacturing operations (MES), level 4 business planning (ERP).",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-004",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A team wants a planning agent to change machine setpoints directly on the PLCs. Why is this a poor design?",
+    "options": {
+      "a": "PLCs use industrial protocols that modern software cannot read",
+      "b": "It bypasses the execution and control layers where safety is managed",
+      "c": "Setpoints are owned by the ERP, so the change must be made in the ERP first",
+      "d": "Agents can only connect to systems that offer a REST API"
+    },
+    "answer": "b",
+    "explanation": "In ISA-95 terms, planning sits at levels 3 and 4. Acting directly on level 0 to 2 control skips the layers that manage execution and machine safety.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-005",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Machine signals arrive every second at levels 0 to 2; the ERP thinks in orders and days. What does this imply for integration?",
+    "options": {
+      "a": "Stream every raw signal straight into the ERP so that it holds the complete picture",
+      "b": "Ignore machine signals, since the ERP holds the official counts",
+      "c": "Keep the signals only in the agent's context window as they arrive",
+      "d": "Turn signals into events such as stops and counts before business layers use them"
+    },
+    "answer": "d",
+    "explanation": "ISA-95 levels work at different time scales. Signals are condensed into events (stops, counts, states) before level 3 and 4 systems consume them.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-006",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Mid-shift job reassignment needs current order status. Which integration pattern fits best?",
+    "options": {
+      "a": "A nightly file extract from the ERP",
+      "b": "A weekly full copy of the ERP database to a separate server",
+      "c": "API reads on demand, or events from a message queue",
+      "d": "A planner exporting a spreadsheet every morning"
+    },
+    "answer": "c",
+    "explanation": "The pattern follows the decision's pace. Files and replicas refreshed daily or weekly suit slow decisions; APIs and queues serve decisions taken within the hour.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-007",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Your agent will start writing confirmed schedules back to the MES. What must the write path include?",
+    "options": {
+      "a": "Validation before each write and an audit trail of every change",
+      "b": "Direct inserts into the MES tables, which are faster than going through any API",
+      "c": "A nightly batch that overwrites the whole MES schedule",
+      "d": "Automatic retries until the MES accepts each record"
+    },
+    "answer": "a",
+    "explanation": "Read first; write back with validation and an audit trail. Retrying until accepted or overwriting in bulk hides errors in a system of record.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-008",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A pilot needs ERP data in week one, but API access requires a security review. What is a sensible start?",
+    "options": {
+      "a": "Screen-scrape the ERP using a shared user account",
+      "b": "Pause all work until the API review is complete",
+      "c": "Ask IT for direct write access to the ERP database while the review runs",
+      "d": "A scheduled read-only extract while the API review proceeds"
+    },
+    "answer": "d",
+    "explanation": "File extracts are a legitimate first integration pattern. They let work start safely while the next rung, API access, is reviewed.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-009",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Machine stop events can come from a message queue or from polling the database every minute. What does the queue add?",
+    "options": {
+      "a": "It removes the need to validate the incoming data",
+      "b": "Events arrive as they happen, without loading the source",
+      "c": "It stores the full event history, so the plant historian can be retired",
+      "d": "It lets the agent write back without human approval"
+    },
+    "answer": "b",
+    "explanation": "A queue pushes events to consumers when they occur. Polling adds load on the source and delay, and neither pattern removes validation.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-010",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "In the three-layer data census, which three layers do you inventory?",
+    "options": {
+      "a": "Raw, cleaned and aggregated data",
+      "b": "Master data, transactional data and reference data",
+      "c": "System data, spreadsheet data and data in heads",
+      "d": "Plant, regional and group-level data"
+    },
+    "answer": "c",
+    "explanation": "The census asks where each needed fact lives: in systems, in spreadsheets or only in people's heads. The last two layers are often the largest.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-011",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Your census finds the real changeover rules only in a senior planner's memory. What is the right next step?",
+    "options": {
+      "a": "Walk real cases with the planner and record the rules in a structured form",
+      "b": "Leave them out of scope until someone documents them in the ERP",
+      "c": "Use the ERP's standard changeover times as a proxy",
+      "d": "Let the model infer them from historical schedules without the planner's input"
+    },
+    "answer": "a",
+    "explanation": "Data in heads is extracted by sitting with the expert on real cases. ERP standards miss the rules, and history alone cannot tell rules from habits.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-012",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Why run the data census before committing to a delivery date?",
+    "options": {
+      "a": "It replaces the need for interviews with operators and planners",
+      "b": "It tells IT which systems need upgrading before the project starts",
+      "c": "It proves to finance that the baseline is reliable",
+      "d": "The share of data outside systems drives the extraction effort"
+    },
+    "answer": "d",
+    "explanation": "Data in spreadsheets and heads must be extracted by hand, which takes time. The census sizes that work before a date is promised.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-013",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A quality engineer's spreadsheet holds the only list of approved material substitutions. How should the pipeline treat it?",
+    "options": {
+      "a": "Copy it once at the start of the project and stop updating it",
+      "b": "As a source with a named owner, a fixed format and checks on load",
+      "c": "Ignore it, because only data held in systems can be trusted in production",
+      "d": "Ask the engineer to email changes to the team when they remember"
+    },
+    "answer": "b",
+    "explanation": "Spreadsheet data is real data. Give it an owner, a format and load checks so it can feed production like any other source.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-014",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "The MES logs 2% downtime on a press, yet output is 20% below a rate verified on the floor. What should you suspect first?",
+    "options": {
+      "a": "Operators overstating the parts they produce",
+      "b": "A rounding error in how the MES stores durations",
+      "c": "Unlogged micro-stops and slow cycles",
+      "d": "Scrap being counted twice in the output total"
+    },
+    "answer": "c",
+    "explanation": "Short stops and slow cycles rarely reach the downtime log. Data archaeology compares logged events with what the floor actually shows.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-015",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Logs show 90-minute changeovers; the procedure takes 40. Interviews reveal routine maintenance during changeovers. What follows?",
+    "options": {
+      "a": "Maintenance is hidden in changeover time and must be separated",
+      "b": "The procedure is wrong and should be rewritten as 90 minutes",
+      "c": "Operators are slow at changeovers and need retraining",
+      "d": "The logs are unreliable and should be dropped from the analysis"
+    },
+    "answer": "a",
+    "explanation": "Maintenance hidden inside changeovers is classic data archaeology. Separating the two shows the true changeover time and the real maintenance load.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-016",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A press's stop log tags 60% of stops as 'other'. What is the best use of this data?",
+    "options": {
+      "a": "Model those stops as random noise in the capacity plan",
+      "b": "Delete the 'other' stops so that the reason analysis stays clean",
+      "c": "Rely only on the 40% of stops that have a reason",
+      "d": "Treat it as a lead and observe stops on the floor"
+    },
+    "answer": "d",
+    "explanation": "Poor logs point to where the real causes hide. Going to the floor recovers them; discarding or modeling them as noise loses the signal.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-017",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Why compare logged downtime with downtime observed on the floor before modeling capacity?",
+    "options": {
+      "a": "Observed downtime is usually exaggerated by operators",
+      "b": "Logged downtime is often understated, which overstates capacity",
+      "c": "The comparison is needed to calibrate the machine sensors on the line",
+      "d": "Auditors require it before any model goes live"
+    },
+    "answer": "b",
+    "explanation": "Logs miss micro-stops and mislabel events. A model fed logged downtime assumes capacity the plant does not have.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-018",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "An orders table that usually loads 2 million rows loads 200,000 tonight. Which check stops this reaching users?",
+    "options": {
+      "a": "A schema check that the column names and types are unchanged",
+      "b": "A longer timeout on the load job",
+      "c": "A row-count check against expected volume",
+      "d": "A file compression ratio alert"
+    },
+    "answer": "c",
+    "explanation": "Checks at each stage, such as row counts, null rates and ranges, catch partial loads. A schema check passes because the columns are fine.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-019",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Your pipeline reloads the full order history every hour and keeps getting slower. What is the standard fix?",
+    "options": {
+      "a": "Incremental loads of changed rows, keyed on stable business keys",
+      "b": "More frequent full reloads, so that each run has less new data to absorb",
+      "c": "Dropping all history older than one month from the pipeline",
+      "d": "Moving the same full reload to a larger server"
+    },
+    "answer": "a",
+    "explanation": "Incremental loads with upserts on business keys process only what changed. Full reloads grow with history however often they run.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-020",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "The ERP team renames a column and your agent silently receives nulls for a week. What would have prevented this?",
+    "options": {
+      "a": "Running the pipeline twice as often",
+      "b": "Granting the agent write access to the ERP",
+      "c": "Keeping every raw extract for a longer retention period before deletion",
+      "d": "A data contract with the source team, plus null-rate checks"
+    },
+    "answer": "d",
+    "explanation": "A data contract fixes what the source delivers and who announces changes. Null-rate checks catch breaks the contract missed, on the first run.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-021",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A temperature feed suddenly shows 1,500 °C for a process that runs at 200 °C. Which check should catch it?",
+    "options": {
+      "a": "A duplicate check on the record keys",
+      "b": "A row-count check on the batch",
+      "c": "A range check at ingestion that holds or flags the data",
+      "d": "A freshness check that the latest timestamp is recent enough"
+    },
+    "answer": "c",
+    "explanation": "Range checks catch values outside physical limits. Row counts and freshness would pass, because the data arrived complete and on time.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-022",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "You join orders to order lines, then sum order value. The total is three times too high. Why?",
+    "options": {
+      "a": "The inner join silently dropped every order that had no order lines at all",
+      "b": "Each order repeats once per line, so its value is counted per line",
+      "c": "Order values are stored in the wrong currency",
+      "d": "The sum function rounds every value upward"
+    },
+    "answer": "b",
+    "explanation": "A join to a many side repeats the one side's columns. Sum order-level values before joining, or sum at line level.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-023",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "You need every machine with its count of stops this week, including machines with no stops. Which join?",
+    "options": {
+      "a": "A left join from machines to stops",
+      "b": "An inner join between machines and stops",
+      "c": "An inner join from stops to machines",
+      "d": "A cross join between machines and stops"
+    },
+    "answer": "a",
+    "explanation": "A left join keeps every machine and counts zero where no stop matches. An inner join silently drops the machines with no stops.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-024",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "An inner join between orders and the customer table drops 5% of orders. What is the most likely cause?",
+    "options": {
+      "a": "The customer table is too large for the join to finish",
+      "b": "The orders are duplicated in the source system and removed by the join",
+      "c": "The join should use a window function instead",
+      "d": "Those orders carry customer IDs missing from the customer table"
+    },
+    "answer": "d",
+    "explanation": "An inner join keeps only matching rows. Orphan keys, often from data entry or migration, vanish silently; a left join and a null check reveal them.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-025",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "You need each machine's running seven-day average scrap rate. Which SQL feature fits best?",
+    "options": {
+      "a": "A GROUP BY on machine only",
+      "b": "A DISTINCT on machine and day",
+      "c": "A window function partitioned by machine, ordered by day",
+      "d": "A self-join of every row to every other row in the table"
+    },
+    "answer": "c",
+    "explanation": "Window functions compute running values per partition without collapsing rows. A GROUP BY on machine gives one figure for the whole period.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-026",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Average cycle time per product is computed as the average of daily averages. What is the problem?",
+    "options": {
+      "a": "Days with few parts weigh as much as busy days",
+      "b": "Daily averages cannot be stored as decimal numbers",
+      "c": "The result double counts parts made across midnight",
+      "d": "The daily averages should have been summed instead"
+    },
+    "answer": "a",
+    "explanation": "An unweighted average of averages ignores volume. Sum cycle time and parts over the whole period, then divide.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-027",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Two plants in different time zones send events in local time. What should the pipeline do?",
+    "options": {
+      "a": "Convert everything to the headquarters' local time",
+      "b": "Keep each plant's local times and compare the plants hour by hour",
+      "c": "Drop the time part and keep only the date of each event",
+      "d": "Store timestamps in UTC and keep each source's time zone"
+    },
+    "answer": "d",
+    "explanation": "UTC makes events comparable and safe across daylight saving changes; keeping the source zone lets you rebuild local shift views.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-028",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A capacity model gives every machine 24 hours a day, but the plant runs two shifts and stops on weekends. What is missing?",
+    "options": {
+      "a": "The machines' standard rates from the ERP",
+      "b": "The shift calendar, which defines available hours",
+      "c": "The OEE target set for each machine",
+      "d": "The historian's raw signal feed"
+    },
+    "answer": "b",
+    "explanation": "Available time comes from the shift calendar, holidays and planned stops. Without it, capacity is overstated by a large factor.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-029",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "One system records resin in kilograms, another in 25 kg bags. What should the pipeline do?",
+    "options": {
+      "a": "Let each downstream user convert the units when needed",
+      "b": "Convert to one unit explicitly, with the factor stored and tested",
+      "c": "Keep the larger figure when the two systems disagree",
+      "d": "Treat both figures as the same unit to keep things simple"
+    },
+    "answer": "b",
+    "explanation": "Units of measure must be explicit. A stored, tested conversion factor avoids silent errors of 25 times in stock and consumption.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-030",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A complaint names a defective finished lot. What data shows which raw material lots went into it?",
+    "options": {
+      "a": "Lot genealogy linking consumed lots to produced lots",
+      "b": "The bill of materials for the finished product",
+      "c": "The supplier's certificate of analysis for each delivery",
+      "d": "The production order's planned start and end dates"
+    },
+    "answer": "a",
+    "explanation": "The bill of materials says what should be used; genealogy records which actual lots were consumed. Only genealogy supports a trace or a recall.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-031",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A night shift runs from 10 pm to 6 am, and output is grouped by calendar day. What goes wrong?",
+    "options": {
+      "a": "Output is counted twice in the weekly totals",
+      "b": "The night shift's data cannot be stored by the MES",
+      "c": "Day shifts appear less productive than they are",
+      "d": "Each night shift's output splits across two days"
+    },
+    "answer": "d",
+    "explanation": "Shift-based metrics need the shift calendar, not midnight boundaries. Splitting a shift across two days distorts per-shift and per-day figures.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-032",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Your agent sets confirmed due dates. The ERP owns that field and the APS holds a copy. Where should the agent write?",
+    "options": {
+      "a": "To the ERP, which then feeds the copy in the APS",
+      "b": "To both systems at once, so that they stay aligned",
+      "c": "To whichever system the planner happens to have open",
+      "d": "To a new table the agent owns, read by both systems"
+    },
+    "answer": "a",
+    "explanation": "Writes go to the owner system; copies refresh from it. Writing to two places creates two owners and, soon, two truths.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-033",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Users edit item weights in the WMS copy, which now disagrees with the ERP that owns them. What is the fix?",
+    "options": {
+      "a": "Sync the WMS edits back to overwrite the ERP every night",
+      "b": "Let each system keep its own value for its own purposes",
+      "c": "Make edits in the ERP and refresh the WMS copy from it",
+      "d": "Average the two weights in a nightly reconciliation job"
+    },
+    "answer": "c",
+    "explanation": "Every field has one owner; other sources are copies that never take edits. Syncing edits back makes the copy a second owner.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-034",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "Your agent reads orders and writes schedule proposals. How should its service account be set up?",
+    "options": {
+      "a": "With administrator rights, to avoid access errors in production",
+      "b": "With only the permissions those two tasks need",
+      "c": "Under a named planner's login, so actions are traceable",
+      "d": "As one shared account for all of the project's tools"
+    },
+    "answer": "b",
+    "explanation": "Least privilege limits damage when something goes wrong. A dedicated, logged service account is traceable without borrowing a person's login.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-035",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "A database password appears in the pipeline's code repository. What should be done?",
+    "options": {
+      "a": "Make the repository private so that outsiders cannot see it",
+      "b": "Rename the variable so the password is harder to spot",
+      "c": "Leave it, since only the project team can read the code",
+      "d": "Rotate it and move secrets to a store outside the code"
+    },
+    "answer": "d",
+    "explanation": "Secrets live outside code. Once exposed, a password is compromised, so it is rotated; hiding the repository leaves it in the history.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DAT-3-036",
+    "domain": "DAT",
+    "tier": 3,
+    "stem": "An agent's write-back changed 40 orders overnight and planners ask why. What should already exist?",
+    "options": {
+      "a": "A rollback script that reverts all changes made by the agent",
+      "b": "A rule that the agent writes only during the day shift",
+      "c": "An audit log of each action, its inputs and the account used",
+      "d": "A weekly summary email sent to the planners by the team"
+    },
+    "answer": "c",
+    "explanation": "Audit logs make every automated write explainable: what changed, on which inputs, under which account. Without them nobody can answer the planners.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]

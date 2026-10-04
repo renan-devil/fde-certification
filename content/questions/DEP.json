@@ -1,0 +1,1009 @@
+[
+  {
+    "id": "DEP-1-001",
+    "domain": "DEP",
+    "tier": 1,
+    "stem": "What best distinguishes a Forward Deployed Engineer from a consultant?",
+    "options": {
+      "a": "The FDE produces more detailed and better-researched written recommendations",
+      "b": "The FDE also sells software licences alongside the work",
+      "c": "The FDE stays accountable for running systems and measured gains",
+      "d": "The FDE works remotely, close to the product team"
+    },
+    "answer": "c",
+    "explanation": "Consultants deliver recommendations. FDEs deliver production code, running systems and euro gains, and the same person owns the outcome from scoping to steady state.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-1-002",
+    "domain": "DEP",
+    "tier": 1,
+    "stem": "Why are the first three months of an engagement budgeted as discovery rather than delivery?",
+    "options": {
+      "a": "Data and organizational problems surface only once AI runs on real data",
+      "b": "Enterprise software licences usually take about three months to activate",
+      "c": "Regulation requires a three-month audit before any AI",
+      "d": "It increases the number of billable days per client"
+    },
+    "answer": "a",
+    "explanation": "Data quality issues appear at inference, and organizational change slides relative to technical plans. Budgeting discovery up front avoids a delay that was always going to happen.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-001",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "Your deployment is two weeks late. What does the no-surprises rule require?",
+    "options": {
+      "a": "Work weekends and report once you are back on track",
+      "b": "Wait for the next monthly steering committee to raise it",
+      "c": "Quietly reduce the scope to protect the original date",
+      "d": "Tell the sponsor now, with the cause and a recovery plan"
+    },
+    "answer": "d",
+    "explanation": "Bad news travels fast. A sponsor who learns of a slip late stops trusting the project; one who learns early can help remove the cause.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-001",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "In a field interview with a planner, which question yields the most reliable information?",
+    "options": {
+      "a": "How should scheduling ideally work in this plant?",
+      "b": "Can you walk me through how you built yesterday's schedule?",
+      "c": "What do you think of the current ERP system?",
+      "d": "Would an AI tool make your day-to-day job easier, in your own view?"
+    },
+    "answer": "b",
+    "explanation": "Ask for a real, recent instance. Descriptions of how things should work reproduce the official process; the last real case reveals workarounds and hidden rules.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-1-003",
+    "domain": "DEP",
+    "tier": 1,
+    "stem": "Your AI pilot impressed in the demo, then stalled once rolled out in the plant. Where does the course say enterprise AI usually fails?",
+    "options": {
+      "a": "The model was not powerful enough for industrial work",
+      "b": "In the last mile: legacy data and changing how people work",
+      "c": "The demo budget was too small to build a convincing prototype",
+      "d": "The cloud provider could not scale to plant volumes"
+    },
+    "answer": "b",
+    "explanation": "Deployment, not models, is the bottleneck. Value is lost where data sits in legacy systems and people must change how they work, which a stronger model does not fix.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-1-004",
+    "domain": "DEP",
+    "tier": 1,
+    "stem": "Your plant wants an AI scheduling tool. Where should the engineers building it spend most of their time?",
+    "options": {
+      "a": "At headquarters, close to the IT department and its architects",
+      "b": "With the vendor's product team, refining the core features",
+      "c": "Remotely, working from written requirements gathered by managers",
+      "d": "In the plant, next to the planners and quality leads"
+    },
+    "answer": "d",
+    "explanation": "Engineers in the plant see the real constraint, the workarounds and the data in people's heads, and can ship in weeks. Requirements written at a distance miss what planners actually do.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-1-005",
+    "domain": "DEP",
+    "tier": 1,
+    "stem": "A partner offers engineers at a daily rate who take tasks from your IT backlog. What separates this from an FDE engagement?",
+    "options": {
+      "a": "The FDE owns a business outcome in production",
+      "b": "The FDE brings a larger team of junior developers",
+      "c": "The FDE writes more code per day than contractors do",
+      "d": "The FDE reports to the vendor's sales team, not to IT"
+    },
+    "answer": "a",
+    "explanation": "Staffing supplies capacity. An FDE is accountable for production code, running systems and measured euro gains: the difference is ownership of the outcome, not the volume of work.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-1-006",
+    "domain": "DEP",
+    "tier": 1,
+    "stem": "Two months into an AI engagement, your team is still cleaning data and mapping workarounds, with no gains yet. How should you read this?",
+    "options": {
+      "a": "The team is failing and should be replaced quickly",
+      "b": "The scope was too ambitious and should be cut in half before month three",
+      "c": "As expected: early months are discovery and stabilization",
+      "d": "The data is unusable, so the engagement should stop"
+    },
+    "answer": "c",
+    "explanation": "The first three months are discovery and stabilization, because data and organizational problems only surface on real data. Gains are expected after that, not in week one.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-002",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "Your FDE has found a high-value scheduling problem at Polymex Industries. In the FDE loop, what comes next?",
+    "options": {
+      "a": "Build fast with the systems and data that already exist",
+      "b": "Write a full specification and send it out to tender",
+      "c": "Wait for the new data warehouse project to finish first",
+      "d": "Expand the scope to the other sites before building anything"
+    },
+    "answer": "a",
+    "explanation": "The loop is embed, find the problem worth solving, build fast with what exists, deploy into real workflows, drive adoption, expand. Waiting for new infrastructure delays value by months.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-003",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "A new tool produces good schedules in a sandbox, but planners must retype them into the ERP to use them. Which FDE loop step is unfinished?",
+    "options": {
+      "a": "Embedding with the client's operations team",
+      "b": "Finding the problem worth solving",
+      "c": "Deploying into the real workflow",
+      "d": "Expanding to the next site or use case"
+    },
+    "answer": "c",
+    "explanation": "Value appears only when the tool sits inside the work people already do. A sandbox that needs manual retyping is built, but not deployed into the real workflow.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-004",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "In the FDE loop, when should a deployment expand to new use cases?",
+    "options": {
+      "a": "As soon as the contract allows additional billable work",
+      "b": "Once value is delivered and adopted in the first one",
+      "c": "Before go-live, so the roadmap impresses the steering committee",
+      "d": "When the vendor releases a new version of the product"
+    },
+    "answer": "b",
+    "explanation": "Expansion is the last step of the loop and follows delivered, adopted value. Widening the scope before the first use case holds spreads the team thin and proves nothing.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-005",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "An integrator proposes one team to scope, another to build and a third to run the tool. What does the FDE model prefer?",
+    "options": {
+      "a": "Three specialized teams, each bound by a clear contract",
+      "b": "A separate run team that takes over right at go-live",
+      "c": "A consulting team to scope, then offshore developers to build",
+      "d": "One person accountable from scoping to steady state"
+    },
+    "answer": "d",
+    "explanation": "Each handoff loses context and dilutes accountability. In the FDE model the same person owns the outcome from scoping to steady state.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-006",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "Halfway through a project, the FDE who scoped it moves to a new client and a colleague takes over. What is mainly lost?",
+    "options": {
+      "a": "The context and accountability built since scoping",
+      "b": "The software licences, which must be renegotiated",
+      "c": "Finance's sign-off on the baseline, which must be redone",
+      "d": "The discovery work, which must restart from month one"
+    },
+    "answer": "a",
+    "explanation": "One person from scoping to steady state avoids handoff chains. A mid-project handover loses context nobody wrote down and blurs who owns the outcome.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-007",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "Your scheduling tool has just gone live at Ferralux. When does the FDE's accountability for the deployment end?",
+    "options": {
+      "a": "At go-live, once the client has signed the acceptance form",
+      "b": "When the code has been delivered and fully documented",
+      "c": "When the new routine has reached steady state",
+      "d": "At the end of the first three months of the engagement"
+    },
+    "answer": "c",
+    "explanation": "The same person owns the outcome from scoping to steady state. Go-live is where data and adoption problems show up, so handing over there leaves them without an owner.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-008",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "A sales director wants FDEs to carry a licence quota to speed up expansion. What does the FDE model say?",
+    "options": {
+      "a": "Agree, since FDEs know the client better than anyone",
+      "b": "Refuse: expansion should follow delivered value",
+      "c": "Agree, but only for renewals of existing licences",
+      "d": "Refuse, because FDEs are too junior to negotiate deals"
+    },
+    "answer": "b",
+    "explanation": "FDEs carry no sales quota. Their credibility on the floor rests on solving the client's problem, and expansion follows the value they deliver, not a target.",
+    "source": "Day 1, what an FDE is",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-009",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "The CEO wants the new tool on all eight sites at once to save time. What does the FDE way recommend?",
+    "options": {
+      "a": "Prove it on one site first, then extend to the others",
+      "b": "Launch on all eight sites together, then fix issues site by site as they appear",
+      "c": "Start with the two smallest sites to limit the risk",
+      "d": "Run a three-month paper study of all eight sites first"
+    },
+    "answer": "a",
+    "explanation": "Lighthouse first: one site proves the gains in the P&L and reveals the real issues before they are multiplied by eight. Extension then follows a proven model.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-010",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "At the lighthouse site, usage is strong but finance has not reconciled the gains. What should happen before extending?",
+    "options": {
+      "a": "Nothing more, since strong usage shows the tool delivers value",
+      "b": "Survey the users to confirm they save time each week",
+      "c": "Reconcile the gains to the P&L first",
+      "d": "Rebuild the tool so each site gets its own version"
+    },
+    "answer": "c",
+    "explanation": "The lighthouse proves value with gains reconciled to the P&L, not with usage or user surveys. Extending on usage alone multiplies an unproven case.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-011",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "The FDE proposes meeting the client team once a month to limit disruption. What does the course recommend?",
+    "options": {
+      "a": "Monthly is enough if the FDE sends good written reports",
+      "b": "A weekly operating rhythm with the client team",
+      "c": "Daily stand-ups with the plant director until go-live",
+      "d": "Meetings only when a problem comes up, to save time on both sides"
+    },
+    "answer": "b",
+    "explanation": "A weekly operating rhythm with the client team catches issues while they are small. A monthly cadence learns of problems weeks late, when they are harder to fix.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-012",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "The FDE works closely with the planners, but the plant director has not been involved since kickoff. What is missing?",
+    "options": {
+      "a": "Regular leadership reviews to steer and remove blockers",
+      "b": "A larger FDE team present on the site every day",
+      "c": "A detailed weekly written report sent to IT",
+      "d": "A second kickoff meeting with all the plant staff"
+    },
+    "answer": "a",
+    "explanation": "The operating rhythm has two layers: weekly work with the client team and regular leadership reviews. Without the second, decisions only leaders can take stall the project.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-013",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "A deployment has missed the stop criteria agreed at launch, and the team asks for three more months. What should leadership do?",
+    "options": {
+      "a": "Grant the extension, since stopping wastes the money already spent",
+      "b": "Extend, but cut the scope down to the easiest part of the problem",
+      "c": "Hand the project to a different vendor and keep going",
+      "d": "Apply the agreed criteria: stop, and record what was learned"
+    },
+    "answer": "d",
+    "explanation": "Explicit stop criteria let a failing initiative end on agreed facts rather than sunk cost. Some AI initiatives are expected to fail; that is part of approving them like capex.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-014",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "A plant manager asks the FDE to keep a failed trial run from the sponsor until a fix is ready. What should the FDE do?",
+    "options": {
+      "a": "Agree, since the plant manager is the daily contact on site",
+      "b": "Agree, provided the fix is ready within two weeks",
+      "c": "Mention it in the final project report at the end",
+      "d": "Inform the sponsor now, with the cause and the plan"
+    },
+    "answer": "d",
+    "explanation": "The no-surprises rule holds whoever asks for silence: bad news goes to the sponsor immediately, with its cause and a plan. A sponsor who finds out later stops trusting the project.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-015",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "A client needs a plant-specific purge rule that the product does not model. Where should the FDE build it?",
+    "options": {
+      "a": "In a fork of the product made for this client",
+      "b": "In the deployment layer, as client-specific context",
+      "c": "Nowhere: tell the client the product cannot do it",
+      "d": "In the core product, released to every other client"
+    },
+    "answer": "b",
+    "explanation": "Client-specific context belongs in the deployment layer, where it is maintained without touching the product. A fork per client becomes impossible to upgrade.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-016",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "The FDE finds the product cannot handle multi-plant inventory, which many clients need. What should the FDE do?",
+    "options": {
+      "a": "Fork the product and add the feature for this client",
+      "b": "Rebuild the feature inside this client's deployment layer",
+      "c": "Escalate it to the software partner as a product gap",
+      "d": "Drop the use case, since the product does not cover it"
+    },
+    "answer": "c",
+    "explanation": "A gap many clients share is a product gap: escalate it to the software partner. Rebuilding it in each deployment, or forking, leaves every client on its own version.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-2-017",
+    "domain": "DEP",
+    "tier": 2,
+    "stem": "Why does the FDE way avoid forking the product for each client?",
+    "options": {
+      "a": "Most enterprise licence contracts forbid modified copies",
+      "b": "Clients do not want features specific to their plant",
+      "c": "Forked code runs more slowly than the original product",
+      "d": "Every fix and upgrade would have to be redone per client"
+    },
+    "answer": "d",
+    "explanation": "A fork per client turns every fix and upgrade into a separate project. Client context goes in the deployment layer; shared gaps go back to the product.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-002",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "A plant manager says 'scheduling is a mess.' What is the first step in framing this as a problem?",
+    "options": {
+      "a": "Collect the features planners want in the new scheduling software",
+      "b": "Benchmark the scheduling tools available on the market",
+      "c": "State it with a metric, a perimeter and a baseline",
+      "d": "Agree a go-live date with the plant manager first"
+    },
+    "answer": "c",
+    "explanation": "A complaint is not a problem statement. Framing turns it into something testable: which metric, on which perimeter, measured against which baseline.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-003",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Which problem statement is framed well enough to test?",
+    "options": {
+      "a": "Planners lose far too much time on scheduling every week",
+      "b": "Line 3 changeover hours, now 120 a month, fall 20% by June",
+      "c": "Use AI to improve scheduling performance across the plant",
+      "d": "Make scheduling smarter, faster and more reliable for everyone"
+    },
+    "answer": "b",
+    "explanation": "It names a metric, a perimeter and a baseline, so success or failure can be measured. The others describe a wish, not a testable problem.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-004",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Noor's problem statement reads: 'Cut scrap on the extrusion lines by 15%.' What is still missing to make it testable?",
+    "options": {
+      "a": "The baseline scrap rate it is measured against",
+      "b": "The name of the AI model that will be used",
+      "c": "A list of the plant's other quality problems",
+      "d": "The vendor's estimate of the expected return on investment"
+    },
+    "answer": "a",
+    "explanation": "A 15% cut means nothing without its starting point. Metric and perimeter are there; the baseline is what makes the claim testable.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-005",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Sam frames 'cut late deliveries by 30%' for the whole group, but only one plant's data is accessible. What should change?",
+    "options": {
+      "a": "Keep the group perimeter and estimate the other plants",
+      "b": "Replace the metric with a user satisfaction score",
+      "c": "Raise the target to 50% to cover the uncertainty",
+      "d": "Narrow the perimeter to the plant you can measure"
+    },
+    "answer": "d",
+    "explanation": "The perimeter must be one where the metric and its baseline can actually be measured. A group-wide claim built on estimates cannot be tested.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-006",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "You are framing a scheduling problem. Which metric should anchor the statement?",
+    "options": {
+      "a": "Weekly logins to the new scheduling tool",
+      "b": "Planner satisfaction score in a survey",
+      "c": "Number of features delivered per sprint",
+      "d": "Changeover hours on the lines in scope"
+    },
+    "answer": "d",
+    "explanation": "The metric must measure the business outcome the complaint is about. Logins, satisfaction and features measure activity around the tool, not whether the problem shrank.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-007",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "To learn how changeovers really happen on line 2, whom should you interview first?",
+    "options": {
+      "a": "The plant manager, who sees the whole site",
+      "b": "The IT team that maintains the MES data",
+      "c": "The supplier who sold the line's equipment",
+      "d": "The operators who run changeovers on line 2"
+    },
+    "answer": "d",
+    "explanation": "Operators know the real sequence, the workarounds and the exceptions. Managers describe the official process, and interviewing only them reproduces it.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-008",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "In an interview, a planner mentions 'my little file' she checks before releasing orders. What should you do?",
+    "options": {
+      "a": "Ask her to show it and walk through what it checks",
+      "b": "Note it and move on to the official process",
+      "c": "Tell her the new tool will soon replace the file",
+      "d": "Ask IT to import the file into the data warehouse"
+    },
+    "answer": "a",
+    "explanation": "Personal spreadsheets often hold the hidden rules the official systems lack. Seeing one used on a real case reveals what the model must encode.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-009",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "An operator says the line 'runs exactly as the procedure says, apart from Fridays.' What should you do?",
+    "options": {
+      "a": "Model the standard procedure and leave the exception out",
+      "b": "Ask the manager whether the Friday exception is approved",
+      "c": "Ask about last Friday and walk through what happened",
+      "d": "Log it as a data quality issue for the IT team"
+    },
+    "answer": "c",
+    "explanation": "Exceptions are where hidden rules live. Walking through the last real case turns a passing remark into a rule the model can encode.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-010",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "A manager describes a clean process; the operators' answers reveal several workarounds. Which account do you design from?",
+    "options": {
+      "a": "The manager's, because it is the approved process",
+      "b": "An average of both, to keep everyone on side",
+      "c": "The operators', checked against real recent cases",
+      "d": "Neither: rely only on the data held in the MES"
+    },
+    "answer": "c",
+    "explanation": "The design must fit how the work is actually done. Workarounds signal rules or constraints the official process misses; verify them on real cases.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-011",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Which line belongs in a naive-deployment failure memo for a scheduling tool?",
+    "options": {
+      "a": "Some users may resist the change in the first weeks after go-live",
+      "b": "AI carries a range of inherent risks that the project team will need to monitor and manage carefully",
+      "c": "Night shift reverts to its spreadsheet within two weeks: rush orders are missing",
+      "d": "The project team will do its very best to limit any disruption"
+    },
+    "answer": "c",
+    "explanation": "The memo predicts concretely what breaks, who reacts and by when. Vague statements about resistance or risk give the steering committee nothing to act on.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-012",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Alex has finished the naive-deployment failure memo. What should happen to it?",
+    "options": {
+      "a": "Keep it in the team folder to avoid alarming the client",
+      "b": "Send it to the vendor's support team for their records",
+      "c": "Take it to the steering committee to agree mitigations",
+      "d": "Share it with the operators after the first incident"
+    },
+    "answer": "c",
+    "explanation": "The memo exists so the steering committee can decide on mitigations in advance. Hiding it to avoid alarm defeats its purpose and breaks the no-surprises rule.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-013",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "When should the naive-deployment failure memo be written?",
+    "options": {
+      "a": "At kickoff, before discovery has started",
+      "b": "Before go-live, early enough to act on it",
+      "c": "After the first week of running in production",
+      "d": "Once the client has reported a first problem"
+    },
+    "answer": "b",
+    "explanation": "Its value is prediction: written before go-live, it lets the team fix what would break. At kickoff too little is known; after go-live it becomes a post-mortem.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-014",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Alex's failure memo predicts that maintenance will ignore the tool's night-shift alerts. What should Alex do about it?",
+    "options": {
+      "a": "Wait and see whether the prediction comes true",
+      "b": "Agree a mitigation and an owner with maintenance",
+      "c": "Report the maintenance team's attitude to HR",
+      "d": "Leave maintenance managers to deal with it later"
+    },
+    "answer": "b",
+    "explanation": "A predicted failure is only useful if someone acts on it. Agreeing a mitigation and an owner with the people concerned turns the forecast into prevention.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-015",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "A sponsor calls the failure memo pessimistic and bad for morale. What is the best response?",
+    "options": {
+      "a": "Replace it with a list of the expected benefits",
+      "b": "Soften it so that only technical risks remain in it",
+      "c": "Share it with the IT team only, not the committee",
+      "d": "Predicted failures can be fixed before they cost trust"
+    },
+    "answer": "d",
+    "explanation": "The memo is not pessimism but prevention. Failures named in advance can be mitigated; the same failures discovered after go-live cost the project its credibility.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-016",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Sam used an AI assistant to write a SQL query summing scrap by line. What should Sam do before the numbers go to the client?",
+    "options": {
+      "a": "Switch to the most capable AI assistant available",
+      "b": "Ask the assistant to review and double-check its own query for errors",
+      "c": "Reconcile totals with a source report the client already uses",
+      "d": "Note in the report that AI produced the query"
+    },
+    "answer": "c",
+    "explanation": "Use AI tools freely for speed, but trust comes from checking outputs against source data. Asking the same tool to check itself is not independent verification.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-017",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Your team wants to ban AI coding tools on the project to avoid errors. What does the course recommend?",
+    "options": {
+      "a": "Ban them for anything that touches production data",
+      "b": "Use them freely, and check outputs against source data",
+      "c": "Allow them only for documentation and slide writing",
+      "d": "Use them, and trust whatever passes the compiler and tests"
+    },
+    "answer": "b",
+    "explanation": "AI tools speed up the work; the discipline lies in verification. A ban gives up the speed, while trusting unchecked output gives up the client's trust.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-018",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "An AI assistant summarized 200 maintenance logs into five root causes for the steering committee. What should the FDE do first?",
+    "options": {
+      "a": "Present it, since the summary reads clearly and fluently",
+      "b": "Ask a second AI tool whether it agrees with the summary",
+      "c": "Present it with a note that the figures are AI-estimated",
+      "d": "Spot-check each cause against the underlying logs"
+    },
+    "answer": "d",
+    "explanation": "Fluent output is not verified output. Checking each cause against the source logs is what lets the FDE stand behind the findings in front of the committee.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-019",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Your team used AI to extract 5,000 order lines from PDFs into a table. How should you verify the result?",
+    "options": {
+      "a": "Rely on the confidence score that the tool reports for each extracted line",
+      "b": "Run the same extraction a second time and compare outputs",
+      "c": "Compare a sample, odd cases included, with the source PDFs",
+      "d": "Ask the planner whether the totals look about right to her"
+    },
+    "answer": "c",
+    "explanation": "Verification means checking against source data, including the unusual cases where extraction fails. A tool's own score or a rerun is not an independent check.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-020",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Why does the FDE way insist on checking AI-assisted work against source data?",
+    "options": {
+      "a": "Client trust rests on numbers that hold when checked",
+      "b": "AI tools are too unreliable to be used for real work",
+      "c": "Contracts require every line of code to be reviewed twice",
+      "d": "Regulators require a manual audit of every AI output"
+    },
+    "answer": "a",
+    "explanation": "AI tools are welcome for speed; credibility comes from outputs that survive a check against source data. One wrong figure found by the client costs more than the time saved.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-021",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "At handover, the client names an IT ticket queue as the owner of the new tool. What is the problem?",
+    "options": {
+      "a": "Ticket queues are too slow for an AI tool's incidents",
+      "b": "No trained person owns the routine and its decisions",
+      "c": "IT should not have access to production planning data",
+      "d": "The vendor, not the client, should own the tool"
+    },
+    "answer": "b",
+    "explanation": "The handover bar includes a trained internal owner. A ticket queue can log incidents but cannot judge the plans, adjust the rules or keep the routine alive.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-022",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "After go-live, usage stays high only on days when the FDE is on site. What does this say about handover?",
+    "options": {
+      "a": "The bar is not met: the routine still depends on the FDE",
+      "b": "Handover can proceed, since average usage is high",
+      "c": "The tool needs more features before anyone hands over",
+      "d": "The plant manager should make usage mandatory first"
+    },
+    "answer": "a",
+    "explanation": "The handover bar requires the new routine to hold without the FDE. Usage that falls when the FDE leaves shows the routine has not yet taken root.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-023",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Two months after handover, the MES data feed stops silently and plans degrade for a week. What was missing?",
+    "options": {
+      "a": "A longer training course for the planners",
+      "b": "Monitoring that raises an alert when a feed fails",
+      "c": "A newer AI model with a larger context window",
+      "d": "A clause in the contract about MES availability"
+    },
+    "answer": "b",
+    "explanation": "Production discipline includes monitoring. Without it, a silent failure is found by its consequences, here a week of bad plans, instead of by an alert.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-024",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "The new owner at Ferralux sees a failed nightly job and does not know what to do. What should the handover have included?",
+    "options": {
+      "a": "A runbook: known failures and the steps to recover",
+      "b": "The FDE's personal phone number for emergencies",
+      "c": "A full copy of the source code and its history",
+      "d": "Admin rights for every planner to rerun the jobs"
+    },
+    "answer": "a",
+    "explanation": "A runbook lets the internal owner recover from known failures without the FDE. Source code and a phone number keep the client dependent on its builder.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-025",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "Before leaving, how can the FDE test that the new routine holds without them?",
+    "options": {
+      "a": "Ask the sponsor to confirm it in a signed letter",
+      "b": "Check that the tool has been live for at least a month",
+      "c": "Survey the users on whether they feel ready to continue",
+      "d": "Step away for a period and check the metric holds"
+    },
+    "answer": "d",
+    "explanation": "The bar is the routine holding without the FDE, so test exactly that. Sign-offs, elapsed time and confidence surveys do not show what happens when the FDE is gone.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-026",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "On day one at Polymex Industries, the FDE is eager to see the lines. What comes first?",
+    "options": {
+      "a": "The site safety induction and its rules",
+      "b": "A tour of the lines with the plant manager",
+      "c": "Installing the data connectors on the MES",
+      "d": "Interviewing the operators on the night shift"
+    },
+    "answer": "a",
+    "explanation": "Safety rules come first on any site. No discovery goal, however urgent, justifies going onto the floor before the induction.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-027",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "You need input from operators on all three shifts. How do you plan the interviews?",
+    "options": {
+      "a": "Gather all operators in one meeting at 10 a.m.",
+      "b": "Interview the day shift and assume the others work the same",
+      "c": "Visit each shift, at times that suit its line",
+      "d": "Send a written survey and wait for the answers"
+    },
+    "answer": "c",
+    "explanation": "Shifts often work differently, each with its own workarounds. Respecting shift patterns means going to each shift at a time that does not disrupt production.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-028",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "An operator is mid-changeover when you arrive for a scheduled interview. What should you do?",
+    "options": {
+      "a": "Start the questions anyway, since the slot was agreed",
+      "b": "Wait or come back, observing if they allow it",
+      "c": "Ask the supervisor to have someone else finish the changeover",
+      "d": "Cancel the interview and use the MES data instead"
+    },
+    "answer": "b",
+    "explanation": "Respect for operators' time means production comes first. Watching the changeover, with their agreement, is often worth more than the interview itself.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-029",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "A senior operator says the tool's suggested sequence will damage a die, though the data says otherwise. What do you do?",
+    "options": {
+      "a": "Trust the data, since it is more objective than opinion",
+      "b": "Escalate to the supervisor and let them settle the question",
+      "c": "Note it for the next release and keep the current sequence",
+      "d": "Take it seriously and check the case with the operator"
+    },
+    "answer": "d",
+    "explanation": "Operators' expertise often holds rules the data lacks. Checking the case with them respects that expertise and may reveal a missing constraint before a die is damaged.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "DEP-3-030",
+    "domain": "DEP",
+    "tier": 3,
+    "stem": "A line lead invites you past a guard rail to see a sensor up close and save time. What do you do?",
+    "options": {
+      "a": "Decline and follow the site's safety rules",
+      "b": "Accept, since the line lead knows the area best",
+      "c": "Accept, but only while the line runs at low speed",
+      "d": "Accept once you have signed the visitor log"
+    },
+    "answer": "a",
+    "explanation": "Safety rules come first, whoever offers the shortcut. An FDE who breaks them endangers people and loses the floor's respect at once.",
+    "source": "Day 1, consulting skills",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]

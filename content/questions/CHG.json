@@ -1,0 +1,971 @@
+[
+  {
+    "id": "CHG-2-001",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "An expert planner resists the new scheduling tool. What usually works best?",
+    "options": {
+      "a": "Escalate to the plant director so that tool usage is enforced from above",
+      "b": "Move the planner off the project to avoid friction",
+      "c": "Make the planner a co-author: encode their rules, show their data",
+      "d": "Tie tool usage targets to the planner's bonus from day one"
+    },
+    "answer": "c",
+    "explanation": "Resistance usually signals a fear, such as losing expertise or status. Turning the expert from suspect into co-author puts their rules in the model and their name on the result.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-002",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Why reshuffle teams around a new AI asset, even when headcount is a small part of the gain?",
+    "options": {
+      "a": "An asset dropped into an unchanged organization gets absorbed by it",
+      "b": "Payroll reduction is where most of the program's value really comes from",
+      "c": "Employee representatives require a new organization chart",
+      "d": "New roles make the program more visible to the board"
+    },
+    "answer": "a",
+    "explanation": "The reshuffle is not the gain; it is what makes the other gain lines reachable. Unchanged teams keep taking yesterday's decisions with today's tool.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-003",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "What does the history of factory electrification teach about AI adoption?",
+    "options": {
+      "a": "Early adopters capture most of the value",
+      "b": "Gains came once work was redesigned and a new generation trained",
+      "c": "Adoption only takes off once the cost of the technology has collapsed",
+      "d": "Regulation is the main driver of adoption"
+    },
+    "answer": "b",
+    "explanation": "Electric motors paid off decades after they arrived, once factories were redesigned around them (Paul David). Plan the redesign, and overweight training for the incoming generation.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-001",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Operators override the scheduler's plan 30% of the time. What should the FDE do first?",
+    "options": {
+      "a": "Lock the plan in the system so that operators can no longer change it at all",
+      "b": "Send the operators back through the training program",
+      "c": "Report low adoption of the tool to the project sponsor",
+      "d": "Study the reasons: each override points to a missing rule or bad data"
+    },
+    "answer": "d",
+    "explanation": "Overrides are information. Each reveals a constraint the model lacks or data that is wrong; fixing them is how trust and accuracy rise together.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-004",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Two weeks after go-live at Polymex Industries, schedule adherence is below its old level. The plant manager wants to roll back. What do you advise?",
+    "options": {
+      "a": "Roll back now and relaunch the tool once the whole team has been retrained",
+      "b": "Hold course: a dip before the rise was expected and planned for",
+      "c": "Enforce the tool through daily usage KPIs so adherence recovers fast",
+      "d": "Accept that the planners' old method was better and keep it"
+    },
+    "answer": "b",
+    "explanation": "Performance dips before it rises on the change curve; the plan should have budgeted for it. Rolling back at the dip throws away the change just before it pays.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-005",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Go-live is planned for March. What should the plan include for the performance dip expected in the first weeks?",
+    "options": {
+      "a": "Targets raised early, to push the team through the dip faster",
+      "b": "A rollback to the old method at the first drop in output",
+      "c": "Buffers in targets and capacity, plus extra support on the floor",
+      "d": "A message to the floor that results will improve from the first day"
+    },
+    "answer": "c",
+    "explanation": "On the change curve, performance dips before it rises. Planning buffers and support for the dip keeps it from being read as failure and triggering a rollback.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-006",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Planners have stopped arguing against the new tool and now try it on a few orders, asking many questions. Which stage of the change curve is this?",
+    "options": {
+      "a": "Denial",
+      "b": "Resistance",
+      "c": "Exploration",
+      "d": "Commitment"
+    },
+    "answer": "c",
+    "explanation": "The curve runs denial, resistance, exploration, commitment. Trying the tool and asking questions is exploration; support matters most here.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-007",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "A quality lead raises a new technical objection each time the previous one is answered. What is the most likely reading?",
+    "options": {
+      "a": "The tool has deep technical flaws that the project team has missed",
+      "b": "The quality lead is being irrational and is best kept away from the project",
+      "c": "The objections call for a longer written answer from the vendor",
+      "d": "A fear, such as losing status or being blamed, drives the objections"
+    },
+    "answer": "d",
+    "explanation": "Resistance usually signals a fear: status, expertise, job or blame. When answers do not end objections, the argument is not the real issue; address the fear.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-008",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Senior planners fear the tool will be used to blame them for late orders. Which response addresses this best?",
+    "options": {
+      "a": "Agree openly how plan errors will be reviewed, as a team and without blame",
+      "b": "Show benchmark data proving that the tool's plans beat the plans they make by hand today",
+      "c": "Promise them that tool usage will not be monitored in any way",
+      "d": "Escalate to the sponsor so the concern does not slow the project"
+    },
+    "answer": "a",
+    "explanation": "Address the fear, not only the argument. Accuracy data answers the argument but leaves the fear of blame intact.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-009",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "During co-authoring, an expert planner's sequencing rule contradicts the ERP data. What should the team do?",
+    "options": {
+      "a": "Keep the ERP version, since it is the official system of record",
+      "b": "Encode the rule as stated, without checking, to keep the expert on side",
+      "c": "Test the rule with the expert on real cases, then encode it if it holds",
+      "d": "Drop the rule to keep the model simple until after go-live"
+    },
+    "answer": "c",
+    "explanation": "Co-authorship means the expert's rules go into the model, checked against real cases. Ignoring them loses the rule and the expert; encoding them blindly loses accuracy.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-010",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "The tool will soon publish plans built on rules from the plant's best planner. Why put that planner's name on the result?",
+    "options": {
+      "a": "It makes the planner formally accountable, in writing, for each plan the tool issues from now on",
+      "b": "It gives the planner ownership, so they defend the tool instead of attacking it",
+      "c": "It lets management compare the planner's output with colleagues' output",
+      "d": "It shows the vendor which users should be trained first"
+    },
+    "answer": "b",
+    "explanation": "Experts become co-authors: their rules in the model, their name on the result. The suspect becomes the author, with a stake in the tool's success.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-011",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "The project team leaves in three months. Who should carry the tool afterward?",
+    "options": {
+      "a": "The IT helpdesk, which already supports every other application running in the plant today",
+      "b": "The vendor's customer success manager, through quarterly calls",
+      "c": "Whichever planner happens to use the tool the most, informally",
+      "d": "An internal operational champion with a formal role and legitimacy"
+    },
+    "answer": "d",
+    "explanation": "An internal operational champion with a formal role, legitimacy and a direct line to the software teams carries the tools after the project team leaves.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-012",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Noor volunteers to be the tool's champion, on top of her full planning job, with no title or time set aside. What is missing?",
+    "options": {
+      "a": "Nothing: volunteering shows the motivation a champion needs most",
+      "b": "A deeper technical background so she can change the code herself",
+      "c": "A formal role and the legitimacy to speak for the floor",
+      "d": "A bonus tied to the number of tool logins on her team"
+    },
+    "answer": "c",
+    "explanation": "Goodwill is not enough. The champion needs a formal role and legitimacy, plus a direct line to the software teams, to keep the tool alive after the project ends.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-013",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Why should the tool's champion usually come from operations rather than from IT?",
+    "options": {
+      "a": "Peers on the floor trust someone who knows their work and its constraints",
+      "b": "IT staff are not allowed to change production schedules or planning data in most plants",
+      "c": "Operations staff need much less training on the software itself",
+      "d": "IT will be busy with integration work for years after go-live"
+    },
+    "answer": "a",
+    "explanation": "The champion is operational: legitimacy with the people who use the tool daily is what carries it. IT remains a partner, reached through the champion's direct line.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-014",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "A champion's direct line to the software team matters mainly because:",
+    "options": {
+      "a": "It lets the champion bypass the plant's IT security rules",
+      "b": "Floor needs reach the people who can change the tool, quickly",
+      "c": "It replaces the need for a steering committee after go-live",
+      "d": "The software team can then monitor each user's activity in detail"
+    },
+    "answer": "b",
+    "explanation": "Without a direct line, requests from the floor stall and the tool falls behind the work. The champion turns floor needs into changes.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-015",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "The new tool now does sequencing that took two planners all day. Which reshuffle fits the course?",
+    "options": {
+      "a": "Keep both planners in their old roles to avoid disruption on the floor",
+      "b": "Remove both planner positions at once to book the payroll saving",
+      "c": "Let each planner decide individually how to use the time that was freed",
+      "d": "Redesign their roles around exceptions and capacity decisions the tool surfaces"
+    },
+    "answer": "d",
+    "explanation": "An asset dropped into an unchanged organization gets absorbed by it. Redesigning roles around the new work is what makes the other gain lines reachable.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-016",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "The CEO wants to announce the AI program at next week's all-hands, before the first tool works. What do you advise?",
+    "options": {
+      "a": "Build quietly until it demonstrably works, then reveal it",
+      "b": "Announce it now so that every employee has plenty of time to prepare for it",
+      "c": "Announce now, and promise that no role will ever change",
+      "d": "Announce only the budget and keep the scope confidential"
+    },
+    "answer": "a",
+    "explanation": "Build in silence until the asset demonstrably works. An early announcement invites fears and rumors with nothing yet to show.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-017",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "The tool is ready to be shown to the whole plant. Besides the tool itself, what should the presentation include?",
+    "options": {
+      "a": "A live demo, with the rest of the details to follow in later months",
+      "b": "The vendor's roadmap of upcoming features and releases",
+      "c": "The usage targets each planner must hit from the first week",
+      "d": "The capture plan, the new team organization and the training"
+    },
+    "answer": "d",
+    "explanation": "The reveal comes as a package: the working asset, the capture plan, the new team and the training. A demo alone leaves people guessing what changes for them.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-018",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "The training budget for a new planning tool is limited. Where does the course suggest putting extra weight?",
+    "options": {
+      "a": "On the most senior staff, who have the most habits to unlearn",
+      "b": "On managers, who can then cascade the training to their teams",
+      "c": "On one go-live session that covers everyone at the same time",
+      "d": "On the incoming generation who will run the redesigned work"
+    },
+    "answer": "d",
+    "explanation": "Electrification paid off once work was redesigned and a new generation trained. Overweight training for the people who will carry the new way of working for decades.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-019",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "A project plan treats change management as a two-day training at go-live. What is wrong with it?",
+    "options": {
+      "a": "Two days is too short; it should be a full week of classroom training",
+      "b": "Change runs through the whole project, from scoping on, not only at go-live",
+      "c": "Nothing, provided the training covers every feature of the tool",
+      "d": "Training should be left to the vendor to save time for the project team"
+    },
+    "answer": "b",
+    "explanation": "Change management is not training at the end. It runs through the project: experts as co-authors, a champion, a reshuffled team, a planned reveal.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-020",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "A year after go-live, planners are back on spreadsheets; the tool still runs on its original rules. What was most likely missing?",
+    "options": {
+      "a": "A strict mandate that blocks the use of spreadsheets for planning on the plant network",
+      "b": "A second round of go-live training for every planner",
+      "c": "A regular feedback loop where the client says how its needs changed",
+      "d": "An upgrade to the latest model release from the vendor"
+    },
+    "answer": "c",
+    "explanation": "Needs change after go-live. Without regular moments where the client says what changed, tools decay on autopilot and people drift back to their own workarounds.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-021",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Camille, an expert scheduler, fears that once her rules are in the tool she will no longer be needed. What addresses this best?",
+    "options": {
+      "a": "Being clear early about her role after go-live, built on her expertise",
+      "b": "Showing her that the tool's plans are already more accurate than her own",
+      "c": "Postponing the question until after go-live to avoid tension now",
+      "d": "Telling her that questions about jobs are outside the project's scope"
+    },
+    "answer": "a",
+    "explanation": "Resistance usually signals a fear, here for her job. Address the fear itself; proving the tool better than her answers the argument and sharpens the fear.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-022",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "While a tool is built in silence, who outside the core project team should know about it?",
+    "options": {
+      "a": "The sponsor and the experts who co-author the model",
+      "b": "Nobody at all, the expert planners included, until the reveal",
+      "c": "The whole plant, through a regular project newsletter",
+      "d": "Only the vendor, since it supplies the software"
+    },
+    "answer": "a",
+    "explanation": "Building in silence means no public announcement before the asset works, not secrecy from the sponsor or from the experts whose rules go into the model.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-023",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "How should you describe the scheduling tool's goal to the shop floor?",
+    "options": {
+      "a": "In headcount terms: how many planning hours the plant can now cut",
+      "b": "In throughput terms: more good output from the same lines",
+      "c": "In technical terms: the model and data platform behind it",
+      "d": "In cost terms: the euro savings finance expects each year"
+    },
+    "answer": "b",
+    "explanation": "Communicate in throughput terms. Headcount framing feeds the job fear behind resistance; technical framing means little to the people affected.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-024",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Employee representatives must be consulted on new work tools at your site. When should you involve them?",
+    "options": {
+      "a": "Early, as required, before the rollout is already decided",
+      "b": "After go-live, once the results of the tool can speak for themselves",
+      "c": "Only if staff raise a formal complaint about the tool",
+      "d": "At the public reveal, at the same time as everyone else"
+    },
+    "answer": "a",
+    "explanation": "Where consultation is required, involve representatives early. Bringing them in after decisions are made turns a formal step into a conflict.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-025",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "IT has blocked the tool's network access for three weeks and the team cannot resolve it. Whose job is it to remove the blocker?",
+    "options": {
+      "a": "The steering committee's, at its next scheduled meeting",
+      "b": "The champion's, through informal contacts within IT",
+      "c": "The sponsor's, who has the authority to clear it now",
+      "d": "The vendor account manager's, through their IT contacts"
+    },
+    "answer": "c",
+    "explanation": "The sponsor removes blockers; the steering committee keeps the cadence. Waiting for the next committee lets a three-week block become a two-month one.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-026",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "In a deployment, what is the main job of the steering committee?",
+    "options": {
+      "a": "Remove day-to-day blockers as soon as they come up on site, without waiting",
+      "b": "Approve each change to the tool's code before it ships",
+      "c": "Stand in for the sponsor whenever the sponsor is unavailable",
+      "d": "Keep the cadence: regular reviews of progress, issues and decisions"
+    },
+    "answer": "d",
+    "explanation": "The steering committee keeps the cadence; the sponsor removes blockers. A committee that waits to clear daily blockers is too slow for them.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-2-027",
+    "domain": "CHG",
+    "tier": 2,
+    "stem": "Which signal best shows that a planning team has reached commitment on the change curve?",
+    "options": {
+      "a": "Logins have risen every week since go-live, on all shifts and all lines",
+      "b": "Planners propose improvements and defend the tool to peers",
+      "c": "Complaints about the tool have stopped since it went live",
+      "d": "Every planner has completed the full training course"
+    },
+    "answer": "b",
+    "explanation": "Commitment shows in ownership: people improve the tool and stand up for it. Silence, logins and training records can coexist with quiet resistance.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-002",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "The override log shows planners always move one order type off line 2 on night shift. What does this most likely reveal?",
+    "options": {
+      "a": "Night-shift planners need refresher training on how to use the tool's plans",
+      "b": "A missing constraint, such as a night-shift skill or tooling limit",
+      "c": "The tool is right and the night shift is ignoring its plans",
+      "d": "Random noise that will average out over the coming months"
+    },
+    "answer": "b",
+    "explanation": "A systematic override points to a rule the model lacks or data that is wrong. Treating it as a training or discipline issue throws that information away.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-003",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "When a user overrides a plan, what should the tool capture so the team can learn from it?",
+    "options": {
+      "a": "Only the count, so the override rate can be tracked over time",
+      "b": "The user's name, so that repeat overriders can be retrained",
+      "c": "Nothing, since logging overrides tends to discourage users",
+      "d": "The changed decision plus a short, structured reason for it"
+    },
+    "answer": "d",
+    "explanation": "Overrides are information only if their reasons are captured. A count shows the size of the problem, not which rule or data is missing.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-004",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "The override rate fell from 30% to 5% in two months. What should the FDE check before celebrating?",
+    "options": {
+      "a": "That logins on the tool rose by the same proportion",
+      "b": "That the sponsor has been told the tool is now trusted",
+      "c": "That the drop came from fixed rules and data, not from users giving up",
+      "d": "That the remaining overrides are spread evenly across all users and all shifts"
+    },
+    "answer": "c",
+    "explanation": "Fewer overrides is good news only if missing rules and bad data were fixed. Users who stop overriding but decide elsewhere have abandoned the tool, not adopted it.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-005",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "The vendor dashboard shows 95% daily logins. What better shows real adoption?",
+    "options": {
+      "a": "The average length of each user's session per day",
+      "b": "The number of reports exported from the tool each week",
+      "c": "The share of staff who completed the full training course on the tool",
+      "d": "The share of decisions actually taken with the tool's plans"
+    },
+    "answer": "d",
+    "explanation": "Adoption is not usage. Count decisions taken with the tool and the reasons for overrides; logins and sessions measure presence, not decisions.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-006",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Planners log in every morning, then build the actual plan in their own spreadsheet. How should the FDE read this?",
+    "options": {
+      "a": "Usage without adoption: find why decisions still happen outside the tool",
+      "b": "Successful adoption, since every planner logs in to the tool daily",
+      "c": "A training gap, best fixed with extra classroom sessions for every planner on site",
+      "d": "A discipline problem, best fixed by blocking the spreadsheets"
+    },
+    "answer": "a",
+    "explanation": "Logging in is not deciding. The spreadsheet holds rules or data the tool lacks, or a fear not yet addressed; finding which is the work.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-007",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Management wants to tie bonuses to tool login counts from day one. What is the likely effect?",
+    "options": {
+      "a": "Adoption rises, since the bonus gives every user a clear target",
+      "b": "Resistance disappears once money is at stake for each user",
+      "c": "Logins rise while real decisions keep being made elsewhere",
+      "d": "Data quality improves because users enter more information"
+    },
+    "answer": "c",
+    "explanation": "Mandating usage through KPIs from day one buys logins, not decisions. It also hides the override reasons that would improve the tool.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-008",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Alex, a respected shift leader, calls the new tool 'a toy'. Which first move does the course favor?",
+    "options": {
+      "a": "Ask his manager to add tool usage to his yearly objectives",
+      "b": "Show him the vendor's case studies from other plants",
+      "c": "Leave him out until the rest of the team is convinced",
+      "d": "Use the tool to solve one of his daily pains first"
+    },
+    "answer": "d",
+    "explanation": "To turn a skeptic, solve one of their pains first, show their own data and give them authorship. Mandates and outside case studies do not address why he doubts.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-009",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "A skeptical quality lead doubts the tool's defect predictions. Which evidence is most likely to persuade her?",
+    "options": {
+      "a": "Accuracy figures from the vendor's benchmark at other plants",
+      "b": "The predictions replayed on her own line's past batches",
+      "c": "A demo on a clean sample dataset prepared by the team",
+      "d": "Testimonials from users at a sister site of the group"
+    },
+    "answer": "b",
+    "explanation": "Skeptics trust their own data. A replay on her line's history answers her doubt in her terms; benchmarks and clean demos invite the reply 'not here'.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-010",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Sam, the most skeptical planner, keeps finding errors in the tool's plans. How can the FDE best use this?",
+    "options": {
+      "a": "Make him the reviewer who writes the missing rules, credited by name",
+      "b": "Limit his access to the tool so that his criticism does not spread",
+      "c": "Collect his errors into a formal report for the software vendor",
+      "d": "Ask him to hold his findings until the next scheduled release"
+    },
+    "answer": "a",
+    "explanation": "Give the skeptic authorship. His error-finding is the best source of missing rules, and authorship turns the critic into a defender.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-011",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "A maintenance lead objects that the tool ignores planned stops. You reply at once with accuracy statistics. What did you skip?",
+    "options": {
+      "a": "Confirming the objection with his manager before you replied",
+      "b": "Sending the objection to the vendor for a formal answer",
+      "c": "Acknowledging his concern and clarifying the case behind it",
+      "d": "Waiting for the steering committee to rule on the objection"
+    },
+    "answer": "c",
+    "explanation": "Objection handling runs acknowledge, clarify, answer with evidence, confirm. Statistics fired back unasked miss the specific case and make the person feel unheard.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-012",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "A planner says the plans ignore a cleaning step on line 3. What is the strongest answer?",
+    "options": {
+      "a": "Overall accuracy figures showing that the tool performs well across all lines on average",
+      "b": "Real plans showing whether the step is handled, or a fix if it is not",
+      "c": "A promise that the vendor will look at it in a later release",
+      "d": "An explanation that the cleaning step is a minor edge case"
+    },
+    "answer": "b",
+    "explanation": "Answer with evidence on the specific case. If the objection is right, it is an override-style signal: fix the rule and show the fix.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-013",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "You have answered a planner's objection about rush orders. What closes the loop?",
+    "options": {
+      "a": "Logging the objection as resolved in the project tracker",
+      "b": "Reporting the outcome to her manager the same day",
+      "c": "Moving on quickly so the meeting stays on schedule",
+      "d": "Confirming with her that the answer resolves the concern"
+    },
+    "answer": "d",
+    "explanation": "The last step is confirm: check with the person that the concern is resolved. Closing it on your own side leaves the objection alive on hers.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-014",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "You must tell a production manager that his team's data entry causes most plan errors. How should you open?",
+    "options": {
+      "a": "With the facts: the error log and the cases traced to data entry",
+      "b": "With your view that his team needs more discipline in data entry",
+      "c": "With praise, keeping the problem for the end of the meeting",
+      "d": "With a reminder that the sponsor expects results this quarter"
+    },
+    "answer": "a",
+    "explanation": "Difficult conversations start with facts before opinions. The traced cases give him something to examine instead of a judgment to defend against.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-015",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "In a tense review, a planner says the project 'is making him look incompetent'. Which reply follows the course?",
+    "options": {
+      "a": "Reassure him that the tool is right, so he has nothing at all to fear from it",
+      "b": "Agree that some planners will struggle with the change",
+      "c": "Separate him from the problem: the issue is the process, not his skill",
+      "d": "End the meeting and report the conflict to the sponsor"
+    },
+    "answer": "c",
+    "explanation": "Separate the person from the problem. Locating the issue in the process protects his standing and keeps the discussion on what to fix.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-016",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "How should a difficult conversation with a resistant department head end?",
+    "options": {
+      "a": "On a summary of everything that has gone wrong so far",
+      "b": "On an agreed next step, with an owner and a date",
+      "c": "On a reminder of what the sponsor expects from the department",
+      "d": "Without commitments, to let emotions settle for a while"
+    },
+    "answer": "b",
+    "explanation": "End on a next step. Without an owner and a date, the conversation changes nothing on the ground.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-017",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "A planner ignored a delay the tool had flagged, and a delivery was late. How should you raise it with him?",
+    "options": {
+      "a": "Start from the dated facts and look together at why the flag was missed",
+      "b": "Remind him that the tool was right and that he must follow its plans",
+      "c": "Raise it with his manager first so that it is handled formally",
+      "d": "Let it pass, to protect the relationship with the planning team"
+    },
+    "answer": "a",
+    "explanation": "Facts before opinions, and the person separated from the problem: looking at why the flag was missed may reveal a missing rule rather than a careless planner.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-018",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "How should operators be trained on a new dispatching tool?",
+    "options": {
+      "a": "In a single classroom day for all shifts, a week before go-live",
+      "b": "Through e-learning videos to be completed before go-live",
+      "c": "By the vendor, in a demo environment with sample data",
+      "d": "At their workstation, on real cases, shift by shift"
+    },
+    "answer": "d",
+    "explanation": "Train at the workstation, on real cases, shift by shift. Classroom and demo training teach features; the workstation teaches the job with the tool.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-019",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Night shift gets little support after go-live and its plans drift. What helps most?",
+    "options": {
+      "a": "A recording of the day-shift training session for night staff",
+      "b": "A phone hotline to the vendor's central support desk",
+      "c": "Super-users on the night shift who coach colleagues on real cases",
+      "d": "An email to night staff with the full user manual attached"
+    },
+    "answer": "c",
+    "explanation": "Build super-users on every shift. A peer on site answers questions on real cases at the moment they arise; remote support and manuals do not.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-020",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Two months after go-live, the only super-user on the night shift leaves. What should the training plan have provided?",
+    "options": {
+      "a": "Several super-users per shift, so coaching never hinges on one person",
+      "b": "A recording of the super-user's sessions for the next night-shift hires",
+      "c": "A contract clause requiring the vendor to provide on-site cover",
+      "d": "A full classroom retraining of every operator on that shift"
+    },
+    "answer": "a",
+    "explanation": "Super-users carry training on the floor, shift by shift. Building several per shift keeps coaching alive when people move; recordings and vendor cover do not coach on real cases.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-021",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Alex plans operator training on a clean demo dataset. What does this approach miss?",
+    "options": {
+      "a": "The chance to collect usage data for the vendor's own model",
+      "b": "Operators' own work and its exceptions, handled by the tool",
+      "c": "A formal certificate that each operator can show to auditors",
+      "d": "Coverage of every feature, which demo data shows more fully"
+    },
+    "answer": "b",
+    "explanation": "Train on real cases at the workstation. Operators trust a tool they have seen handle their own work, exceptions included; real cases also surface missing rules early.",
+    "source": "Day 4, human roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-022",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Plant-floor supervisors quietly keep the old routine alive despite the sponsor's support. Which group did the stakeholder map underweight?",
+    "options": {
+      "a": "The board, whose formal backing had already been secured",
+      "b": "The vendor's team, who configured the tool at the start",
+      "c": "Employee representatives, who were consulted formally",
+      "d": "Middle management, whose daily choices shape the floor"
+    },
+    "answer": "d",
+    "explanation": "Middle management and IT are often decisive. Supervisors decide what actually happens each shift, whatever the sponsor says.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-023",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "Your stakeholder map shows a maintenance manager with high influence and low interest in the project. What follows?",
+    "options": {
+      "a": "Manage him closely as a key player in every project meeting",
+      "b": "Keep him satisfied: brief him early on what touches his area",
+      "c": "Monitor him only, with minimal effort, since interest is low",
+      "d": "Keep him informed through the general project newsletter"
+    },
+    "answer": "b",
+    "explanation": "On the influence-interest grid, high influence and low interest means keep satisfied. Ignoring him risks a late veto from someone who can block.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "CHG-3-024",
+    "domain": "CHG",
+    "tier": 3,
+    "stem": "The IT manager was not consulted and now delays the tool's network access. What would most likely have prevented this?",
+    "options": {
+      "a": "Asking the sponsor in advance to order IT to comply",
+      "b": "Hosting the tool outside the company network from the start",
+      "c": "Mapping IT as a decisive stakeholder and involving it early",
+      "d": "Choosing the tool from IT's list of preferred vendors"
+    },
+    "answer": "c",
+    "explanation": "IT is often decisive. Mapping it early and involving it turns a likely blocker into a partner; going around it creates risk and resentment.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]

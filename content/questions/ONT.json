@@ -1,0 +1,1256 @@
+[
+  {
+    "id": "ONT-1-001",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Which description best fits an ontology?",
+    "options": {
+      "a": "A data lake that stores all of the company's raw operational data",
+      "b": "A dashboard showing the plant's main operational KPIs in real time",
+      "c": "A formal model of the business: things, relations, rules, allowed actions",
+      "d": "A hierarchy of product categories and sub-categories used for reporting purposes"
+    },
+    "answer": "c",
+    "explanation": "A category hierarchy is a taxonomy, and a lake stores what happened. The ontology captures meaning: what exists, how it connects, the rules that apply and the actions permitted.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-002",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Why do many ontology efforts underdeliver, according to the course?",
+    "options": {
+      "a": "They rely on graph databases where relational databases would have done the job",
+      "b": "They model the facts but skip the rules experts use to judge decisions",
+      "c": "They are built too slowly by teams inside the company",
+      "d": "They describe each product in far too much detail"
+    },
+    "answer": "b",
+    "explanation": "Products, machines and suppliers are the easy part. The rules your best people apply to decide what a good decision looks like carry the value, and they are rarely written down.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-003",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "In data.world's enterprise benchmark, what happened when the model answered through a knowledge graph rather than the raw database?",
+    "options": {
+      "a": "Accuracy roughly tripled",
+      "b": "Costs doubled with no gain in accuracy",
+      "c": "Answers came faster, with unchanged accuracy",
+      "d": "Hallucinations disappeared completely"
+    },
+    "answer": "a",
+    "explanation": "Correct answers rose from 16% to 54% (Sequeda et al., 2023). The test used an insurance schema, so it proves the principle rather than a manufacturing figure.",
+    "source": "Further reading, data.world benchmark",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-001",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "A scheduler keeps placing family F2 right after F7, which requires a full purge. Where should that rule live in the model?",
+    "options": {
+      "a": "On machine #7 only, recorded as part of today's machine status",
+      "b": "On each sales order that contains family F2",
+      "c": "In the planner's personal notes, as today",
+      "d": "On the product family and machine type, as a constraint"
+    },
+    "answer": "d",
+    "explanation": "A constraint that holds for every instance belongs at the type level. When it is missing, the tool generates impossible plans, the floor overrides it, and trust is lost.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-001",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Where do you usually find the rules that make a plant's schedule actually feasible?",
+    "options": {
+      "a": "In the ERP routing tables and standard rates",
+      "b": "In the planning software vendor's documentation",
+      "c": "In experienced planners' heads and spreadsheets",
+      "d": "In the plant's quality manual and procedures"
+    },
+    "answer": "c",
+    "explanation": "Feasibility rules often live as shadow algorithms kept by experts. Extracting and encoding them, by sitting with the people and walking real cases, is core ontology work.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-004",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "In the course's terms, what is a knowledge graph?",
+    "options": {
+      "a": "The ontology filled with the company's actual facts, as nodes and links",
+      "b": "A catalog listing every dataset the company stores, with its owner and location",
+      "c": "A chart showing how the company's departments report to each other",
+      "d": "A search engine that indexes all the documents on the intranet"
+    },
+    "answer": "a",
+    "explanation": "The ontology is the model of what exists and how it relates; the knowledge graph is that model populated with real products, machines and orders. A data catalog only lists where data sits.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-005",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your CIO says the new data lake makes the company AI-ready. What does the course say is still missing?",
+    "options": {
+      "a": "More storage, so that ten years of plant history fit in the lake",
+      "b": "A model of what the data means: things, relations and rules",
+      "c": "A faster network link between the plants and the cloud provider",
+      "d": "A dashboard layer so managers can browse the lake themselves"
+    },
+    "answer": "b",
+    "explanation": "A lake stores what happened. It does not say what things are, how they connect or which rules apply, which is what the ontology adds and what AI needs to act correctly.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-006",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Models get more capable every year. Does that remove the need to model your business?",
+    "options": {
+      "a": "Yes: the next model generation will infer your rules from your raw data alone",
+      "b": "Yes, once the model has been fine-tuned on public industry documents",
+      "c": "No: a model cannot know your plants' rules unless you give them to it",
+      "d": "No, but only because today's models are still too slow for plant use"
+    },
+    "answer": "c",
+    "explanation": "Your products, constraints and expert rules exist nowhere in public training data. However capable the model, it acts well only on the context your ontology gives it.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-007",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your first AI use case built a model of products, machines and constraints. Why should the next use cases cost less?",
+    "options": {
+      "a": "The AI vendor usually discounts follow-on projects for loyal clients",
+      "b": "The team can skip the work with experts on later projects",
+      "c": "AI models get cheaper every year, so any later project costs less",
+      "d": "They reuse the objects and rules already modeled"
+    },
+    "answer": "d",
+    "explanation": "The ontology compounds: each new use case builds on what is already modeled, so the second and third need less discovery and less build than the first.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-008",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your company switches to a different AI model vendor. What happens to a well-built ontology?",
+    "options": {
+      "a": "It stays, and the new model works on top of it",
+      "b": "It must be rebuilt from scratch in the new vendor's own format",
+      "c": "It is lost, since it lived inside the old model's training",
+      "d": "It becomes obsolete, as newer models model the business themselves"
+    },
+    "answer": "a",
+    "explanation": "The model is rented; the ontology is yours. It sits outside any model and stays independent of the vendor, which is why it is the asset worth building.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-009",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Which of these belongs to the rules of an ontology rather than its facts?",
+    "options": {
+      "a": "Line 3 has a nominal capacity of 400 units per hour",
+      "b": "Rush orders for key accounts go ahead of stock replenishment",
+      "c": "Product P40 is made from resin R7 and dye D2, in a fixed ratio",
+      "d": "Supplier S12 delivers two grades of resin to the plant"
+    },
+    "answer": "b",
+    "explanation": "Capacities, recipes and suppliers are facts. A priority between rush orders and replenishment is a rule experts use to judge a good decision, and the rules are where the value sits.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-010",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "A vendor offers a ready-made ontology for your industry, set up in two weeks. What does the course say?",
+    "options": {
+      "a": "Buy it, since a standard industry model already covers what makes your plants different",
+      "b": "Buy it, as long as the vendor also supplies the most capable model",
+      "c": "Your plants' rules still have to be captured on the floor, with your experts",
+      "d": "Decline it and wait until your data lake has been completed"
+    },
+    "answer": "c",
+    "explanation": "An ontology cannot be bought off the shelf. What makes it valuable is how your plants actually run, which only engineers sitting with planners and quality leads can capture.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-011",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your team proposes letting an AI model generate the ontology from the ERP tables. What will it most likely miss?",
+    "options": {
+      "a": "The list of machines and their codes in each plant",
+      "b": "The products and the bills of materials recorded for each",
+      "c": "The suppliers recorded in the ERP for each purchased material",
+      "d": "The unwritten rules your experts use to decide"
+    },
+    "answer": "d",
+    "explanation": "ERP tables hold facts such as machines, products and suppliers. The rules that make decisions good live in experts' heads and spreadsheets, so they cannot be generated from tables.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-012",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "The same scheduling software succeeds in one group's plants and fails in another's. What best explains this?",
+    "options": {
+      "a": "How well each plant's own context was captured and modeled",
+      "b": "One group bought a newer version of the same software",
+      "c": "The failing group was running a less capable AI model behind the software",
+      "d": "The vendor's support team favored the larger of the two groups"
+    },
+    "answer": "a",
+    "explanation": "Context beats code. The software is the same; what differs is whether each plant's facts, constraints and expert rules were modeled before the tool was asked to decide.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-013",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Why does the course cite Palantir when it discusses ontologies?",
+    "options": {
+      "a": "It sells the leading off-the-shelf ontology for the manufacturing sector",
+      "b": "Its platform is built around an ontology layer on which AI acts",
+      "c": "It showed that large models no longer need a model of the business",
+      "d": "It trained the first large language model built for industry"
+    },
+    "answer": "b",
+    "explanation": "Palantir is the clearest market proof of the pattern: AI acting on an ontology layer. It does not show that ontologies can be bought ready-made for your plants.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-014",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Why does the course treat the data.world knowledge graph benchmark as proof of a principle, not a plant figure?",
+    "options": {
+      "a": "It compared two models rather than two ways of supplying data",
+      "b": "It measured answer speed rather than the accuracy of the answers",
+      "c": "It was run on an insurance schema, not on manufacturing data",
+      "d": "It tested a single question against one small spreadsheet"
+    },
+    "answer": "c",
+    "explanation": "The benchmark shows that grounding a model in a knowledge graph raises accuracy by multiples. Because the schema came from insurance, the exact gain at your plant must be measured, not assumed.",
+    "source": "Further reading, data.world benchmark",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-015",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your AI assistant often gives wrong answers about which machines can run which products. What improves accuracy most?",
+    "options": {
+      "a": "Asking each question several times and keeping the most common answer",
+      "b": "Moving to whichever model currently tops the public benchmarks",
+      "c": "Giving it direct access to the raw tables of the data lake",
+      "d": "Grounding it in a knowledge graph of your plant"
+    },
+    "answer": "d",
+    "explanation": "A model answers well about your plant only when it works through a structured model of it. Grounding in a knowledge graph raises accuracy by multiples; raw tables do not carry meaning.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-016",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your IT team says the database schema already is your ontology. What is the key difference?",
+    "options": {
+      "a": "A schema says how data is stored; an ontology says what it means",
+      "b": "A schema is relational, while an ontology must live in a graph database",
+      "c": "A schema covers one system, while an ontology is several schemas merged",
+      "d": "None that matters: ontology is simply a newer word for a schema"
+    },
+    "answer": "a",
+    "explanation": "A schema describes storage. The ontology describes what exists, how things relate, which rules apply and which actions are allowed, whatever the storage underneath.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-017",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "A CFO calls the ontology project 'IT hygiene with no business value'. What is the best response?",
+    "options": {
+      "a": "It reduces the number of servers and licences that IT has to run",
+      "b": "It encodes the rules behind the decisions that move margin",
+      "c": "It is required by regulation before the company can use AI at all",
+      "d": "Agreed, so IT should fund it from its own budget"
+    },
+    "answer": "b",
+    "explanation": "The ontology captures how the business decides: scheduling, formulation, release. That is where margin sits, so it is a business asset, not IT housekeeping.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-1-018",
+    "domain": "ONT",
+    "tier": 1,
+    "stem": "Your ontology states that a planner may move an order between lines but not change its recipe. Which part of the ontology is this?",
+    "options": {
+      "a": "A taxonomy of order categories used for reporting",
+      "b": "A record of past events kept in the data lake",
+      "c": "The actions allowed, and who may take them",
+      "d": "A field definition in the ERP database schema"
+    },
+    "answer": "c",
+    "explanation": "An ontology goes beyond things and relations: it states which rules apply and which actions are allowed. That is what lets people and AI act on it safely.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-002",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Machine #7 is down for maintenance today. Where does that information belong in the model?",
+    "options": {
+      "a": "On the instance machine #7, as its current state",
+      "b": "On the machine type, so that every similar machine shows it",
+      "c": "In the setup matrix of that machine type",
+      "d": "On each product family that normally runs on machine #7"
+    },
+    "answer": "a",
+    "explanation": "Types carry capabilities and constraints that hold for every machine of that kind. Today's state, such as a breakdown, belongs to the instance.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-003",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "A new press of a model the plant already runs arrives next month. What should the team add to the ontology?",
+    "options": {
+      "a": "A new machine type that copies all the rates and constraints of the old one",
+      "b": "A new instance linked to the existing machine type",
+      "c": "Nothing until the press has run for a full quarter",
+      "d": "A new taxonomy branch for presses bought this year"
+    },
+    "answer": "b",
+    "explanation": "The type already carries the rates, allowed families and setup rules. Adding an instance inherits them; copying them into a new type creates two versions that drift apart.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-004",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Your team wants to automate order release next month, before products and constraints are modeled. What do you advise?",
+    "options": {
+      "a": "Automate now and rebuild the model later from the system's logs",
+      "b": "Automate now, but only for the night shift at first",
+      "c": "Model what the objects are first, then automate what they do",
+      "d": "Use a larger model so it can infer the constraints on its own"
+    },
+    "answer": "c",
+    "explanation": "Automation acts on objects. If what a product, an order or a constraint is has not been modeled, the automation acts on guesses and its errors reach the floor.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-005",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "A pilot agent that reschedules orders keeps confusing work orders with sales orders. What is the root cause?",
+    "options": {
+      "a": "The agent's prompt is too short to describe the plant",
+      "b": "The model's temperature setting is set too high for this task",
+      "c": "The ERP is too old to be used safely by agents",
+      "d": "The objects and their relations were never modeled"
+    },
+    "answer": "d",
+    "explanation": "An agent can only tell objects apart if the model says what each one is and how it relates to the others. Prompt tweaks do not replace modeling what things are.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-006",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "An engineer argues a capable model can schedule straight from raw ERP tables, with no ontology. What will most likely go wrong?",
+    "options": {
+      "a": "Plans that break constraints the tables do not hold",
+      "b": "Answers that arrive too slowly for the planners to use them in their daily work",
+      "c": "Licence fees that run well above the agreed budget",
+      "d": "Refusals to answer questions about scheduling"
+    },
+    "answer": "a",
+    "explanation": "Capable models do not remove the need to model the business. Constraints that are missing from the tables are invisible to the model, so it proposes plans the floor cannot run.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-007",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Two next use cases have similar value. One needs mostly new objects; the other reuses the scheduling model. Which first?",
+    "options": {
+      "a": "The one with new objects, to widen the model's coverage faster",
+      "b": "The one that reuses the scheduling model's objects",
+      "c": "Either one, since the order of use cases does not change cost",
+      "d": "Neither until a full enterprise ontology has been completed"
+    },
+    "answer": "b",
+    "explanation": "The ontology is the roadmap. At similar value, the use case that reuses modeled objects costs less and arrives sooner, and each reuse makes the next one cheaper.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-008",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Each new use case at Polymex Industries comes with its vendor's own data model. What does the course warn about?",
+    "options": {
+      "a": "The plant will run out of database storage within a year",
+      "b": "Vendors will refuse to work alongside one another on the same plant data",
+      "c": "Nothing is reused, so each use case costs as much as the first",
+      "d": "The models will be too consistent to catch each other's errors"
+    },
+    "answer": "c",
+    "explanation": "Separate data models break the compounding effect. A shared ontology lets the second and third use cases reuse objects; vendor-specific models force the discovery work to start again.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-009",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Your project plan allocates no time to modeling before development starts. What is the main risk?",
+    "options": {
+      "a": "The vendor will charge more for its software licence",
+      "b": "The model will run too slowly once in production on the plant's servers",
+      "c": "IT will refuse to host the resulting database",
+      "d": "Hidden rules surface during build, and the schedule slips anyway"
+    },
+    "answer": "d",
+    "explanation": "Ontology work is discovery work. Rules and data gaps appear whether or not time was planned for them; budgeting the time up front avoids a slip that was coming anyway.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-010",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Halfway through modeling, the team finds planners use five unwritten sequencing rules. How should the manager see this?",
+    "options": {
+      "a": "As an expected output of discovery, to fold into the model",
+      "b": "As scope creep, to be pushed to a later project phase",
+      "c": "As a sign that the planners are resisting the project",
+      "d": "As proof that the ERP has to be replaced before going further"
+    },
+    "answer": "a",
+    "explanation": "Finding unwritten rules is the point of discovery. Those rules are where the value sits; deferring them means the tool will produce plans the floor overrides.",
+    "source": "Day 2, leading an FDE project",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-011",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "You are staffing the modeling workshops for a scheduling use case. Who must take part alongside the engineers?",
+    "options": {
+      "a": "The IT team and the ERP integrator, who know where the data is stored",
+      "b": "The planners and quality leads who make the decisions",
+      "c": "The vendor's consultants, working from the ERP configuration",
+      "d": "The plant director, who sets the site's strategy"
+    },
+    "answer": "b",
+    "explanation": "An ontology is built by hand, on the floor, by engineers sitting with planners and quality leads. The rules that matter live with them, not in the ERP or with the vendor.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-012",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Six months after go-live, a new line and three products were added and plans keep getting worse. What most likely happened?",
+    "options": {
+      "a": "The AI model has degraded through daily use since go-live",
+      "b": "Operators have gradually forgotten the training they received",
+      "c": "Nobody owns the ontology, so it no longer matches the plant",
+      "d": "The ERP database has grown too large for the scheduler to read"
+    },
+    "answer": "c",
+    "explanation": "Someone must own the ontology after go-live. Plants change; a model that is not kept in step decays, and the plans built on it degrade with it.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-013",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Who should own the ontology once the deployment is live?",
+    "options": {
+      "a": "The AI vendor, as part of its standard support contract",
+      "b": "Nobody, since a well-built ontology stays stable once finished",
+      "c": "The project team, until it moves on to the next site in the rollout",
+      "d": "A named owner who updates it as the plant changes"
+    },
+    "answer": "d",
+    "explanation": "Without a named owner the ontology decays as lines, products and rules change. A project team that leaves cannot be that owner.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-014",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "A new product family is introduced at Ferralux. What should happen to the ontology?",
+    "options": {
+      "a": "Its owner adds the family with its constraints and setup rules",
+      "b": "Nothing, as the model will learn the new family from incoming orders",
+      "c": "The vendor regenerates the ontology at its next software release",
+      "d": "Planners note the family's rules in their own spreadsheets"
+    },
+    "answer": "a",
+    "explanation": "New families bring new constraints and setup rules. If they are not modeled, the tool plans them as if no rule applied and the floor overrides it.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-015",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "An agent will move orders between lines. What makes this safe, according to the course?",
+    "options": {
+      "a": "A detailed prompt asking the agent to be careful",
+      "b": "The ontology states which moves are permitted under which constraints",
+      "c": "Letting the agent learn from its own mistakes on the floor",
+      "d": "Running the agent only outside normal working hours"
+    },
+    "answer": "b",
+    "explanation": "Agents act safely when the ontology states the permitted actions and their constraints. A prompt asking for care is not a rule the software can check.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-016",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Your agent proposed moving a food-grade order onto a line not certified for it. What is the right fix?",
+    "options": {
+      "a": "Add a sentence about food-grade orders to the agent's instructions",
+      "b": "Retrain the model on last year's schedules from the whole plant",
+      "c": "Encode the certification as a constraint on permitted moves",
+      "d": "Remove the agent's access to that line by hand each week"
+    },
+    "answer": "c",
+    "explanation": "A constraint stated in the ontology is checked on every action. A sentence in the prompt can be ignored or lost, and manual blocking does not scale.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-017",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Why does an agent need the ontology's allowed actions, and not only its facts?",
+    "options": {
+      "a": "Facts are often out of date, while the allowed actions stay fixed after go-live",
+      "b": "Allowed actions make the agent's answers faster to compute",
+      "c": "Facts are stored in the ERP, so the agent cannot read them",
+      "d": "Facts say what is; allowed actions say what it may change"
+    },
+    "answer": "d",
+    "explanation": "Knowing the plant is not the same as knowing what may be done in it. The permitted actions and their constraints are what bound an agent's behavior.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-2-018",
+    "domain": "ONT",
+    "tier": 2,
+    "stem": "Your model covers products, machines and routings, yet planners still override one plan in three. What should be modeled next?",
+    "options": {
+      "a": "More attributes for each product, such as color and packaging",
+      "b": "A finer breakdown of the routing steps already modeled",
+      "c": "A full history of every machine's past breakdowns and repairs",
+      "d": "The rules planners use to choose between feasible plans"
+    },
+    "answer": "d",
+    "explanation": "Modeling products and machines is not enough. The judgment rules experts apply are where the value sits, and frequent overrides show they are still missing.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-002",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "You need to record that the mold on line 2 was changed at 14:10. How should this be modeled?",
+    "options": {
+      "a": "As a timestamped event, separate from the line's state",
+      "b": "As an attribute that is overwritten on the line record",
+      "c": "As a new machine type created for line 2",
+      "d": "As a direct relationship between the mold and the product"
+    },
+    "answer": "a",
+    "explanation": "Events are things that happen at a time; states are what is true now. Keeping changes as events preserves history and lets the current state be derived and audited.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-003",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A recipe changes on 1 March, but February batches must still trace to the old version. What does the model need?",
+    "options": {
+      "a": "An overwrite of the recipe, with a backup file kept elsewhere",
+      "b": "Recipe versions with valid-from and valid-to dates",
+      "c": "A new product code issued for every change to the recipe",
+      "d": "A free-text comment noting the date of the change"
+    },
+    "answer": "b",
+    "explanation": "Temporal validity lets each batch link to the recipe version valid when it was made. Overwriting loses traceability; new product codes break the product's identity.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-004",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Resin use is stored in kilograms in one system and in pounds in another. What should the ontology do?",
+    "options": {
+      "a": "Store the bare numbers and let the model infer the unit",
+      "b": "Keep only the system that already uses metric units",
+      "c": "Attach a unit to each quantity and convert explicitly",
+      "d": "Round both values to whole numbers before comparing them"
+    },
+    "answer": "c",
+    "explanation": "Units of measure are a modeling primitive. Bare numbers invite silent errors of a factor of two; explicit units and conversions make every quantity unambiguous.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-005",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A batch can draw resin from several lots, and one lot feeds many batches. How do you model batch to lot?",
+    "options": {
+      "a": "A one-to-many relationship from each lot to the batches it feeds, with quantities",
+      "b": "An attribute on the batch holding a single lot code",
+      "c": "A hierarchy that places lots underneath their batches",
+      "d": "A many-to-many relationship, with the quantity used on each link"
+    },
+    "answer": "d",
+    "explanation": "Cardinality must match reality. One-to-many would lose batches that mix lots, which breaks traceability exactly when a recall needs it.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-006",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Should 'supplier' be an attribute of a material or an entity of its own?",
+    "options": {
+      "a": "An entity, since suppliers have their own properties and relations",
+      "b": "An attribute, since each material record in the ERP holds exactly one supplier name",
+      "c": "An attribute, since extra entities slow down every query",
+      "d": "Neither, since suppliers belong only in the purchasing system"
+    },
+    "answer": "a",
+    "explanation": "Suppliers have sites, lead times, certifications and links to many materials. Modeled as a text attribute, none of that can be queried or reasoned over.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-007",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Setup time depends on both the family leaving the machine and the family arriving. Where should it be modeled?",
+    "options": {
+      "a": "On the incoming family, as one average setup time",
+      "b": "On each pair of families, in the machine type's setup matrix",
+      "c": "On the machine instance, as the average setup time observed over the last year",
+      "d": "On each work order, as a note written by the planner"
+    },
+    "answer": "b",
+    "explanation": "Sequence-dependent setups are properties of the transition, held at type level. A single average per family hides exactly the sequencing choices the scheduler must make.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-008",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "After go-live, which pattern most strongly points to a missing type-level constraint?",
+    "options": {
+      "a": "One operator overrides plans much more often than colleagues on the same shift do",
+      "b": "Overrides spike during a single week of holiday staffing",
+      "c": "The same kind of sequence is overridden on every similar machine",
+      "d": "Plans are overridden only on days when a machine breaks down"
+    },
+    "answer": "c",
+    "explanation": "A constraint missing at type level fails the same way on every instance of the type. Isolated or one-off overrides point rather to people, staffing or breakdowns.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-009",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A minimum batch size applies to every extruder of one type but was stored only on extruder E3. What will happen?",
+    "options": {
+      "a": "Nothing, since the scheduler generalizes the rule from extruder E3",
+      "b": "Extruder E3 is excluded from every plan the scheduler produces",
+      "c": "The rule reaches the other extruders through the type automatically",
+      "d": "Plans on the other extruders break the rule and get overridden"
+    },
+    "answer": "d",
+    "explanation": "A rule stored on one instance applies to that instance only. The other machines get infeasible plans, the floor overrides them and trust erodes.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-010",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Planners used the new scheduler for two weeks, then went back to spreadsheets. Its plans looked valid on screen. What is the likeliest cause?",
+    "options": {
+      "a": "Missing constraints made plans infeasible, and trust collapsed",
+      "b": "The interface was too complex for daily use by planners",
+      "c": "The planners had not been trained long enough on the new tool before go-live",
+      "d": "The model's outputs varied too much between two runs"
+    },
+    "answer": "a",
+    "explanation": "Plans that look valid but ignore real constraints get overridden on the floor, and after a few such plans planners stop trusting the tool. Predict this before go-live.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-011",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "In a pre-go-live review, which check best predicts floor overrides?",
+    "options": {
+      "a": "Load-test the scheduler with ten times the usual order volume and check response times",
+      "b": "Compare each type's constraints with the rules planners say they enforce",
+      "c": "Confirm that every ERP master data field has a value",
+      "d": "Walk the plant director through the scheduler's main screens"
+    },
+    "answer": "b",
+    "explanation": "Overrides come from rules the floor enforces and the model lacks. Checking type-level constraints against planners' rules finds them before go-live; filled ERP fields can still be wrong.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-012",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A planner says, 'We always run light colors before dark.' What should you ask next?",
+    "options": {
+      "a": "How many years have you been applying that rule?",
+      "b": "Could you write down all of your rules in a document for us?",
+      "c": "When did you last break that rule, and why?",
+      "d": "Would you agree to the tool enforcing that rule strictly?"
+    },
+    "answer": "c",
+    "explanation": "Exceptions reveal the real rule and its conditions. A stated rule taken at face value becomes a hard constraint the floor will override when the exception comes up.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-013",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "After go-live, which source best reveals the rules still missing from your model?",
+    "options": {
+      "a": "The ERP's standard routing tables and rates",
+      "b": "The vendor's default configuration for the industry",
+      "c": "The findings of the plant's latest annual quality audit",
+      "d": "The log of planner overrides, with the reason for each"
+    },
+    "answer": "d",
+    "explanation": "Studying overrides is one of the three ways to extract shadow algorithms. Each override with its reason points to a missing rule or to wrong data.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-014",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A planner keeps a spreadsheet with color-coded cells and hand-built formulas. How should the FDE treat it?",
+    "options": {
+      "a": "As a shadow algorithm, to decode with the planner",
+      "b": "As a bad practice to retire on the day of go-live",
+      "c": "As raw data to import into the new tool as it is",
+      "d": "As personal notes that fall outside the project scope"
+    },
+    "answer": "a",
+    "explanation": "Real decision rules often live in spreadsheets like this. Decoding the logic with its author turns it into explicit rules the model can carry.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-015",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Interviewing a quality lead about lot release, which approach best surfaces the real rules?",
+    "options": {
+      "a": "Ask the lead to describe the ideal release process step by step",
+      "b": "Review ten recent lots: which were held, which released, and why",
+      "c": "Read the quality manual first, then confirm each of its steps with the lead",
+      "d": "Send a questionnaire to every quality technician on site"
+    },
+    "answer": "b",
+    "explanation": "Walking recent real cases reveals the rules actually applied, exceptions included. Manuals and ideal descriptions reproduce the official process, not the one that runs.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-016",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "One supplier appears as 'Supplier 12' in the ERP, 'S-012 Resins' in the QMS and 'V0042' in the WMS. What is needed?",
+    "options": {
+      "a": "Let the model guess at query time which records match",
+      "b": "Rename the supplier the same way in all three systems so that the names match",
+      "c": "An explicit mapping linking the three codes to one supplier",
+      "d": "Keep the ERP record and delete the two other records"
+    },
+    "answer": "c",
+    "explanation": "Identity resolution needs explicit, maintained mapping. Guessing at query time is unreliable, and renaming or deleting records in owner systems breaks what depends on them.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-017",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Why is fuzzy name matching alone risky for linking materials across systems?",
+    "options": {
+      "a": "It is too slow to run on more than a few thousand records",
+      "b": "It cannot handle names that contain numbers, codes or abbreviations of grades",
+      "c": "It can only run on top of a graph database",
+      "d": "Similar names can hide different grades, so false links corrupt answers"
+    },
+    "answer": "d",
+    "explanation": "Name similarity proposes candidates; it does not prove identity. Two grades of the same resin can differ by one character, so matches need explicit confirmation.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-018",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A mapping between ERP and MES material codes was complete at go-live. What keeps it correct afterward?",
+    "options": {
+      "a": "A routine that flags new unmapped codes and assigns someone to map them",
+      "b": "A full rebuild of the mapping once a year, from fresh exports of both systems",
+      "c": "A freeze on creating new materials in either system",
+      "d": "Letting the model map new codes on its own, unreviewed"
+    },
+    "answer": "a",
+    "explanation": "New materials keep appearing in both systems. Identity mapping must be maintained continuously, with an owner, or it decays like the rest of the model.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-019",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Answers about supplier delays double-count some suppliers. What is the likeliest cause?",
+    "options": {
+      "a": "The model's context window is too small to hold the full list of suppliers",
+      "b": "Unresolved identities: one supplier sits under several codes",
+      "c": "The delay dates are stored in the wrong time zone",
+      "d": "The graph holds too many different types of relationship"
+    },
+    "answer": "b",
+    "explanation": "When the same supplier appears under different codes across systems without explicit mapping, every count, total and ranking built on it is wrong.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-020",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "When does a graph database earn its place over relational storage for the ontology?",
+    "options": {
+      "a": "Whenever the company decides it wants an ontology",
+      "b": "Once data volumes exceed a few million rows across all the plant systems",
+      "c": "For multi-hop questions and structure that varies across entities",
+      "d": "When the team needs strict transactions and consistency"
+    },
+    "answer": "c",
+    "explanation": "Graph storage helps with questions that chain many relationships and with variable structure. An ontology does not require it and can live on relational storage.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-021",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Your IT standard is a relational database. Can the ontology live there?",
+    "options": {
+      "a": "No, since an ontology is by definition a graph database",
+      "b": "Yes, but only if the relationships are left out of the model",
+      "c": "No, since relational tables cannot represent relationships",
+      "d": "Yes; graph storage helps some queries but is not required"
+    },
+    "answer": "d",
+    "explanation": "An ontology is a model of meaning, not a storage technology. Relational storage can hold entities and relationships; a graph database is a choice, not a precondition.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-022",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Which of these is a multi-hop question on a plant knowledge graph?",
+    "options": {
+      "a": "Which customers got batches made with resin from supplier S12?",
+      "b": "What is the current status of machine #7 on line 2?",
+      "c": "How many orders were shipped from the plant yesterday?",
+      "d": "What is the standard unit cost of resin R7 this quarter?"
+    },
+    "answer": "a",
+    "explanation": "The key question chains supplier, lot, batch, shipment and customer. The others read one fact from one entity, which any table answers directly.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-023",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "In knowledge graph terms, what are 'machine', 'runs on' and 'maximum speed'?",
+    "options": {
+      "a": "An edge type, a node type and a property",
+      "b": "A node type, an edge type and a property",
+      "c": "A property, an edge type and a node type",
+      "d": "A node type, a property and an edge type"
+    },
+    "answer": "b",
+    "explanation": "Things are nodes, relationships between them are edges, and values describing a node or an edge are properties.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-024",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "How should the model be validated before planners rely on it?",
+    "options": {
+      "a": "Check that every ERP field is mapped to an attribute in the model",
+      "b": "Survey the planners on whether the model looks right to them",
+      "c": "Experts check its outputs against recent real cases they know",
+      "d": "Compare it with the vendor's reference model for the industry"
+    },
+    "answer": "c",
+    "explanation": "Validation means experts testing the model on recent real cases. Complete field mapping and opinions about how it looks say nothing about whether its decisions hold.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-025",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "An engineer edits a setup rule directly in production on a Friday afternoon. What practice was skipped?",
+    "options": {
+      "a": "A backup of the planners' personal spreadsheets",
+      "b": "A retraining of the model on the latest plant data",
+      "c": "An update to the user training material for planners",
+      "d": "Versioning and review, as for any code change"
+    },
+    "answer": "d",
+    "explanation": "The ontology drives decisions, so changes to it are treated like code changes: versioned, reviewed and tested before release.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-026",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Plans changed overnight after an ontology update. What lets you find which change caused it?",
+    "options": {
+      "a": "A versioned history of the model, with each change and its author",
+      "b": "The chat logs of every conversation the model had with planners that week",
+      "c": "A fresh export of the ERP master data from that morning",
+      "d": "The planners' memory of how the old plans looked"
+    },
+    "answer": "a",
+    "explanation": "Versioning makes every change traceable and reversible. Without it, a regression in plans cannot be tied to the change that caused it.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-027",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Before releasing a new setup constraint, which test plays the role of a regression test?",
+    "options": {
+      "a": "Ask the planner who proposed the constraint to approve it",
+      "b": "Rerun recent real plans and check none turns infeasible",
+      "c": "Check that the constraint parses without a syntax error",
+      "d": "Test the constraint on a synthetic week of random orders"
+    },
+    "answer": "b",
+    "explanation": "A new constraint can break plans that were fine. Replaying recent real cases shows its side effects; the proposer's approval and synthetic data do not.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-028",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "ERP standard rates are wrong for two machines. What should the FDE do?",
+    "options": {
+      "a": "Override them in the ontology with the right values and leave the ERP as it is",
+      "b": "Ask the model to estimate the rates from production history",
+      "c": "Have them corrected in the ERP and keep reading them from there",
+      "d": "Keep a corrected copy in a shared spreadsheet for planners"
+    },
+    "answer": "c",
+    "explanation": "The ontology references each fact's owner system; it does not become a second source of truth. Fixing the value at the source keeps every consumer consistent.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-029",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "A team proposes copying all ERP and MES data into a graph database to build the ontology. What is the main objection?",
+    "options": {
+      "a": "Graph databases cannot hold data coming from an ERP",
+      "b": "Copying data is slower than asking planners for it",
+      "c": "An ontology should hold rules only and leave the facts out",
+      "d": "It creates a second source of truth instead of referencing owner systems"
+    },
+    "answer": "d",
+    "explanation": "Each fact keeps one owner system. The ontology models meaning and references the owner of each fact; a full copy drifts from the source and competes with it.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "ONT-3-030",
+    "domain": "ONT",
+    "tier": 3,
+    "stem": "Two reports show different stock for one material. Your ontology links to both systems. What must it state?",
+    "options": {
+      "a": "Which system owns stock for that material",
+      "b": "The average of the two values, refreshed every hour",
+      "c": "Whichever of the two values is the most recent one",
+      "d": "The two values side by side, leaving users to pick one"
+    },
+    "answer": "a",
+    "explanation": "The ontology records the owner system of each fact. Averaging or picking the latest value hides the conflict instead of resolving where the truth lives.",
+    "source": "Day 3, IT and infrastructure fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]

@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Design tokens (docs/SPEC.md section 14). */
+@theme {
+  --color-ink: #141313;
+  --color-paper: #ffffff;
+  --color-steel: #5b6470;
+  --color-gauge: #e2e5e9;
+  --color-marker: #ffd028;
+  --color-pass: #1e7b4e;
+  --color-fail: #b3261e;
+  --color-divider: #3a3a3a;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-27: 27px;
+  --text-34: 34px;
+  --text-44: 44px;
+  --text-56: 56px;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); }
+body { font-size: 17px; line-height: 1.55; font-variation-settings: "wdth" 100; }
+
+/* Condensed display type, like plant signage. */
+.display { font-weight: 700; font-stretch: 70%; font-variation-settings: "wdth" 70; line-height: 1.05; letter-spacing: 0; }
+.tnum { font-variant-numeric: tabular-nums; }
+.prose-width { max-width: 72ch; }
+
+:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+.band :focus-visible { outline-color: #fff; }
+
+a.link { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a.link:hover { text-decoration-thickness: 2px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 20px; font-weight: 600; border: 1px solid var(--color-ink); background: var(--color-ink); color: #fff; cursor: pointer; text-decoration: none; }
+.btn:hover { background: #2b2a2a; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-secondary { background: #fff; color: var(--color-ink); }
+.btn-secondary:hover { background: var(--color-gauge); }
+
+.field { display: block; width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--color-steel); background: #fff; font-size: 17px; }
+.label { display: block; font-weight: 600; margin-bottom: 4px; }
+
+table.data { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+table.data th { text-align: left; font-weight: 600; font-size: 15px; color: var(--color-steel); border-bottom: 1px solid var(--color-ink); padding: 8px 12px 8px 0; }
+table.data td { border-bottom: 1px solid var(--color-gauge); padding: 10px 12px 10px 0; vertical-align: top; }
+
+.option-fill { transition: background-color 120ms ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .option-fill { transition: none; }
+  .score-in { animation: none !important; }
+}
+@keyframes score-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.score-in { animation: score-in 500ms ease-out 1; }

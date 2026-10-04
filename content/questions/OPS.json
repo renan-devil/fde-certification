@@ -1,0 +1,686 @@
+[
+  {
+    "id": "OPS-2-001",
+    "domain": "OPS",
+    "tier": 2,
+    "stem": "What is an hour saved at a non-bottleneck machine worth to plant output?",
+    "options": {
+      "a": "The same as an hour saved at the bottleneck",
+      "b": "The machine's full cost rate for one hour",
+      "c": "Close to nothing",
+      "d": "More than a bottleneck hour, since it is cheaper to save"
+    },
+    "answer": "c",
+    "explanation": "An hour lost at the bottleneck is lost for the whole system; an hour saved elsewhere is a mirage. Optimizing a non-bottleneck produces dashboards, not euros.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-001",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A hall holds 90 tonnes of work in progress and its bottleneck processes 30 tonnes a day. What is the average lead time?",
+    "options": {
+      "a": "0.3 days",
+      "b": "3 days",
+      "c": "30 days",
+      "d": "120 days"
+    },
+    "answer": "b",
+    "explanation": "Little's Law: lead time = WIP ÷ throughput = 90 ÷ 30 = 3 days, whatever the ERP's standard lead time says.",
+    "source": "Day 5, the full motion",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-002",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A shop already running at full capacity receives more released orders. What happens?",
+    "options": {
+      "a": "Lead times shorten because the queue moves faster",
+      "b": "Every order gets later, because WIP rises at fixed throughput",
+      "c": "Throughput rises in proportion to the number of extra orders released",
+      "d": "Nothing changes until overtime starts"
+    },
+    "answer": "b",
+    "explanation": "At fixed throughput, more WIP means longer lead times. Cutting WIP is the only way to cut lead time without adding capacity.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-2-002",
+    "domain": "OPS",
+    "tier": 2,
+    "stem": "A line runs 80% of its planned time, at 75% of its rated speed, and makes no scrap. What is its OEE?",
+    "options": {
+      "a": "50%",
+      "b": "60%",
+      "c": "75%",
+      "d": "80%"
+    },
+    "answer": "b",
+    "explanation": "OEE = availability × performance × quality = 0.8 × 0.75 × 1 = 60%. Taking the lowest factor or the highest one ignores that the losses multiply.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-2-003",
+    "domain": "OPS",
+    "tier": 2,
+    "stem": "A line reports 95% availability, yet its output stays well below plan. What should you examine next?",
+    "options": {
+      "a": "Its speed and quality losses, which multiply with availability",
+      "b": "Nothing on the line itself, since 95% availability means it runs efficiently",
+      "c": "Whether a second shift would close the gap with the plan",
+      "d": "The downtime reason codes recorded for the remaining 5%"
+    },
+    "answer": "a",
+    "explanation": "OEE = availability × performance × quality. A line can be up almost all the time and still run slow or make bad parts; high availability alone says little.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-2-004",
+    "domain": "OPS",
+    "tier": 2,
+    "stem": "The shop is loaded to capacity and the bottleneck sets its pace. What rule should govern when new orders are released to the floor?",
+    "options": {
+      "a": "Release each order as soon as it is confirmed by sales",
+      "b": "Release enough work to keep every machine fully busy",
+      "c": "Release the most urgent orders first, whatever the load",
+      "d": "Release work at the pace the bottleneck can absorb it"
+    },
+    "answer": "d",
+    "explanation": "Work released faster than the bottleneck processes it only queues as WIP and makes every order later. Keeping every machine busy is the misconception that fills the shop.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-2-005",
+    "domain": "OPS",
+    "tier": 2,
+    "stem": "A plant manager sets a target of 100% utilization on every machine. What is the most likely result?",
+    "options": {
+      "a": "Maximum plant output at the lowest cost per part",
+      "b": "Shorter lead times, since no machine ever sits idle",
+      "c": "Piles of work in progress and longer lead times, with no extra output",
+      "d": "Higher output at the bottleneck, pushed by the busier upstream machines"
+    },
+    "answer": "c",
+    "explanation": "Output is set by the bottleneck. Running non-bottlenecks flat out only builds WIP in front of it, which lengthens lead times without adding a single shipped unit.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-2-006",
+    "domain": "OPS",
+    "tier": 2,
+    "stem": "Your team must choose where a scheduling tool should create value first. What should they establish before anything else?",
+    "options": {
+      "a": "Which machine has the lowest OEE in the plant",
+      "b": "Which department is asking most loudly for the tool",
+      "c": "Which machine has the cleanest and most complete data",
+      "d": "Which resource is the bottleneck"
+    },
+    "answer": "d",
+    "explanation": "An hour gained at the bottleneck is an hour for the whole plant; elsewhere it is a mirage. The lowest-OEE machine may well have spare capacity.",
+    "source": "Day 2, problems worth solving",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-003",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A plant wants shorter lead times without adding any capacity. Which lever does Little's Law point to?",
+    "options": {
+      "a": "Raising utilization on every machine in the shop",
+      "b": "Cutting work in progress by releasing less work",
+      "c": "Shortening the standard lead times held in the ERP",
+      "d": "Expediting the latest orders ahead of the others"
+    },
+    "answer": "b",
+    "explanation": "Lead time = WIP ÷ throughput. At fixed throughput, the only way to shorten lead time is to hold less WIP; editing ERP standards changes no physical queue.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-004",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Over a year, a shop's average lead time doubled while its throughput stayed flat. What must have happened to its work in progress?",
+    "options": {
+      "a": "It roughly doubled",
+      "b": "It roughly halved",
+      "c": "It stayed about the same",
+      "d": "It cannot be inferred from lead time and throughput"
+    },
+    "answer": "a",
+    "explanation": "Little's Law: WIP = throughput × lead time. With throughput flat, doubling lead time means WIP roughly doubled too.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-005",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "How do you most reliably identify the constraint on a running shop floor?",
+    "options": {
+      "a": "Pick the machine with the highest hourly cost rate",
+      "b": "Pick the machine with the lowest OEE in the plant",
+      "c": "Find where work piles up and waits the longest",
+      "d": "Pick the machine with the most breakdowns last year"
+    },
+    "answer": "c",
+    "explanation": "Work queues in front of the resource that cannot keep up. A low-OEE or unreliable machine may still have spare capacity, so it is not necessarily the constraint.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-006",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Under the Theory of Constraints, where should a quality check sit relative to the bottleneck?",
+    "options": {
+      "a": "Only at final inspection, where all defects are caught at once",
+      "b": "Just before it, so no bad part consumes its time",
+      "c": "Just after it, so its output can be sorted quickly",
+      "d": "On every machine equally, with the same sampling rate"
+    },
+    "answer": "b",
+    "explanation": "Exploiting the constraint means never feeding it bad parts: a minute spent on a part that will be scrapped is a minute lost for the whole plant.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-007",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Upstream machines have spare capacity. Under the Theory of Constraints, how should they be scheduled?",
+    "options": {
+      "a": "To maximize their own utilization and output",
+      "b": "By their own changeover costs, independently of the rest",
+      "c": "At full speed, to build large protective buffers in front of every machine",
+      "d": "To feed the constraint's schedule, even if they sit idle at times"
+    },
+    "answer": "d",
+    "explanation": "Subordinate everything else to the constraint. Idle time on a non-bottleneck costs nothing; producing ahead of the constraint only adds WIP.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-008",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Ferralux's bottleneck starves twice a day and receives scrap from upstream. The team proposes buying a second machine. What comes first?",
+    "options": {
+      "a": "Stop the starvation and the bad parts reaching it",
+      "b": "Buy the machine now, since the constraint is clearly identified",
+      "c": "Raise utilization on the upstream machines",
+      "d": "Add a second shift on every machine in the plant"
+    },
+    "answer": "a",
+    "explanation": "Elevate only after exploiting. Starvation and scrap waste capacity the plant already owns; buying more of it before fixing that is the expensive option.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-009",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "After a year of work, the former bottleneck press has spare capacity and orders now wait at heat treatment. What should the team do next?",
+    "options": {
+      "a": "Keep improving the press, since that is where the program has worked so far",
+      "b": "Declare the job done and stop the improvement program",
+      "c": "Buy a second press to secure the gains already made",
+      "d": "Treat heat treatment as the new constraint and repeat"
+    },
+    "answer": "d",
+    "explanation": "The constraint moves once it is broken. The cycle repeats on the new one; further gains at the press are now a mirage.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-010",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Finished-goods stock rose 20% this quarter. What, by definition, must have happened?",
+    "options": {
+      "a": "Inflow from production exceeded outflow to shipments",
+      "b": "Sales dropped compared with the previous quarter",
+      "c": "Production rose compared with the previous quarter",
+      "d": "The warehouse added storage capacity during the quarter"
+    },
+    "answer": "a",
+    "explanation": "A stock changes only through its flows. Sales may have dropped or production risen, but neither is required; only inflow exceeding outflow is.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-011",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Camille must fix late deliveries at Polymex Industries. What should she do before choosing any tool?",
+    "options": {
+      "a": "Benchmark three scheduling vendors against each other",
+      "b": "Build a dashboard of utilization for every machine",
+      "c": "Draw the map of stocks and flows from order to shipment",
+      "d": "Load every ERP table into a central data lake first"
+    },
+    "answer": "c",
+    "explanation": "Draw the map before touching tools. The stocks and flows show where orders wait and why; tools chosen before that tend to optimize the wrong place.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-012",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Your team adds 10% capacity and expects the order backlog to disappear within a week. What do you tell them?",
+    "options": {
+      "a": "It drains only at the gap between outflow and inflow",
+      "b": "It disappears at once, since capacity now exceeds demand",
+      "c": "It never drains unless some orders are cancelled",
+      "d": "It drains only once ERP lead times are updated"
+    },
+    "answer": "a",
+    "explanation": "A backlog is a stock: it falls only by the amount outflow exceeds inflow each week. A small surplus of capacity drains a large backlog slowly.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-013",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Lateness rises, so planners expedite more orders. Sequences break, changeovers rise and lateness grows further. What is this?",
+    "options": {
+      "a": "A balancing loop that will settle on its own",
+      "b": "A bullwhip effect coming from upstream suppliers",
+      "c": "A reinforcing loop that feeds on itself",
+      "d": "Random variation in customer demand from week to week"
+    },
+    "answer": "c",
+    "explanation": "This is the expedite doom loop: each turn adds changeovers, cuts capacity and creates more lateness, so it reinforces itself instead of settling.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-014",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "You have mapped the expedite doom loop at Ferralux. Which intervention does the course favor?",
+    "options": {
+      "a": "Expedite more precisely, using a better priority rule for the late orders",
+      "b": "Add capacity on every machine that sits in the loop",
+      "c": "Break the loop at its cheapest link, such as protecting the sequence",
+      "d": "Send a daily lateness report to the project sponsor"
+    },
+    "answer": "c",
+    "explanation": "Break the cheapest link. Protecting the sequence stops the extra changeovers that drive the loop; expediting better only spins it faster.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-015",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Planners react to a two-week-old inventory report with large order corrections. What pattern should you expect?",
+    "options": {
+      "a": "Oscillation, with stock swinging between shortage and excess",
+      "b": "Steady convergence toward the target stock level",
+      "c": "A shortage that grows a little every week",
+      "d": "Stable stock levels, but steadily rising lead times"
+    },
+    "answer": "a",
+    "explanation": "Delay plus strong reaction produces oscillation, the mechanism behind the bullwhip effect. Shorter delays or gentler corrections damp it.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-016",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Which of these is a balancing feedback loop?",
+    "options": {
+      "a": "More scrap triggers rework that crowds the line and causes more scrap",
+      "b": "Stock below target raises production until the stock recovers",
+      "c": "Rising WIP lengthens lead times, prompting earlier releases and more WIP",
+      "d": "Satisfied customers order more, funding capacity that wins more orders"
+    },
+    "answer": "b",
+    "explanation": "A balancing loop pushes a variable back toward a target. The other three amplify the change they start with, which makes them reinforcing loops.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-017",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Why sequence orders by product family on a constrained line?",
+    "options": {
+      "a": "To raise the utilization of the upstream machines",
+      "b": "To shorten the ERP's standard lead time for each order",
+      "c": "To give each product family an equal and predictable share of the week",
+      "d": "To cut changeovers and free constraint time for output"
+    },
+    "answer": "d",
+    "explanation": "Changeovers within a family are short and between families long. Grouping families saves changeover time on the constraint, which is time for the whole plant.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-018",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Sam starts a SMED effort on a press. What is the first step to shorten its changeover?",
+    "options": {
+      "a": "Move tasks that can be done while it runs out of the stop",
+      "b": "Run longer batches so changeovers happen less often",
+      "c": "Buy faster tooling for every press in the plant",
+      "d": "Ask operators to work faster during each stop"
+    },
+    "answer": "a",
+    "explanation": "SMED first separates internal tasks (machine stopped) from external ones (machine running) and moves external work out of the stop. Longer batches avoid changeovers but do not shorten them.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-019",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "To save changeovers, planners run very large batches on the bottleneck. Changeover hours fall, but on-time delivery drops. Why?",
+    "options": {
+      "a": "Changeover time was never a real cost on the constraint",
+      "b": "Large batches cause more scrap at the constraint",
+      "c": "Large batches raise WIP and make other families wait longer",
+      "d": "On-time delivery measures quality, not the timing of orders"
+    },
+    "answer": "c",
+    "explanation": "Batch size trades changeovers against waiting: other families queue longer and WIP grows, so lead time rises. Sequencing by family aims for both at once.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-020",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A line has 400 minutes of available time per shift, and customers need 200 units per shift. What is the takt time?",
+    "options": {
+      "a": "0.5 minutes",
+      "b": "2 minutes",
+      "c": "4 minutes",
+      "d": "20 minutes"
+    },
+    "answer": "b",
+    "explanation": "Takt time = available time ÷ customer demand = 400 ÷ 200 = 2 minutes per unit. It is the pace demand sets, not how fast the line can run.",
+    "source": "Day 5, the full motion",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-021",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A station's cycle time is longer than the line's takt time. What follows?",
+    "options": {
+      "a": "It has spare capacity that can serve other products",
+      "b": "Its lead time is automatically shorter than takt time",
+      "c": "Its OEE must be above the plant average",
+      "d": "It cannot keep pace with demand without more capacity"
+    },
+    "answer": "d",
+    "explanation": "Takt time is the pace demand requires; cycle time is how long the station takes per unit. A cycle longer than takt means the station falls behind demand.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-022",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Orders reach customers on the promised day, but often with lines missing. Which metric exposes this?",
+    "options": {
+      "a": "OEE, overall equipment effectiveness",
+      "b": "First-pass yield on the packing line",
+      "c": "OTIF, on time and in full",
+      "d": "Takt time on the shipping line"
+    },
+    "answer": "c",
+    "explanation": "OTD counts only timing. OTIF also requires every line in full, so partial shipments that look on time are counted as failures.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-023",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A process ships 98% of its parts after rework, but only 80% pass the first time. Which figure reveals the capacity lost to rework?",
+    "options": {
+      "a": "The final yield of 98%",
+      "b": "The scrap rate of 2%",
+      "c": "The average yield of 89%",
+      "d": "The first-pass yield of 80%"
+    },
+    "answer": "d",
+    "explanation": "First-pass yield counts only parts good the first time. Final yield hides the rework loop, which consumes capacity, especially if it passes through the bottleneck.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-024",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Machining takes 2 hours per part, yet parts take 3 weeks to cross the shop. What explains most of the gap?",
+    "options": {
+      "a": "Machines slower than their cycle times suggest",
+      "b": "Time spent waiting in queues, driven by WIP",
+      "c": "Transport time between the shop's buildings",
+      "d": "Inspection carried out after every operation"
+    },
+    "answer": "b",
+    "explanation": "Lead time is mostly queue time, and queues grow with WIP (Little's Law). Processing time is usually a small fraction of lead time.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-025",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "The MRP plan loads the press at 140% of its hours next week. What does this reveal?",
+    "options": {
+      "a": "MRP assumes infinite capacity, so the plan is not feasible as is",
+      "b": "The plan is feasible, because MRP checks capacity on every machine",
+      "c": "The press will absorb the extra load with normal overtime",
+      "d": "Demand is 40% above forecast and orders must be cancelled"
+    },
+    "answer": "a",
+    "explanation": "MRP plans materials against fixed lead times and ignores capacity limits. A feasible schedule respects the real hours of each resource.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-026",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Your team wants to schedule the floor directly from MRP planned orders. What must the schedule add?",
+    "options": {
+      "a": "More precise standard lead times for each routing step",
+      "b": "Higher safety stock on all purchased components",
+      "c": "A daily rerun of MRP with the latest orders",
+      "d": "Finite capacity: no resource loaded beyond its real hours"
+    },
+    "answer": "d",
+    "explanation": "MRP output is a material plan, not a schedule. A feasible schedule loads each resource only up to its real capacity, with its real constraints.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-027",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "MRP offsets each step by a fixed standard lead time. Why do its dates drift from what happens on the floor?",
+    "options": {
+      "a": "Standard lead times are usually entered in the wrong unit",
+      "b": "Real lead time depends on load and WIP, which MRP ignores",
+      "c": "MRP rounds every lead time up to whole days",
+      "d": "Operators do not record the start times of their jobs"
+    },
+    "answer": "b",
+    "explanation": "Real lead time is WIP ÷ throughput and moves with load. A fixed ERP standard is a planning parameter, not the real lead time.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-028",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Demand for a part becomes twice as variable while its target service level stays the same. What happens to the safety stock it needs?",
+    "options": {
+      "a": "It stays the same, because the service level is unchanged",
+      "b": "It falls, because average demand did not change",
+      "c": "It rises, because safety stock covers variability",
+      "d": "It drops to zero if the supplier lead time is short"
+    },
+    "answer": "c",
+    "explanation": "Safety stock covers variability of demand and supply over the lead time. More variability at the same service level needs more safety stock.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-029",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "Noor raises a part's target service level from 95% to 99%. What should she expect?",
+    "options": {
+      "a": "Safety stock rises by about 4%, in line with the target",
+      "b": "Safety stock rises sharply, as the last points cost the most",
+      "c": "Safety stock stays flat; only reorder frequency changes",
+      "d": "Stockouts on the part disappear entirely"
+    },
+    "answer": "b",
+    "explanation": "Each extra point of service level costs more stock than the one before, so the last few points are expensive. Even at 99%, stockouts remain possible.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "OPS-3-030",
+    "domain": "OPS",
+    "tier": 3,
+    "stem": "A supplier's lead time grows from 2 to 6 weeks, with demand variability unchanged. What happens to the safety stock needed?",
+    "options": {
+      "a": "It rises, since it must cover uncertainty over a longer period",
+      "b": "It stays the same, since demand variability is unchanged",
+      "c": "It falls, since orders are placed less often",
+      "d": "It matters less, since cycle stock now covers the risk"
+    },
+    "answer": "a",
+    "explanation": "Safety stock protects against variation during the replenishment lead time. A longer lead time exposes the part to more variation, so more safety stock is needed.",
+    "source": "Day 5, the full motion",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]

@@ -1,0 +1,1427 @@
+[
+  {
+    "id": "LLM-1-001",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "In everyday terms, what is a token?",
+    "options": {
+      "a": "A security key that grants access to the model",
+      "b": "A small chunk of text, often part of a word",
+      "c": "One hour of computing power rented from a cloud provider",
+      "d": "One complete sentence inside a prompt or an answer"
+    },
+    "answer": "b",
+    "explanation": "Models read and write tokens, about three quarters of an English word on average. Prices, speed and context limits are all counted in tokens.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-002",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "A model answers badly about last week's production, although the data exists in your systems. What is the most likely cause?",
+    "options": {
+      "a": "The model is too small to handle industrial questions",
+      "b": "The model must first be fine-tuned on last week's data",
+      "c": "The question was asked in the wrong language",
+      "d": "That data was never put into the model's context"
+    },
+    "answer": "d",
+    "explanation": "A model knows its training data and what you give it in context, nothing else. Retrieval and connections to your systems bring the right facts; retraining is rarely the answer.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-001",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "When is fine-tuning a better fit than retrieval (RAG)?",
+    "options": {
+      "a": "When you need a consistent format or style in every answer",
+      "b": "When the underlying knowledge changes every single day",
+      "c": "When every answer must cite the exact document it came from",
+      "d": "When you have no labeled examples of the task to learn from"
+    },
+    "answer": "a",
+    "explanation": "Retrieval suits knowledge that changes and answers that must cite sources. Fine-tuning shapes behavior, format and style, and needs good labeled examples. Most projects start with prompting and context.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-002",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "What actually happens when an AI agent uses a tool (function calling)?",
+    "options": {
+      "a": "The model executes code directly on the company's own servers, unsupervised",
+      "b": "A human operator carries out the action the model suggested",
+      "c": "The model writes a request; your software runs it and returns the result",
+      "d": "The model installs a plug-in that adds the tool's knowledge to its training"
+    },
+    "answer": "c",
+    "explanation": "The model only produces a structured request. Your software decides whether and how to execute it, which is where permissions, approvals and logs live.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-003",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "An agent will propose changes to production schedules in the ERP. Which safeguard matters most at first?",
+    "options": {
+      "a": "A higher temperature so the agent explores more options",
+      "b": "Human approval before any write, with every action logged",
+      "c": "A much longer system prompt describing the plant in detail",
+      "d": "Letting the agent retry until the ERP accepts the change"
+    },
+    "answer": "b",
+    "explanation": "Writing to a system of record is consequential and hard to reverse. Start with approvals and an audit trail; relax them only where evals and history show the agent is reliable.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-001",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Why does pure vector search often miss a query like 'stock level for part 4471-B'?",
+    "options": {
+      "a": "Vector databases are unable to store numbers or codes of any kind",
+      "b": "Embeddings capture meaning, not exact codes; add keyword search",
+      "c": "The model's context window is too small to hold long part numbers",
+      "d": "Part numbers must first be fine-tuned into the model weights"
+    },
+    "answer": "b",
+    "explanation": "Exact identifiers such as SKUs, machine ids and order numbers need lexical matching. Hybrid retrieval combines keyword and vector search, a routine need with industrial data.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-002",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "You edit a prompt to fix one wrong extraction. What should happen before the change is deployed?",
+    "options": {
+      "a": "Check that the fixed case now works, then ship it",
+      "b": "Raise the temperature to avoid overfitting to that one case",
+      "c": "Ask the model to judge whether the new prompt is better",
+      "d": "Rerun the full eval set to catch regressions on other cases"
+    },
+    "answer": "d",
+    "explanation": "Prompt changes have side effects. The eval set is the regression test for AI behavior; one fixed case proves nothing about the others.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-003",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "In a transformer model, what does the attention mechanism do?",
+    "options": {
+      "a": "Lets each token weigh the relevance of every other token in context",
+      "b": "Stores facts in an internal database the model can query at answer time",
+      "c": "Filters harmful content out of the model's answers before display",
+      "d": "Compresses the model's weights so it can run on smaller hardware"
+    },
+    "answer": "a",
+    "explanation": "Attention relates every token to the others in the context. Its cost grows quickly with context length, one reason very long contexts are slow and expensive.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude-spec",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-003",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "A vendor prices its AI service per million tokens. What are you actually paying for?",
+    "options": {
+      "a": "The amount of text the model reads and writes",
+      "b": "The number of employees given access to the tool",
+      "c": "The number of questions asked, whatever their length",
+      "d": "The hours of computing time reserved for your company"
+    },
+    "answer": "a",
+    "explanation": "Tokens are chunks of text. Every word the model reads in the prompt and writes in the answer is counted, so long documents and long answers cost more.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-004",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "What is a model's context window?",
+    "options": {
+      "a": "The full set of documents the lab used to train the model",
+      "b": "The period during which the model's answers remain valid",
+      "c": "Everything the model can take into account in one call",
+      "d": "The part of the screen where the conversation is shown"
+    },
+    "answer": "c",
+    "explanation": "The context window holds the instructions, documents and conversation the model considers in one call. What is neither in its training nor in its context does not exist for it.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-005",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "Your CFO asks why the AI bill keeps growing with usage, since the lab already built the model. What is the answer?",
+    "options": {
+      "a": "The lab retrains the model on your data every month",
+      "b": "Each use of the model is paid per token, on every call",
+      "c": "The model grows more expensive as it learns from your staff",
+      "d": "Usage fees repay the lab for building a model just for you"
+    },
+    "answer": "b",
+    "explanation": "Training builds the model once, at the lab's expense. Inference, using the model, is paid per token on every call, so cost follows usage.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-006",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "What is the difference between training a model and inference?",
+    "options": {
+      "a": "Training is done by your own staff; inference is done by the vendor's staff",
+      "b": "Training happens on every call; inference happens once a year",
+      "c": "Training is free for customers; inference is paid by the lab",
+      "d": "Training builds the model, rarely and at high cost; inference uses it"
+    },
+    "answer": "d",
+    "explanation": "Labs train models, which is expensive and rare. Companies run inference: each call to the model, paid per token.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-007",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "One team polishes the wording of its prompt; another adds the plant's procedures and recent data. Which usually gets better answers?",
+    "options": {
+      "a": "The one polishing wording, since phrasing unlocks the model's hidden skills",
+      "b": "Neither, since answer quality depends only on which model is used",
+      "c": "The one adding procedures and data, since context beats wording",
+      "d": "Whichever team writes the longer prompt, since length drives quality"
+    },
+    "answer": "c",
+    "explanation": "Better context beats clever wording. A model given the right facts and procedures answers well with plain instructions; the best phrasing cannot supply missing facts.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-008",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "Your team builds an assistant that answers from the plant's maintenance manuals using retrieval (RAG). What does retrieval do?",
+    "options": {
+      "a": "Fetches the relevant manual pages and puts them in the model's context",
+      "b": "Retrains the model on the manuals so that it remembers them",
+      "c": "Copies all the manuals permanently into the model's own long-term memory",
+      "d": "Replaces the model's answers with whole pages from the manuals"
+    },
+    "answer": "a",
+    "explanation": "Retrieval finds the relevant passages and places them in the context for each question. Answers are grounded in company data without changing the model itself.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-009",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "A vendor proposes fine-tuning a model on all your documents so that 'it knows the company'. What does the course say?",
+    "options": {
+      "a": "It is essential, since a model cannot use company data without it",
+      "b": "It is rarely the first step; first give the model the right context",
+      "c": "It is sensible, because it keeps the model current as the data changes",
+      "d": "It is the cheapest option, since it removes the need for prompts"
+    },
+    "answer": "b",
+    "explanation": "Fine-tuning changes a model's weights with examples; it is rarely where a company starts. Knowledge that changes is better brought in through context and retrieval.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-010",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "Sam corrected the assistant's mistake yesterday. Today it repeats the same error. What is the most likely reason?",
+    "options": {
+      "a": "Sam's correction was too short for the model to retain it",
+      "b": "The model learns from corrections only after its weekly update cycle",
+      "c": "The model needs the same correction from several users first",
+      "d": "Models do not learn from conversations unless memory is built"
+    },
+    "answer": "d",
+    "explanation": "A model does not learn from conversations by default. Anything that must persist, such as a correction or a rule, has to be engineered into memory, data or the prompt.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-011",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "Your team wants an assistant that remembers each customer's past complaints across conversations. What does this require?",
+    "options": {
+      "a": "Nothing, since the model already remembers every past conversation",
+      "b": "Retraining the model after each new complaint is recorded",
+      "c": "Memory built by the team, such as a database the assistant reads",
+      "d": "Choosing a larger model, since larger models remember more"
+    },
+    "answer": "c",
+    "explanation": "Persistence is engineered, not built in. The application stores the history and puts the relevant part into the context of each new conversation.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-1-012",
+    "domain": "LLM",
+    "tier": 1,
+    "stem": "An assistant handles short reports well but fails when a 2,000-page archive is pasted in at once. What is the likely limit?",
+    "options": {
+      "a": "The model was never trained on this particular archive",
+      "b": "The model's vocabulary lacks the plant's industrial terms",
+      "c": "The archive must first be translated into plain English",
+      "d": "The archive does not fit in what the model can consider"
+    },
+    "answer": "d",
+    "explanation": "The context window caps how much the model can consider in one call. Large archives are searched with retrieval, which brings in only the relevant pages.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-004",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Ferralux extends its English-language assistant to its Polish sites. Why might the cost per question rise?",
+    "options": {
+      "a": "Every language other than English carries a fixed per-token surcharge",
+      "b": "Non-English text often takes more tokens for the same content",
+      "c": "Each language requires its own fine-tuned copy of the model",
+      "d": "Polish answers require a larger context window licence"
+    },
+    "answer": "b",
+    "explanation": "Tokenizers are most efficient on English. Other languages, numbers and codes often split into more tokens, and cost is counted in tokens.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-005",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Two jobs use the same number of tokens: one reads a lot and writes little, the other reads little and writes a lot. Which usually costs more?",
+    "options": {
+      "a": "The one that reads more, since input tokens usually cost more",
+      "b": "Neither, since cost depends only on the number of calls made",
+      "c": "Neither, since input and output tokens are priced at the same rate",
+      "d": "The one that writes more, since output tokens usually cost more"
+    },
+    "answer": "d",
+    "explanation": "Output tokens are usually priced higher than input tokens. Long generated answers cost more than long documents read.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-006",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Sam sets the temperature to zero for invoice extraction and expects identical outputs on every run. What should Sam know?",
+    "options": {
+      "a": "It reduces variation but does not guarantee identical outputs",
+      "b": "It guarantees identical outputs, so logging becomes unnecessary",
+      "c": "Temperature affects only the speed of generation, not content",
+      "d": "At zero, the model refuses any extraction it is unsure about"
+    },
+    "answer": "a",
+    "explanation": "Temperature controls variability. A low temperature narrows it, but the same input can still give different outputs, so validate and log.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-007",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Your team uses a model to extract order data and to brainstorm names for a product line. How should temperature differ?",
+    "options": {
+      "a": "Higher for extraction, so the model weighs more possible values",
+      "b": "The same for both tasks, since temperature affects only speed",
+      "c": "Lower for extraction, higher for generating varied ideas",
+      "d": "Zero for both tasks, since zero makes every output correct"
+    },
+    "answer": "c",
+    "explanation": "Low temperature suits tasks with one right answer; higher temperature adds the variety that brainstorming needs. No setting makes outputs correct.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-008",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "A search for 'machine stopped' should also find reports that say 'line down'. Which technique does this?",
+    "options": {
+      "a": "Keyword search, which matches the exact words that were typed",
+      "b": "Semantic search over embeddings, which compares meaning",
+      "c": "Fine-tuning the model on every past maintenance report",
+      "d": "A larger context window so that all reports fit in at once"
+    },
+    "answer": "b",
+    "explanation": "Embeddings turn text into vectors that capture meaning, so semantic search finds similar meaning even when the words differ. Keyword search would miss the synonym.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-009",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "What is an embedding?",
+    "options": {
+      "a": "A compressed copy of a document stored inside the model",
+      "b": "An index of the exact words that appear in each document",
+      "c": "A small model trained separately for each document",
+      "d": "A list of numbers that represents what a text means"
+    },
+    "answer": "d",
+    "explanation": "An embedding is a vector: texts with similar meaning get nearby vectors. That is what semantic search compares.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-010",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "A RAG assistant quotes the 2019 version of a procedure that was replaced last year. Which pipeline failure is this?",
+    "options": {
+      "a": "A stale document in the index, which retrieval then returned",
+      "b": "A hallucination, in which the model invented the procedure",
+      "c": "A context window too small to hold the newer version",
+      "d": "A temperature set too high for answering factual questions reliably"
+    },
+    "answer": "a",
+    "explanation": "The model faithfully used what retrieval gave it. Missing or stale documents are a classic RAG failure; the fix is in the document store, not the model.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-011",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Retrieval returned the right pages, but the answer states a torque value found in none of them. Where did the pipeline fail?",
+    "options": {
+      "a": "Retrieval, which selected the wrong chunks for the question",
+      "b": "Chunking, which split the pages into pieces far too small to make sense alone",
+      "c": "Generation, which gave an answer the retrieved text does not support",
+      "d": "Embedding, because the query vector did not match the pages"
+    },
+    "answer": "c",
+    "explanation": "The right pages were retrieved, so retrieval worked. The model then stated something those pages do not contain: an unsupported answer at the generation step.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-012",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Plant managers distrust the assistant's answers. Which RAG design choice most helps them check an answer?",
+    "options": {
+      "a": "A higher temperature so that answers are more nuanced",
+      "b": "A longer system prompt that asks the model to be accurate",
+      "c": "Fine-tuning the model on the plant's documents first",
+      "d": "Citations linking each answer to the passages it used"
+    },
+    "answer": "d",
+    "explanation": "Citations make answers checkable: a manager can open the source and verify. Asking the model to be accurate changes nothing that can be checked.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-013",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Your agent has a tool that cancels purchase orders. Where should the rule 'only orders under €10K' be enforced?",
+    "options": {
+      "a": "In the system prompt, as a firm instruction to the model",
+      "b": "In the application code that decides whether to execute the call",
+      "c": "In the model's weights, by fine-tuning it on past purchase order cancellations",
+      "d": "In the tool description, which the model reads before calling"
+    },
+    "answer": "b",
+    "explanation": "The model only requests the action; the application executes it. Rules enforced in code hold whatever the model writes, while prompt instructions can be ignored or overridden.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-014",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "What is the basic loop an AI agent runs?",
+    "options": {
+      "a": "Plan, act with a tool, observe, repeat until done or a limit is hit",
+      "b": "Receive one prompt, write one answer, then stop and wait",
+      "c": "Retrain on each result, then answer the next question",
+      "d": "Run every available tool at once, then merge all of their outputs into one answer"
+    },
+    "answer": "a",
+    "explanation": "An agent plans, acts through a tool, observes the result and repeats until the task is done or a limit is hit. The controls sit around that loop.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-015",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "An agent researching supplier delays ran 400 steps overnight and ran up a large bill. Which control was missing?",
+    "options": {
+      "a": "A lower temperature, so that each step costs less",
+      "b": "A larger context window to remember earlier steps",
+      "c": "Step and cost limits on the agent's loop",
+      "d": "Fine-tuning so the agent finds its answers faster"
+    },
+    "answer": "c",
+    "explanation": "The agent loop repeats until done or a limit is hit. Without step and cost limits, nothing stops a confused agent from looping.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-016",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "An extraction model returns supplier data as JSON for the ERP interface. What should the application do with each output?",
+    "options": {
+      "a": "Pass it straight on, since a JSON format means the content is correct",
+      "b": "Ask the model to confirm that its own output is correct",
+      "c": "Raise the temperature until the format stops changing",
+      "d": "Validate it against the expected schema before using it"
+    },
+    "answer": "d",
+    "explanation": "Structured outputs make model output usable by software, but well-formed JSON can still hold wrong or missing fields. Validate before anything reaches the ERP.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-017",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Several AI assistants in your company need the same maintenance database. What does the Model Context Protocol (MCP) offer?",
+    "options": {
+      "a": "A way to train the model directly on the contents of the database itself",
+      "b": "A plug-in that works with a single vendor's assistant only",
+      "c": "One standard connection to the database, reusable by many AI clients",
+      "d": "A security certification required before connecting AI to data"
+    },
+    "answer": "c",
+    "explanation": "MCP is an open standard: a data source or tool is connected once and many AI applications can use it, instead of one custom integration per assistant.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-018",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Your team builds its first eval set for a maintenance assistant. What should it contain?",
+    "options": {
+      "a": "Real cases from the plant, each with the expected output",
+      "b": "Questions the assistant already answers well, to show progress",
+      "c": "Synthetic questions written by the vendor's own team",
+      "d": "Hundreds of random questions, with no expected answers"
+    },
+    "answer": "a",
+    "explanation": "An eval set is real cases with expected outputs, run before and after every change. Without expected outputs nothing is measured, and easy or vendor cases flatter the system.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-019",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Reports drafted by your assistant come out in inconsistent formats. What should you try first?",
+    "options": {
+      "a": "Fine-tuning a model on thousands of labeled reports",
+      "b": "Retrieval over the plant's whole document store",
+      "c": "A higher temperature so the model finds a better format",
+      "d": "Clear format instructions and a few examples in the prompt"
+    },
+    "answer": "d",
+    "explanation": "Behavior, format and style call for prompting first. Fine-tuning comes later, and only when good examples are plentiful; retrieval brings knowledge, not format.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-020",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "In a RAG system, what happens to the documents before any question is asked?",
+    "options": {
+      "a": "The model is fine-tuned on every document in the store",
+      "b": "They are split into chunks and turned into embeddings in an index",
+      "c": "They are all pasted together into one permanent system prompt for the model",
+      "d": "They are summarized by hand into a list of frequent questions"
+    },
+    "answer": "b",
+    "explanation": "The pipeline chunks and embeds documents ahead of time; at question time it retrieves, optionally reranks and generates with citations. The model itself is not changed.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-2-021",
+    "domain": "LLM",
+    "tier": 2,
+    "stem": "Your agent drafts and sends supplier emails. After a complaint, nobody can tell what it did. What was missing?",
+    "options": {
+      "a": "Logs of each step: prompts, tool calls and their results",
+      "b": "A lower temperature on the email-drafting step",
+      "c": "A larger model, better able to recall its own actions",
+      "d": "A longer system prompt about a professional tone"
+    },
+    "answer": "a",
+    "explanation": "Logs are one of the agent controls, with permissions, limits and approvals. Without them, no one can explain or correct what the agent did.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-004",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "What does a language model produce at each step of generation?",
+    "options": {
+      "a": "A complete sentence, chosen from a database of answers stored during training",
+      "b": "The single correct word, computed by deterministic rules",
+      "c": "Scores over its vocabulary, turned into next-token probabilities",
+      "d": "A search query that fetches the next word from the web"
+    },
+    "answer": "c",
+    "explanation": "The model outputs logits over its vocabulary; softmax turns them into probabilities, and sampling settings pick the next token.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-005",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Sam lowers top-p from 0.9 to 0.5. What changes in generation?",
+    "options": {
+      "a": "The model reads only half of its context window",
+      "b": "Sampling draws from a smaller set of the most likely tokens",
+      "c": "Half of the model's weights are switched off to save cost",
+      "d": "Answers are cut to about half of their usual length"
+    },
+    "answer": "b",
+    "explanation": "Top-p keeps the smallest set of tokens whose probabilities add up to p and samples from it. A lower p means fewer, more likely candidates.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-006",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "A model gives the next token 'pump' a probability of 0.6. What happens when you raise the temperature?",
+    "options": {
+      "a": "'pump' becomes certain to be picked at every run",
+      "b": "The model rereads its context with more attention",
+      "c": "The vocabulary grows to include rarer technical words and codes",
+      "d": "The distribution flattens, so unlikely tokens get picked more"
+    },
+    "answer": "d",
+    "explanation": "Temperature rescales the logits before softmax. Higher values flatten the distribution, so less likely tokens are sampled more often; lower values sharpen it.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-007",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Context grows from 50,000 to 100,000 tokens. Roughly how does the cost of naive attention change?",
+    "options": {
+      "a": "1.4×",
+      "b": "2×",
+      "c": "4×",
+      "d": "8×"
+    },
+    "answer": "c",
+    "explanation": "Naive attention compares every token with every other token, so cost grows with the square of length: twice the context, about four times the attention cost.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": true,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-008",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your team plans to send a whole 5,000-page manual with every question, since it fits the context window. What is the strongest objection?",
+    "options": {
+      "a": "The model would learn the manual permanently, and its future answers would be biased",
+      "b": "Retrieve only the relevant pages; long contexts are slow, costly and less reliable",
+      "c": "Very long contexts switch off the model's ability to call tools",
+      "d": "Context windows accept only text written in English"
+    },
+    "answer": "b",
+    "explanation": "A bigger window does not remove the need for retrieval. Long contexts are slow and expensive, and recall across them is uneven, so bring in only what the question needs.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-009",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "A critical safety rule sits in the middle of a 60-page prompt, and the model often ignores it. What do you do first?",
+    "options": {
+      "a": "Place the rule deliberately, at the start or end, and trim the prompt",
+      "b": "Raise the temperature so the model explores more of the prompt",
+      "c": "Switch to a model with an even larger context window",
+      "d": "Fine-tune the model on the safety rule so that it is applied in future answers"
+    },
+    "answer": "a",
+    "explanation": "Recall in long contexts is uneven, weakest in the middle. Put critical instructions where they are recalled and remove what the task does not need.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-010",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Alex wants to compare two prompt versions fairly on the eval set. What must stay fixed between the two runs?",
+    "options": {
+      "a": "Nothing, since at temperature zero every run gives identical outputs anyway",
+      "b": "The time of day at which the two eval runs are started",
+      "c": "The person who reads and summarizes the eval results",
+      "d": "The model version, settings and eval cases; only the prompt changes"
+    },
+    "answer": "d",
+    "explanation": "To attribute a difference to the prompt, everything else must be held and logged: model version, settings, cases. Temperature zero does not make runs identical.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-011",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Every call to your assistant begins with the same 20-page set of instructions. Which technique cuts both cost and latency?",
+    "options": {
+      "a": "A higher temperature to shorten the answers",
+      "b": "Fine-tuning the instructions into a new model each week",
+      "c": "Prompt caching of the repeated instructions",
+      "d": "Batch processing, which also speeds up live replies"
+    },
+    "answer": "c",
+    "explanation": "Prompt caching reuses work on a repeated prefix, cutting cost and latency. Batch processing cuts cost but returns results later, so it does not suit live replies.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-012",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Ferralux must classify 200,000 archived quality reports, and nobody needs the results before next week. What lowers the cost most?",
+    "options": {
+      "a": "Batch processing, which trades speed for a lower price",
+      "b": "Prompt caching of each report's unique text",
+      "c": "A larger context window to process many reports per call",
+      "d": "Running at temperature zero to reduce token usage"
+    },
+    "answer": "a",
+    "explanation": "Batch processing cuts cost for jobs that can wait. Caching helps only with repeated prefixes, not each report's unique text, and temperature does not change token counts.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-013",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "To benefit from prompt caching, how should you order the parts of a prompt?",
+    "options": {
+      "a": "The variable question first, the stable instructions last",
+      "b": "In any order, since caching finds repeated text anywhere",
+      "c": "In a different order on each call, to avoid getting stale cached answers",
+      "d": "Stable instructions and documents first, the variable part last"
+    },
+    "answer": "d",
+    "explanation": "Caching works on a repeated prefix. Anything that changes per call must come after the stable part, or nothing after it can be reused.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-014",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Planners ask both 'which orders mention customer code C-8812?' and 'which orders were delayed by material shortages?'. Which retrieval design handles both?",
+    "options": {
+      "a": "Vector search alone, with a larger embedding model",
+      "b": "Keyword search alone, with a list of synonyms",
+      "c": "Hybrid: keyword search for codes, vectors for meaning",
+      "d": "Loading every order into the context of each call"
+    },
+    "answer": "c",
+    "explanation": "Exact codes need lexical matching such as BM25; questions about meaning need vectors. Hybrid retrieval combines the two.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-015",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your assistant serves three sites but keeps retrieving procedures from the wrong site. What fixes this?",
+    "options": {
+      "a": "Naming the site in the system prompt and asking for care",
+      "b": "Site metadata on each chunk, filtered before semantic search",
+      "c": "Retrieving more chunks for each question that is asked",
+      "d": "Fine-tuning a separate model for each of the three sites it serves"
+    },
+    "answer": "b",
+    "explanation": "Attach metadata such as site, product family and validity dates, and filter on it before semantic search. A prompt instruction cannot fix what retrieval returns.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-016",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "How should you chunk a maintenance manual organized in numbered sections?",
+    "options": {
+      "a": "In fixed 200-character pieces, ignoring the headings",
+      "b": "As one chunk for the whole manual, so nothing is cut",
+      "c": "One sentence per chunk, for the highest precision",
+      "d": "Along its sections, each chunk keeping its heading"
+    },
+    "answer": "d",
+    "explanation": "Chunk along document structure so each piece is a coherent unit with its context. Fixed-size cuts split procedures; whole manuals blur meaning.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-017",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "The right passage appears in the top 50 retrieval results but rarely in the top 5 sent to the model. What helps most?",
+    "options": {
+      "a": "A reranker that reorders the candidates by relevance",
+      "b": "Passing all 50 results to the model on every call",
+      "c": "Smaller chunks, so that more of them fit in the top 5",
+      "d": "Keyword search alone, replacing vector search entirely"
+    },
+    "answer": "a",
+    "explanation": "Rerankers raise precision by rescoring a wider candidate set. Sending all 50 adds cost and noise, and recall over long contexts is uneven.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-018",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "An answer cites retrieved passages, but one of its claims appears in none of them. Which automatic check catches this?",
+    "options": {
+      "a": "A temperature check flagging any sampling above zero",
+      "b": "A schema check on the format of the answer",
+      "c": "A groundedness check of claims against the retrieved text",
+      "d": "A token count check on the length of the answer"
+    },
+    "answer": "c",
+    "explanation": "Groundedness checks compare each claim with the retrieved sources and flag unsupported ones. A valid format or length says nothing about support.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-019",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Which question is better answered by knowledge-graph retrieval than by retrieving text chunks?",
+    "options": {
+      "a": "What does the procedure say about cleaning the extruder?",
+      "b": "Can you summarize last week's shift report from line 3 for the manager?",
+      "c": "What torque does the pump manual specify for the seal?",
+      "d": "Which operators ran the lines fed by the resin batch that failed?"
+    },
+    "answer": "d",
+    "explanation": "Multi-hop questions follow links: batch to lines to operators. A graph traverses them; text chunks each hold only part of the chain.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-020",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "A graph-backed assistant names the wrong suppliers for line 4, although its graph query ran exactly as intended. Where is the fault most likely?",
+    "options": {
+      "a": "In the temperature used to word the final answer",
+      "b": "In the graph's data: a missing or wrong supplier-to-line link",
+      "c": "In the embedding model that encoded the planner's question",
+      "d": "In the context window, which truncated the result of the graph query"
+    },
+    "answer": "b",
+    "explanation": "When the query is right, a graph answer is only as good as its facts and links. Fix the data in the graph, not the model; this is why the ontology needs owners.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-021",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your knowledge graph holds machines, lots and suppliers. How does an agent typically answer a multi-hop question with it?",
+    "options": {
+      "a": "It writes a graph query, runs it through a tool and explains the result",
+      "b": "It reads the whole graph, exported as text, into its context on every call",
+      "c": "It is fine-tuned on the graph so it memorizes every link",
+      "d": "It embeds each node and returns the single most similar one"
+    },
+    "answer": "a",
+    "explanation": "The model translates the question into a query, the application runs it, and the model explains the exact result. Memorizing or dumping the graph does not scale or stay current.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-022",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your team points a model at the ERP's 3,000 raw tables for text-to-SQL. What should you expect, and what helps?",
+    "options": {
+      "a": "Reliable queries, since models already know common ERP schemas",
+      "b": "Reliable queries, as long as the temperature is kept high",
+      "c": "Unreliable queries; add a semantic layer or knowledge graph",
+      "d": "Unreliable queries; fine-tune the model on the list of tables"
+    },
+    "answer": "c",
+    "explanation": "Raw schemas hide meaning in cryptic names and joins. A semantic layer or knowledge graph maps business terms to data and raises accuracy markedly.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-023",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "How can an ontology improve model-generated SQL once the query has been written?",
+    "options": {
+      "a": "Speed queries up by caching every table in memory",
+      "b": "Replace SQL with answers written in natural language",
+      "c": "Encrypt the queries before they reach the database",
+      "d": "Check the queries against its rules and repair errors"
+    },
+    "answer": "d",
+    "explanation": "The ontology knows what entities, relations and constraints are valid, so it can catch and repair wrong queries; the data.world follow-up study reported about four times the accuracy.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-024",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your agent has a single tool, run_any_sql, with write access to the database. What is the better design?",
+    "options": {
+      "a": "Keep the one tool but add 'be careful with writes' to its description",
+      "b": "Add more general tools so the agent has more options",
+      "c": "Give the tool admin rights to avoid permission errors",
+      "d": "Few narrow tools, with reads separated from writes"
+    },
+    "answer": "d",
+    "explanation": "Narrow tools limit what can go wrong and are easier for the model to use correctly. Separating reads from writes lets writes carry approvals and stricter controls.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-025",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "An agent's write tool times out, the agent retries, and two identical orders are created. Which tool property prevents this?",
+    "options": {
+      "a": "Idempotent writes, such as a request key that makes retries harmless",
+      "b": "A longer timeout so that the first call has time to complete",
+      "c": "A lower temperature so the agent retries less often",
+      "d": "A rule in the system prompt telling the agent not to retry failed calls"
+    },
+    "answer": "a",
+    "explanation": "Agents retry. An idempotent write gives the same result however often it is called, so a retry cannot duplicate an order.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-026",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Before an agent reschedules orders in the APS, what tool feature lets the planner see the effect first?",
+    "options": {
+      "a": "Read access to a copy of the model's training data",
+      "b": "A higher step limit so the agent can explore more plans",
+      "c": "A dry-run mode returning the changes without applying them",
+      "d": "A verbose mode that logs each of the model's reasoning steps"
+    },
+    "answer": "c",
+    "explanation": "A dry-run returns what a write would change without doing it, so a person or a check can review the effect before it is applied.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-027",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "A tool returns only 'Error 500' when a part number is malformed, and the agent keeps repeating the call. What should change?",
+    "options": {
+      "a": "Hide errors from the agent so that it is not confused",
+      "b": "Errors that state what was wrong and how to fix the call",
+      "c": "A higher step limit so the agent eventually succeeds",
+      "d": "Automatic retries of the same call until it works"
+    },
+    "answer": "b",
+    "explanation": "The model can only correct a call if the error tells it what to correct. Actionable error messages are part of tool design; retrying the same malformed call changes nothing.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-028",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "An agent keeps calling get_orders when it should call get_order_lines. What is the first fix?",
+    "options": {
+      "a": "Fine-tune the model on many examples of correct tool choices",
+      "b": "Clearer names and descriptions saying when to use each tool",
+      "c": "A higher temperature so the agent tries the other tool",
+      "d": "Merge all order tools into one general query tool"
+    },
+    "answer": "b",
+    "explanation": "The model chooses tools from their names and descriptions. Making them distinct and explicit is the cheap first fix; merging into a broad tool loses control.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-029",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "You extract defect codes from reports. Which metrics show whether the extractor misses codes or invents them?",
+    "options": {
+      "a": "Precision for missed codes, recall for invented ones",
+      "b": "Recall for missed codes, precision for invented ones",
+      "c": "Overall accuracy of each report summary, rated by readers",
+      "d": "Latency and token cost per processed report"
+    },
+    "answer": "b",
+    "explanation": "Recall measures how many true codes were found, so misses lower it. Precision measures how many extracted codes are right, so inventions lower it.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-030",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your team wants a model to grade answers automatically in the eval suite. When can you trust that grader?",
+    "options": {
+      "a": "Once its grades agree with human labels on a calibration set",
+      "b": "As soon as it is a larger model than the model whose answers it grades",
+      "c": "When it explains its reasoning before giving each grade",
+      "d": "When it gives the same answer the same grade twice in a row"
+    },
+    "answer": "a",
+    "explanation": "Model-graded evaluation is only trusted once calibrated against human labels. Size, explanations or consistency do not show that its grades are right.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-031",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your golden set has 200 real cases, all taken from routine weeks. What risk does it hide?",
+    "options": {
+      "a": "It is too large to run before every change",
+      "b": "It overfits the model's weights to routine weeks",
+      "c": "It prevents the use of model-graded evaluation",
+      "d": "It misses the rare, hard cases where errors cost most"
+    },
+    "answer": "d",
+    "explanation": "A golden set should reflect the real cases that matter, including the difficult ones. Running evals does not change the model's weights.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-032",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "The expected outputs in your eval set were written by one engineer with no plant experience. What should you do?",
+    "options": {
+      "a": "Use the model's own outputs as the expected answers instead",
+      "b": "Keep them as they are, since the cases themselves are real",
+      "c": "Have plant experts review and correct the expected outputs",
+      "d": "Add more cases written by the same engineer for consistency"
+    },
+    "answer": "c",
+    "explanation": "A golden set is only as good as its labels. Real cases need expected outputs that experts agree are right; the model's own outputs would grade it against itself.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-033",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "A planner reports a strange answer from last Tuesday. What must have been logged to reproduce it?",
+    "options": {
+      "a": "The prompt, model version, inputs and output of that call",
+      "b": "Only the final answer that was shown to the planner",
+      "c": "The planner's name and the time the request was made",
+      "d": "The temperature setting used by the assistant across that whole week"
+    },
+    "answer": "a",
+    "explanation": "The same input can produce different outputs, and providers update models. Logging prompts, model versions, inputs and outputs makes behavior reproducible.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-034",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "A field must hold one of 12 defect codes, but the model sometimes invents a 13th. What is the sound fix?",
+    "options": {
+      "a": "Set the temperature to zero so that invented codes cannot occur",
+      "b": "Constrain the output to the allowed codes and validate it",
+      "c": "Tell the model in the prompt not to invent any new codes",
+      "d": "Fine-tune the model until it has memorized all twelve codes"
+    },
+    "answer": "b",
+    "explanation": "The model picks probable tokens, so restrict the choice to valid codes and check the result in code. Temperature zero lowers variation but does not prevent invalid values.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-035",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "How do you tell whether a RAG system's wrong answers come from retrieval rather than generation?",
+    "options": {
+      "a": "Ask users to rate each final answer on a five-point satisfaction scale",
+      "b": "Measure how long the retrieval step takes per question",
+      "c": "Check whether each eval case's source passages were retrieved",
+      "d": "Count how many chunks the index currently holds"
+    },
+    "answer": "c",
+    "explanation": "Evaluate the retriever separately: if the expected passages are missing from what was retrieved, the generator never had a chance.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-036",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Each chunk in your index is a whole 40-page document, and retrieval performs poorly. What is the main reason?",
+    "options": {
+      "a": "One vector blurs many topics, so no single meaning matches well",
+      "b": "Long chunks are moved to a slower tier of storage",
+      "c": "Keyword search cannot index chunks that run longer than a single page",
+      "d": "The model refuses to read documents longer than a page"
+    },
+    "answer": "a",
+    "explanation": "An embedding summarizes a chunk's meaning in one vector. A chunk covering many topics matches none of them sharply, so precision drops.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-037",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Why does a model sometimes write a fluent but wrong part number?",
+    "options": {
+      "a": "Its internal database of part numbers holds outdated or duplicated entries",
+      "b": "Part numbers are too long to fit in its context window",
+      "c": "Its attention mechanism filters numbers out of the context",
+      "d": "It predicts likely tokens; a plausible code is not a looked-up fact"
+    },
+    "answer": "d",
+    "explanation": "Generation picks probable next tokens. Without the real code in context or from a tool, the model produces something that looks right.",
+    "source": "Day 3, AI fundamentals",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-038",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "An agent needs one order's status, but its tool returns the full 5,000-line order table. What is wrong?",
+    "options": {
+      "a": "Nothing is wrong, as long as the full table fits within the context window",
+      "b": "The tool should return only what is needed, keeping context small",
+      "c": "The agent should be fine-tuned to read large tables faster",
+      "d": "The table should first be embedded as a single vector"
+    },
+    "answer": "b",
+    "explanation": "Narrow tools return what the task needs. Dumping large results wastes tokens, slows calls and buries the relevant line in the middle of the context.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-039",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "After a prompt change, the pass rate on a 50-case eval set rises from 80% to 82%. What is fair to conclude?",
+    "options": {
+      "a": "One case changed; that is within noise, so claim no gain yet",
+      "b": "The new prompt is reliably better and can be shipped as an improvement",
+      "c": "The eval set is broken, since scores should not move at all",
+      "d": "The model learned from the first run, inflating the second"
+    },
+    "answer": "a",
+    "explanation": "Two percent of 50 cases is one case, well within run-to-run variation. Enlarge the set or rerun before claiming an improvement.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-040",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "Your knowledge graph answers 'which lots used resin batch R-7?' but not 'why was this lot scrapped?'. What should you add?",
+    "options": {
+      "a": "More links between lots and machines in the graph",
+      "b": "A larger model that reads the graph exported as text",
+      "c": "Text retrieval over quality reports alongside the graph",
+      "d": "Fine-tuning the model on past scrap decisions"
+    },
+    "answer": "c",
+    "explanation": "Graphs answer relational questions; explanations live in reports and notes. Combine graph queries with text retrieval for the narrative part.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-041",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "What should the application do before running model-generated SQL on the ERP?",
+    "options": {
+      "a": "Run it directly, since models write valid SQL for known schemas",
+      "b": "Ask the model whether the query it wrote is safe to run",
+      "c": "Run it at night, when the ERP has spare capacity",
+      "d": "Run it read-only, after checks on schema and allowed tables"
+    },
+    "answer": "d",
+    "explanation": "Generated SQL is unreliable on raw schemas. Read-only access and validation against the schema keep a bad query from changing or overloading the system of record.",
+    "source": "Day 4, technical roadblocks",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  },
+  {
+    "id": "LLM-3-042",
+    "domain": "LLM",
+    "tier": 3,
+    "stem": "How should you evaluate an agent that completes tasks in several tool steps?",
+    "options": {
+      "a": "Rate only how fluent its final message to the user is",
+      "b": "Check the outcome and the tool calls it made, on real cases",
+      "c": "Count its steps, since fewer steps means a better agent",
+      "d": "Ask the agent to grade its own run once the task has been completed"
+    },
+    "answer": "b",
+    "explanation": "An agent can reach a good-looking answer through wrong or unsafe actions. Evaluate the end state and the tool calls against real cases.",
+    "source": "Day 3, build lab",
+    "keepOrder": false,
+    "status": "draft",
+    "author": "claude",
+    "reviewedBy": null
+  }
+]
