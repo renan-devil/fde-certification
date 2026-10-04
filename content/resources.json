@@ -1,6 +1,28 @@
 {
   "sessions": [
     {
+      "id": "program",
+      "title": "Start here: the week",
+      "summary": "How the five days run, the Polymex plant you will work on all week, the teams and the daily rhythm.",
+      "tracks": [
+        "exco",
+        "manager",
+        "fde"
+      ],
+      "domains": [],
+      "items": [
+        {
+          "id": "your-week",
+          "kind": "reading",
+          "title": "Your week",
+          "summary": "What the week must produce, the days at a glance, the Polymex plant, teams and roles, house rules, setup and the exam.",
+          "read": "fde-school-your-week.md",
+          "href": "/resources/fde-school-your-week.md",
+          "status": "available"
+        }
+      ]
+    },
+    {
       "id": "day-1",
       "title": "Day 1: The role",
       "summary": "What an FDE is and where the role comes from, then the consulting basics it relies on: structuring a message, navigating an organization, keeping the top-level view.",
@@ -18,15 +40,36 @@
           "id": "d1-slides-am",
           "kind": "slides",
           "title": "What an FDE is",
-          "href": null,
-          "status": "coming_soon"
+          "summary": "The job AI created: why deployment, not models, is where industrial AI fails, and what an FDE is accountable for. 50 slides.",
+          "read": "d1-am-what-an-fde-is.deck.md",
+          "href": "/resources/d1-am-what-an-fde-is.deck.md",
+          "status": "available"
+        },
+        {
+          "id": "d1-lab-kit",
+          "kind": "dataset",
+          "title": "Lab kit: Polymex Plant Pulse",
+          "summary": "The morning lab: brief, rules for Claude Code, 90 days of shift logs and the data dictionary. Clone it and ship a dashboard.",
+          "href": "/resources/fde-school-day1-participant-kit.zip",
+          "status": "available"
         },
         {
           "id": "d1-slides-pm",
           "kind": "slides",
           "title": "Consulting skills 101",
-          "href": null,
-          "status": "coming_soon"
+          "summary": "Think like a partner, speak like one: structure the problem, structure the message, navigate the organization. 50 slides.",
+          "read": "d1-pm-consulting-skills.deck.md",
+          "href": "/resources/d1-pm-consulting-skills.deck.md",
+          "status": "available"
+        },
+        {
+          "id": "d1-exercises",
+          "kind": "exercise",
+          "title": "Afternoon exercises",
+          "summary": "Three exercises on Polymex: turn Hervé's complaint into a testable problem, write an answer-first memo, map the plant and brief Hervé live.",
+          "read": "d1-pm-consulting-skills.exercises.md",
+          "href": "/resources/d1-pm-consulting-skills.exercises.md",
+          "status": "available"
         },
         {
           "id": "d1-recording",

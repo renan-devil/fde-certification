@@ -37,3 +37,10 @@ Every default taken or changed, one line each. The spec is docs/SPEC.md.
 - Homepage rewritten: what the FDE School is, then a map of the site, then the exams.
 
 - FDE basics skill (`content/FDEbasics.md`, public at `/FDEbasics.md`): the doctrine of spec section 18 rewritten as working rules for an AI assistant, in Claude Code skill format (name `fde-basics`). Installed by saving it as `~/.claude/skills/fde-basics/SKILL.md`; the Agents page gives the command.
+
+## Course material (4 October 2026)
+
+- Renan's curriculum upload (`docs/curriculum/source-files.zip`): participant files go to `public/resources/` (behind the password) and are readable on the site at `/resources/read/<file>`; slide decks render one framed panel per slide. Facilitator guides and the lab kit's answer key and generator stay in `docs/curriculum/facilitator/`, never served: they hold model answers and "things not to reveal".
+- The Day 1 lab kit is served as `fde-school-day1-participant-kit.zip`, rebuilt from the `participant/` folder only.
+- Renan asked for cards on the Resources page; this replaces the spec's "no rows of identical cards" rule for that page only. Cards differ by state: available (ink border) or coming soon (grey).
+- The program guide is a facilitator document (its materials index says so) and its Polymex cast table reveals the consolidation rumor the Day 1 facilitator guide says not to reveal. Participants get "Your week", the same text minus the cast table, facilitation principles, materials index, design conventions and trainer-only lines. The full guide stays in `docs/curriculum/facilitator/`.

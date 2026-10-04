@@ -31,7 +31,7 @@ export default async function ResourcesPage({ searchParams }: { searchParams: Pr
   return (
     <div>
       <h1 className="display text-44">Course material</h1>
-      <p className="prose-width mt-3">The five days of the FDE School, in order. Material appears here after each session.</p>
+      <p className="prose-width mt-3">The five days of the FDE School, in order. Read the material here or download it; more appears after each session.</p>
 
       <nav aria-label="Filter by track" className="mt-6 flex flex-wrap gap-2">
         {FILTERS.map((f) => (
@@ -61,19 +61,26 @@ export default async function ResourcesPage({ searchParams }: { searchParams: Pr
                 ))}
               </p>
             )}
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {s.items.filter((it) => fits(it.tracks ?? s.tracks)).map((it) => {
-                const available = it.status === 'available' && it.href;
+                const available = it.status === 'available' && Boolean(it.read || it.href);
+                const local = it.href?.startsWith('/');
                 return (
-                  <li key={it.id} className="flex flex-wrap items-baseline gap-x-3">
-                    <span className="w-20 shrink-0 text-15 text-steel">{KIND_LABEL[it.kind]}</span>
-                    {available ? (
-                      <a href={it.href!} target="_blank" rel="noopener noreferrer" className="link font-semibold">{it.title}</a>
-                    ) : (
-                      <span className="text-steel">{it.title}</span>
-                    )}
-                    {it.duration && <span className="tnum text-15 text-steel">{it.duration}</span>}
-                    {!available && <span className="text-15 text-steel">(Available after the session)</span>}
+                  <li key={it.id} className={`flex flex-col border p-5 ${available ? 'border-ink' : 'border-gauge bg-gauge/30'}`}>
+                    <p className="text-13 text-steel">{KIND_LABEL[it.kind]}{it.duration ? `, ${it.duration}` : ''}</p>
+                    <h3 className={`mt-1 text-21 font-semibold leading-snug ${available ? '' : 'text-steel'}`}>{it.title}</h3>
+                    <p className="mt-2 flex-1 text-15 text-steel">{it.summary ?? ''}</p>
+                    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-15">
+                      {!available && <span className="text-steel">Available after the session</span>}
+                      {available && it.read && (
+                        <Link href={`/resources/read/${it.read}`} className="link font-semibold">{it.kind === 'slides' ? 'View slides' : 'Read'}</Link>
+                      )}
+                      {available && it.href && (
+                        <a href={it.href} {...(local ? { download: true } : { target: '_blank', rel: 'noopener noreferrer' })} className={`link ${it.read ? '' : 'font-semibold'}`}>
+                          {it.href.endsWith('.zip') ? 'Download the kit' : local ? 'Download' : 'Open'}
+                        </a>
+                      )}
+                    </div>
                   </li>
                 );
               })}
@@ -85,11 +92,13 @@ export default async function ResourcesPage({ searchParams }: { searchParams: Pr
       {reading.length > 0 && (
         <section className="border-t border-ink pt-6">
           <h2 className="display text-27">Further reading</h2>
-          <ul className="mt-4 space-y-3">
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {reading.map((r) => (
-              <li key={r.id}>
-                <a href={r.href} target="_blank" rel="noopener noreferrer" className="link font-semibold">{r.title}</a>
-                <span className="block text-15 text-steel">{r.by}</span>
+              <li key={r.id} className="flex flex-col border border-ink p-5">
+                <p className="text-13 text-steel">Reading</p>
+                <h3 className="mt-1 flex-1 text-17 font-semibold leading-snug">{r.title}</h3>
+                <p className="mt-2 text-15 text-steel">{r.by}</p>
+                <a href={r.href} target="_blank" rel="noopener noreferrer" className="link mt-4 text-15 font-semibold">Open</a>
               </li>
             ))}
           </ul>
