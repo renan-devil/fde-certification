@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Band } from '@/components/Band';
 import type { OptionId } from '@/lib/bank/schema';
 import type { AnswerMap, RunnerQuestion } from '@/lib/exam/attempts';
@@ -27,6 +28,7 @@ function formatClock(ms: number): string {
 }
 
 export function Runner({ attemptId, trackName, questions, initialAnswers, serverNow, deadline }: Props) {
+  const router = useRouter();
   const storageKey = `fde_attempt_${attemptId}`;
   const [answers, setAnswers] = useState<AnswerMap>(initialAnswers);
   const answersRef = useRef(answers);
@@ -51,23 +53,20 @@ export function Runner({ attemptId, trackName, questions, initialAnswers, server
   }, [storageKey]);
 
   // Saves one answer; failed saves retry with backoff until they succeed or the attempt closes.
-  const persist = useCallback((questionId: string, attempt = 0) => {
-    clearTimeout(retryTimers.current[questionId]);
-    const a = answersRef.current[questionId] ?? blank;
+  const persist = useCallback((questionId: string) => {
+    const done = () => setUnsaved((s) => { const n = new Set(s); n.delete(questionId); return n; });
+    const run = (attempt: number) => {
+      clearTimeout(retryTimers.current[questionId]);
+      const a = answersRef.current[questionId] ?? blank;
+      saveAnswerAction(attemptId, questionId, a.o, a.f)
+        // Saved, or refused for good (closed after the deadline: submitting finalizes and moves on).
+        .then(done)
+        .catch(() => {
+          retryTimers.current[questionId] = setTimeout(() => run(attempt + 1), Math.min(15000, 1000 * 2 ** attempt));
+        });
+    };
     setUnsaved((s) => new Set(s).add(questionId));
-    saveAnswerAction(attemptId, questionId, a.o, a.f)
-      .then((res) => {
-        if (res.ok || res.reason !== 'closed') {
-          setUnsaved((s) => { const n = new Set(s); n.delete(questionId); return n; });
-          return;
-        }
-        // Closed: the deadline passed. Submitting finalizes and moves on.
-        setUnsaved((s) => { const n = new Set(s); n.delete(questionId); return n; });
-      })
-      .catch(() => {
-        const delay = Math.min(15000, 1000 * 2 ** attempt);
-        retryTimers.current[questionId] = setTimeout(() => persist(questionId, attempt + 1), delay);
-      });
+    run(0);
   }, [attemptId]);
 
   const update = useCallback((questionId: string, change: Partial<{ o: OptionId | null; f: boolean }>) => {
@@ -85,7 +84,7 @@ export function Runner({ attemptId, trackName, questions, initialAnswers, server
       try {
         await submitAction(attemptId, answersRef.current);
         try { localStorage.removeItem(storageKey); } catch { /* ignore */ }
-        window.location.assign(`/attempt/${attemptId}/result`);
+        router.replace(`/attempt/${attemptId}/result`);
         return;
       } catch {
         await new Promise((r) => setTimeout(r, 1000 * 2 ** i));
@@ -94,7 +93,7 @@ export function Runner({ attemptId, trackName, questions, initialAnswers, server
     submittedRef.current = false;
     setSubmitting(false);
     setAnnouncement('Your answers could not be sent. Check your connection and press Submit answers again.');
-  }, [attemptId, storageKey]);
+  }, [attemptId, storageKey, router]);
 
   // On load: the server's answers are the truth; answers kept in this browser fill any gap.
   useEffect(() => {

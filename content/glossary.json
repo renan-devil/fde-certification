@@ -1,0 +1,398 @@
+[
+  {
+    "term": "agent",
+    "tier": 1,
+    "definition": "An AI system that plans and carries out multi-step tasks with tools, under supervision. For example: read an order, check capacity, propose a slot, flag the risk and draft the supplier email.",
+    "domain": "GAI"
+  },
+  {
+    "term": "hallucination",
+    "tier": 1,
+    "definition": "A confident but wrong answer from a model. It is a property of the technology, not a bug the next model will fix: grounding in company data reduces it, and human review controls it.",
+    "domain": "GAI"
+  },
+  {
+    "term": "reasoning model",
+    "tier": 2,
+    "definition": "A model that spends extra computation working through a problem before answering. It does better on multi-step problems but is slower and costs more per answer.",
+    "domain": "GAI"
+  },
+  {
+    "term": "context window",
+    "tier": 1,
+    "definition": "Everything a model can consider in one call: instructions, documents and conversation. What is in neither its training nor its context does not exist for the model.",
+    "domain": "LLM"
+  },
+  {
+    "term": "fine-tuning",
+    "tier": 1,
+    "definition": "Changing a model's weights by training it further on examples. It shapes behavior, format and style, but it is rarely the first step for a company and is a poor way to add changing knowledge.",
+    "domain": "LLM"
+  },
+  {
+    "term": "inference",
+    "tier": 1,
+    "definition": "Using a trained model to produce an answer. It is paid per token, on every call, so it is the running cost of any AI application.",
+    "domain": "LLM"
+  },
+  {
+    "term": "prompt",
+    "tier": 1,
+    "definition": "The instructions and context given to a model in a call. Better context beats clever wording: what the model needs to know must be put in front of it.",
+    "domain": "LLM"
+  },
+  {
+    "term": "retrieval-augmented generation (RAG)",
+    "tier": 1,
+    "definition": "A method that fetches relevant documents and puts them in the model's context, grounding answers in company data without changing the model. Typical failures: wrong passages retrieved, missing or stale documents.",
+    "domain": "LLM"
+  },
+  {
+    "term": "token",
+    "tier": 1,
+    "definition": "A chunk of text, about three quarters of an English word on average. Prices, speed and limits are counted in tokens. Non-English text, numbers and codes often take more tokens.",
+    "domain": "LLM"
+  },
+  {
+    "term": "training",
+    "tier": 1,
+    "definition": "Building a model by learning from very large datasets. It is done by labs, is expensive and happens rarely. A model does not learn from your conversations by default.",
+    "domain": "LLM"
+  },
+  {
+    "term": "embedding",
+    "tier": 2,
+    "definition": "A list of numbers (a vector) that captures the meaning of a piece of text. Texts with similar meaning get similar vectors, which makes semantic search possible.",
+    "domain": "LLM"
+  },
+  {
+    "term": "eval",
+    "tier": 2,
+    "definition": "A set of real cases with expected outputs, run before and after every change to a prompt, model or pipeline. Without evals, quality is an opinion.",
+    "domain": "LLM"
+  },
+  {
+    "term": "Model Context Protocol (MCP)",
+    "tier": 2,
+    "definition": "An open standard for connecting AI applications to tools and data sources. A connection is built once and can then be used by many AI clients.",
+    "domain": "LLM"
+  },
+  {
+    "term": "semantic search",
+    "tier": 2,
+    "definition": "Search that finds text with similar meaning, not identical words, by comparing embeddings. It does not match exact codes reliably, such as part numbers or order numbers.",
+    "domain": "LLM"
+  },
+  {
+    "term": "structured output",
+    "tier": 2,
+    "definition": "Model output that follows a defined format, such as JSON matching a schema, so software can use it directly. It should still be validated before use.",
+    "domain": "LLM"
+  },
+  {
+    "term": "temperature",
+    "tier": 2,
+    "definition": "A setting that controls how much a model's output varies. A low temperature reduces variation but does not guarantee identical outputs for the same input.",
+    "domain": "LLM"
+  },
+  {
+    "term": "tool use (function calling)",
+    "tier": 2,
+    "definition": "The model emits a structured request to call a tool; the application decides whether to execute it and returns the result. This is how agents act on systems, and where permissions live.",
+    "domain": "LLM"
+  },
+  {
+    "term": "attention",
+    "tier": 3,
+    "definition": "The mechanism that lets each token weigh every other token in the context. Its naive cost grows quadratically with context length, and recall across long contexts is uneven.",
+    "domain": "LLM"
+  },
+  {
+    "term": "groundedness",
+    "tier": 3,
+    "definition": "Whether an answer is actually supported by the documents or data the model was given. Groundedness checks catch answers that sound right but are not backed by what was retrieved.",
+    "domain": "LLM"
+  },
+  {
+    "term": "hybrid retrieval",
+    "tier": 3,
+    "definition": "Retrieval that combines keyword search with vector search. It is needed for exact identifiers such as part numbers, SKUs, machine ids and order numbers, which embeddings alone miss.",
+    "domain": "LLM"
+  },
+  {
+    "term": "logits",
+    "tier": 3,
+    "definition": "The raw scores a model outputs over its vocabulary for the next token. They are turned into probabilities, and sampling settings such as temperature then pick the token.",
+    "domain": "LLM"
+  },
+  {
+    "term": "prompt caching",
+    "tier": 3,
+    "definition": "Reusing the processing of a repeated prompt prefix, such as fixed instructions or a long document, across calls. It cuts both cost and latency.",
+    "domain": "LLM"
+  },
+  {
+    "term": "reranking",
+    "tier": 3,
+    "definition": "A second step in retrieval that reorders the candidate passages by relevance to the question before they reach the model. It raises the precision of what the model is given.",
+    "domain": "LLM"
+  },
+  {
+    "term": "knowledge graph",
+    "tier": 1,
+    "definition": "An ontology filled with a company's actual facts, stored as nodes and relationships. It lets a model answer questions that span several linked facts, such as suppliers, machines and defective lots.",
+    "domain": "ONT"
+  },
+  {
+    "term": "ontology",
+    "tier": 1,
+    "definition": "A formal, machine-readable model of the business: what exists, how things relate, which rules apply and which actions are allowed. The model is rented; the ontology is the company's own asset.",
+    "domain": "ONT"
+  },
+  {
+    "term": "taxonomy",
+    "tier": 1,
+    "definition": "A hierarchy of categories, such as product families and subfamilies. It is not an ontology: it classifies things but does not state their relationships, rules or allowed actions.",
+    "domain": "ONT"
+  },
+  {
+    "term": "type and instance",
+    "tier": 2,
+    "definition": "A type carries shared capabilities and constraints, such as rates, allowed product families and setup rules for a machine type. An instance is one real thing, such as machine #7, with today's state.",
+    "domain": "ONT"
+  },
+  {
+    "term": "identity resolution",
+    "tier": 3,
+    "definition": "Mapping the same supplier, material or machine when it appears under different codes across systems. Without explicit mapping, the same thing is counted or treated as several.",
+    "domain": "ONT"
+  },
+  {
+    "term": "shadow algorithm",
+    "tier": 3,
+    "definition": "A real decision rule that lives in spreadsheets and experts' heads rather than in any system. Extract it by walking recent real cases, asking for exceptions and studying overrides.",
+    "domain": "ONT"
+  },
+  {
+    "term": "ERP",
+    "tier": 1,
+    "definition": "Enterprise resource planning: the core business system for orders, inventory and finance. It stays as the system of record; its master data, such as rates and lead times, is often wrong.",
+    "domain": "DAT"
+  },
+  {
+    "term": "system of record",
+    "tier": 1,
+    "definition": "The system that officially owns a piece of data; every other source is a copy. Keep the ERP as the system of record and add a thin layer of agents and apps on top.",
+    "domain": "DAT"
+  },
+  {
+    "term": "APS",
+    "tier": 2,
+    "definition": "Advanced planning and scheduling: a system that builds production plans and schedules against capacity and constraints, between the ERP and the shop floor.",
+    "domain": "DAT"
+  },
+  {
+    "term": "CMMS",
+    "tier": 2,
+    "definition": "Computerized maintenance management system: the system that plans and records maintenance work, breakdowns and spare parts for equipment.",
+    "domain": "DAT"
+  },
+  {
+    "term": "MES",
+    "tier": 2,
+    "definition": "Manufacturing execution system: the plant system that runs and records shop-floor execution, such as which order runs on which machine, when, and with what result.",
+    "domain": "DAT"
+  },
+  {
+    "term": "official vs real process",
+    "tier": 2,
+    "definition": "The documented process and how work actually happens diverge. Data produced by the official process can mislead, so watch the real work before modeling or automating it.",
+    "domain": "DAT"
+  },
+  {
+    "term": "PLM",
+    "tier": 2,
+    "definition": "Product lifecycle management: the system that holds product data, such as designs, specifications, bills of materials and their revisions.",
+    "domain": "DAT"
+  },
+  {
+    "term": "QMS",
+    "tier": 2,
+    "definition": "Quality management system: the system that holds quality data and processes, such as inspections, nonconformities, corrective actions and lot release.",
+    "domain": "DAT"
+  },
+  {
+    "term": "SCADA",
+    "tier": 2,
+    "definition": "Supervisory control and data acquisition: systems that monitor and control machines and collect their signals, usually stored over time in historians.",
+    "domain": "DAT"
+  },
+  {
+    "term": "WMS",
+    "tier": 2,
+    "definition": "Warehouse management system: the system that manages stock locations, receipts, picking and shipments inside a warehouse.",
+    "domain": "DAT"
+  },
+  {
+    "term": "data census",
+    "tier": 3,
+    "definition": "An inventory of the data a use case needs across three layers: system data, spreadsheet data and data in people's heads. Much of what agents need lives outside any system of record.",
+    "domain": "DAT"
+  },
+  {
+    "term": "idempotent pipeline",
+    "tier": 3,
+    "definition": "A data pipeline that gives the same result however many times it runs on the same input. It relies on stable business keys, upserts, incremental loads and checks at each stage.",
+    "domain": "DAT"
+  },
+  {
+    "term": "ISA-95",
+    "tier": 3,
+    "definition": "A standard model of plant system levels: 0 to 2 for sensing and control, 3 for manufacturing operations such as the MES, and 4 for business planning such as the ERP.",
+    "domain": "DAT"
+  },
+  {
+    "term": "gain capture",
+    "tier": 1,
+    "definition": "Turning capacity freed by software into money through decisions, such as filling freed hours with orders or stopping overtime. It needs a client-side owner with a mandate and authority.",
+    "domain": "VAL"
+  },
+  {
+    "term": "validated gain",
+    "tier": 1,
+    "definition": "A gain that the client's finance team has signed: measurable, attributable and backed by the CFO. Until then it does not count, however good the project team's model looks.",
+    "domain": "VAL"
+  },
+  {
+    "term": "baseline",
+    "tier": 2,
+    "definition": "The agreed reference a gain is measured against: 12 rolling months when there is seasonality, never fewer than 6, on a frozen, named perimeter. Co-build it with finance before any software runs.",
+    "domain": "VAL"
+  },
+  {
+    "term": "contribution margin",
+    "tier": 2,
+    "definition": "Revenue minus variable costs. Freed capacity is valued at contribution margin only when the extra output can be sold, capped by the order backlog; otherwise at avoided variable cost.",
+    "domain": "VAL"
+  },
+  {
+    "term": "cost to achieve",
+    "tier": 2,
+    "definition": "The one-time cost of getting a gain, such as software, people and change. Gains are stated gross or net of it, and payback is this cost divided by the monthly net run-rate.",
+    "domain": "VAL"
+  },
+  {
+    "term": "normalization",
+    "tier": 2,
+    "definition": "Adjusting the baseline for changes in volume, mix and price, so a gain reflects the improvement and not a busier or quieter period. For example: baseline rate × actual volume, per product family.",
+    "domain": "VAL"
+  },
+  {
+    "term": "run-rate",
+    "tier": 2,
+    "definition": "The recurring level a gain reaches once fully in place, usually expressed per month or year. It must be distinguished from what has actually been realized so far.",
+    "domain": "VAL"
+  },
+  {
+    "term": "triangulation",
+    "tier": 3,
+    "definition": "Building a gain figure a second, independent way, such as top-down from the P&L and bottom-up from hours × rates. Within 20 to 30%, present it; beyond, find the error.",
+    "domain": "VAL"
+  },
+  {
+    "term": "working capital",
+    "tier": 3,
+    "definition": "The cash tied up in running the business: inventory plus receivables minus payables. Releasing it is counted once as cash, and recurring only as the carrying cost saved.",
+    "domain": "VAL"
+  },
+  {
+    "term": "Forward Deployed Engineer",
+    "tier": 1,
+    "definition": "An engineer who embeds in the client's operation and owns a business outcome in production: production code, running systems, measured euro gains. Not a consultant, a pre-sales engineer or staffing.",
+    "domain": "DEP"
+  },
+  {
+    "term": "lighthouse site",
+    "tier": 1,
+    "definition": "The first site where a deployment proves itself, with gains reconciled to the P&L, before it extends to other sites. Pilot sites are rarely representative, so check before generalizing.",
+    "domain": "DEP"
+  },
+  {
+    "term": "champion",
+    "tier": 2,
+    "definition": "An internal operational person with a formal role, legitimacy and a direct line to the software teams, who carries the tools after the project team leaves.",
+    "domain": "CHG"
+  },
+  {
+    "term": "change curve",
+    "tier": 2,
+    "definition": "The path people go through when their work changes: denial, resistance, exploration, commitment. Performance dips before it rises, so plan for the dip.",
+    "domain": "CHG"
+  },
+  {
+    "term": "bottleneck",
+    "tier": 2,
+    "definition": "The step that limits the output of the whole system. An hour lost there is lost for the whole system; an hour saved elsewhere is a mirage.",
+    "domain": "OPS"
+  },
+  {
+    "term": "OEE",
+    "tier": 2,
+    "definition": "Overall equipment effectiveness: availability × performance × quality. It shows how much of a machine's planned time produces good parts at the expected rate.",
+    "domain": "OPS"
+  },
+  {
+    "term": "changeover",
+    "tier": 3,
+    "definition": "Switching a machine or line from one product to another, during which it does not produce good parts. Sequencing by product family and SMED methods reduce changeover time.",
+    "domain": "OPS"
+  },
+  {
+    "term": "expedite doom loop",
+    "tier": 3,
+    "definition": "A reinforcing loop: expedites break sequences, causing more changeovers, less capacity, more lateness and more expedites. Break it at the cheapest link rather than expediting better.",
+    "domain": "OPS"
+  },
+  {
+    "term": "Little's Law",
+    "tier": 3,
+    "definition": "Work in progress = throughput × lead time, so lead time = work in progress ÷ throughput. Releasing more work into a full shop makes orders later, not earlier.",
+    "domain": "OPS"
+  },
+  {
+    "term": "OTIF",
+    "tier": 3,
+    "definition": "On time in full: the share of orders delivered on the promised date and in the full quantity. It is stricter than on-time delivery (OTD) alone.",
+    "domain": "OPS"
+  },
+  {
+    "term": "takt time",
+    "tier": 3,
+    "definition": "The pace of production needed to meet customer demand: available time divided by demand. It differs from cycle time (time to complete one unit) and lead time (time through the whole flow).",
+    "domain": "OPS"
+  },
+  {
+    "term": "Theory of Constraints",
+    "tier": 3,
+    "definition": "A method to improve flow: identify the constraint, exploit it, subordinate everything else to it, elevate it only after exploiting it, and repeat, because the constraint moves.",
+    "domain": "OPS"
+  },
+  {
+    "term": "work in progress (WIP)",
+    "tier": 3,
+    "definition": "Orders or material that have started but are not finished. With throughput fixed by the bottleneck, more WIP means longer lead times, not more output.",
+    "domain": "OPS"
+  },
+  {
+    "term": "human in the loop",
+    "tier": 1,
+    "definition": "A design where AI proposes and an accountable person approves consequential or irreversible actions. Controls match the cost of error; approving every output is not the safest design.",
+    "domain": "RSK"
+  },
+  {
+    "term": "prompt injection",
+    "tier": 3,
+    "definition": "An attack where instructions hidden in input, directly or through documents, emails or web pages, hijack a model. Defend with least privilege, separate reads and writes, and human approval for writes.",
+    "domain": "RSK"
+  }
+]

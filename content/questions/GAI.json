@@ -273,7 +273,7 @@
     "options": {
       "a": "Agents will soon need no supervision, so plan to remove all reviews",
       "b": "Revisit often which tasks agents can take on, as their reach grows",
-      "c": "The trend is about to stop, so plan only around today's capabilities",
+      "c": "The trend is about to stop, so plan around today's capabilities",
       "d": "Wait until agents can run whole processes before starting any project"
     },
     "answer": "b",

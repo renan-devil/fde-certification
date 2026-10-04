@@ -535,11 +535,11 @@
     "id": "OPS-3-023",
     "domain": "OPS",
     "tier": 3,
-    "stem": "A process ships 98% of its parts after rework, but only 80% pass the first time. Which figure reveals the capacity lost to rework?",
+    "stem": "A process ships 98% of its parts after rework, but only 80% come out right without rework. Which figure reveals the capacity lost to rework?",
     "options": {
       "a": "The final yield of 98%",
       "b": "The scrap rate of 2%",
-      "c": "The average yield of 89%",
+      "c": "The average of both yields, 89%",
       "d": "The first-pass yield of 80%"
     },
     "answer": "d",

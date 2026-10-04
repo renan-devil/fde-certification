@@ -367,7 +367,7 @@
     "stem": "A project plan treats change management as a two-day training at go-live. What is wrong with it?",
     "options": {
       "a": "Two days is too short; it should be a full week of classroom training",
-      "b": "Change runs through the whole project, from scoping on, not only at go-live",
+      "b": "Change runs through the whole project, starting at scoping",
       "c": "Nothing, provided the training covers every feature of the tool",
       "d": "Training should be left to the vendor to save time for the project team"
     },

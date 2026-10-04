@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Logos } from '@/components/Logos';
 import { SITE } from '@/lib/config/site';
+import { emailEnabled } from '@/lib/env';
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -24,6 +25,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <Link href="/privacy" className="link">Privacy</Link>
             <Link href="/verify" className="link">Verify a certificate</Link>
             <Link href="/glossary" className="link">Glossary</Link>
+            {emailEnabled() && <Link href="/certificates" className="link">Find my certificates</Link>}
           </p>
           {SITE.showAiBadge && <p className="text-13">{SITE.aiBadge}</p>}
         </div>

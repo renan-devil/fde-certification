@@ -6,6 +6,7 @@ import { trackName } from '@/lib/config/tracks';
 import { getAttemptFresh, runnerData } from '@/lib/exam/attempts';
 import { holdsAttempt } from '@/lib/exam/guard';
 import { Runner } from './Runner';
+import { serverTime } from '@/lib/format';
 
 export const metadata: Metadata = { title: 'Exam in progress' };
 
@@ -34,7 +35,7 @@ export default async function AttemptPage({ params }: { params: Promise<{ attemp
       trackName={trackName(attempt.trackId)}
       questions={questions}
       initialAnswers={answers}
-      serverNow={Date.now()}
+      serverNow={serverTime()}
       deadline={attempt.deadlineAt.getTime()}
     />
   );

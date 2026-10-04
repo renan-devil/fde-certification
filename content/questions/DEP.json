@@ -556,10 +556,10 @@
     "tier": 3,
     "stem": "To learn how changeovers really happen on line 2, whom should you interview first?",
     "options": {
-      "a": "The plant manager, who sees the whole site",
+      "a": "The plant manager, who sees every line on the site",
       "b": "The IT team that maintains the MES data",
       "c": "The supplier who sold the line's equipment",
-      "d": "The operators who run changeovers on line 2"
+      "d": "The operators who perform them on each shift"
     },
     "answer": "d",
     "explanation": "Operators know the real sequence, the workarounds and the exceptions. Managers describe the official process, and interviewing only them reproduces it.",
@@ -861,8 +861,8 @@
     "stem": "Two months after handover, the MES data feed stops silently and plans degrade for a week. What was missing?",
     "options": {
       "a": "A longer training course for the planners",
-      "b": "Monitoring that raises an alert when a feed fails",
-      "c": "A newer AI model with a larger context window",
+      "b": "An alert that fires when incoming data stops",
+      "c": "A newer AI model with a much larger context window",
       "d": "A clause in the contract about MES availability"
     },
     "answer": "b",

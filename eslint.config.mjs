@@ -5,6 +5,8 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  // Admin pages link to CSV route handlers, which are downloads, not pages.
+  { rules: { '@next/next/no-html-link-for-pages': 'off' } },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:

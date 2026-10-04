@@ -28,6 +28,7 @@ function register() {
 const dataUri = (file: string) => `data:image/png;base64,${readFileSync(path.join(LOGOS, file)).toString('base64')}`;
 
 const INK = '#141313', STEEL = '#5B6470';
+/* eslint-disable jsx-a11y/alt-text -- react-pdf Image has no alt attribute */
 // A4 landscape: 842 × 595 pt.
 const s = StyleSheet.create({
   page: { fontFamily: 'Archivo', color: INK, fontSize: 10, backgroundColor: '#FFFFFF' },

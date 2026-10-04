@@ -957,7 +957,7 @@
     "options": {
       "a": "A temperature check flagging any sampling above zero",
       "b": "A schema check on the format of the answer",
-      "c": "A groundedness check of claims against the retrieved text",
+      "c": "A groundedness check against the sources",
       "d": "A token count check on the length of the answer"
     },
     "answer": "c",
