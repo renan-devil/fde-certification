@@ -44,3 +44,12 @@ Every default taken or changed, one line each. The spec is docs/SPEC.md.
 - The Day 1 lab kit is served as `fde-school-day1-participant-kit.zip`, rebuilt from the `participant/` folder only.
 - Renan asked for cards on the Resources page; this replaces the spec's "no rows of identical cards" rule for that page only. Cards differ by state: available (ink border) or coming soon (grey).
 - The program guide is a facilitator document (its materials index says so) and its Polymex cast table reveals the consolidation rumor the Day 1 facilitator guide says not to reveal. Participants get "Your week", the same text minus the cast table, facilitation principles, materials index, design conventions and trainer-only lines. The full guide stays in `docs/curriculum/facilitator/`.
+
+## Course material, Days 2, 3 and 5 (8 October 2026)
+
+- Renan's second upload (one zip per day, Day 4 missing, plus the updated program guide) is archived untouched in `docs/curriculum/source/`. Participant files follow the Day 1 pattern: deck content and handouts to `public/resources/`, readable on the site; facilitator guides, answer keys, generators and the Day 3 holdout evals to `docs/curriculum/facilitator/`.
+- The Day 3 lab kit is served as `fde-school-day3-participant-kit.zip`, rebuilt from the `participant/` folder only. The new Day 1 kit is identical to the one already served, and the Day 1 texts differ only in file names in their comments, so Day 1 is unchanged.
+- The designed `.dc.html` decks are not served: they need a `shared/` folder (fonts, images, slide engine) that was not uploaded. The site keeps rendering decks from their Markdown content.
+- The Day 5 afternoon deck is held back ("Available after the session"): it tells what really happened in both Friday cases, which the facilitator guide keeps for the 13:30 debrief. The Day 5 case packs and handouts are published.
+- Day 4 stays "Available after the session" until its material is uploaded.
+- `docs/curriculum/**` is excluded from lint: it holds the trainers' generators as uploaded.

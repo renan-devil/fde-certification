@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Trainers' lab generators, kept as uploaded.
+    "docs/curriculum/**",
   ]),
 ]);
 

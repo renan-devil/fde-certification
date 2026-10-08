@@ -1,0 +1,137 @@
+{
+  "schedule_rows": 65,
+  "violations": [
+    {
+      "rule": "R01",
+      "machine": "M02",
+      "order_id": "O58817",
+      "from": "PPK-4010",
+      "to": "PPN-1020",
+      "at": "2026-05-06 15:20",
+      "detail": "black to natural on Wed shift B; allowed only Saturday shift A"
+    },
+    {
+      "rule": "R02/R03",
+      "machine": "M04",
+      "order_id": "O58835",
+      "product": "PPG-5030",
+      "customer": "Brisol Automotive",
+      "at": "2026-05-06 18:49",
+      "detail": "M04 cannot run PPG"
+    },
+    {
+      "rule": "R05",
+      "machine": "M05",
+      "order_id": "O58844",
+      "from": "PPG-5030",
+      "to": "PPW-2010",
+      "at": "2026-05-07 07:10",
+      "detail": "white directly after glass-filled"
+    },
+    {
+      "rule": "R06",
+      "machine": "M07",
+      "shift": "2026-05-07 B",
+      "changeovers": 6,
+      "detail": "6 changeovers in one shift, maximum 4"
+    },
+    {
+      "rule": "R04",
+      "machines": [
+        "M03",
+        "M06"
+      ],
+      "orders": [
+        "O58826",
+        "O58849"
+      ],
+      "at": [
+        "2026-05-06 03:59",
+        "2026-05-06 06:29"
+      ],
+      "gap_h": 2.5,
+      "detail": "two PA6 starts 2.5 h apart; the dryer needs 4 h"
+    }
+  ],
+  "line_fit": {
+    "M01": {
+      "orders": 12,
+      "tonnes": 312,
+      "changeover_min_erp": 660,
+      "changeover_min_real": 965,
+      "planned_end_erp": "2026-05-11 03:09",
+      "end_with_real_changeovers": "2026-05-11 08:14",
+      "fits_week": false,
+      "overrun_h": 2.2
+    },
+    "M02": {
+      "orders": 9,
+      "tonnes": 235,
+      "changeover_min_erp": 480,
+      "changeover_min_real": 550,
+      "planned_end_erp": "2026-05-09 10:06",
+      "end_with_real_changeovers": "2026-05-09 11:16",
+      "fits_week": true,
+      "overrun_h": 0
+    },
+    "M03": {
+      "orders": 9,
+      "tonnes": 210,
+      "changeover_min_erp": 480,
+      "changeover_min_real": 650,
+      "planned_end_erp": "2026-05-08 21:45",
+      "end_with_real_changeovers": "2026-05-09 00:35",
+      "fits_week": true,
+      "overrun_h": 0
+    },
+    "M04": {
+      "orders": 8,
+      "tonnes": 200,
+      "changeover_min_erp": 420,
+      "changeover_min_real": 465,
+      "planned_end_erp": "2026-05-08 15:48",
+      "end_with_real_changeovers": "2026-05-08 16:33",
+      "fits_week": true,
+      "overrun_h": 0
+    },
+    "M05": {
+      "orders": 8,
+      "tonnes": 210,
+      "changeover_min_erp": 420,
+      "changeover_min_real": 240,
+      "planned_end_erp": "2026-05-08 20:45",
+      "end_with_real_changeovers": "2026-05-08 17:45",
+      "fits_week": true,
+      "overrun_h": 0
+    },
+    "M06": {
+      "orders": 9,
+      "tonnes": 299.8,
+      "changeover_min_erp": 480,
+      "changeover_min_real": 690,
+      "planned_end_erp": "2026-05-10 18:07",
+      "end_with_real_changeovers": "2026-05-10 21:37",
+      "fits_week": true,
+      "overrun_h": 0
+    },
+    "M07": {
+      "orders": 10,
+      "tonnes": 215.5,
+      "changeover_min_erp": 540,
+      "changeover_min_real": 450,
+      "planned_end_erp": "2026-05-09 01:28",
+      "end_with_real_changeovers": "2026-05-08 23:58",
+      "fits_week": true,
+      "overrun_h": 0
+    }
+  },
+  "rules": {
+    "R01": "Black to natural: screw pull, 240 min, only Saturday shift A when maintenance is on site",
+    "R02": "Glass-filled (PPG) only on M01, M02, M05",
+    "R03": "PA6 only on M03 and M06",
+    "R04": "Shared dryer: no two PA6 starts on M03 and M06 within 4 h",
+    "R05": "Never white directly after glass-filled",
+    "R06": "Maximum 4 changeovers per line per shift"
+  },
+  "decoy": "M06 Saturday 07:00 PPK-4040 to PPN-1010 is allowed (R01 Saturday shift A); a checker that flags it is wrong"
+}

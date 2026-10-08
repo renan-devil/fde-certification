@@ -99,22 +99,37 @@
           "id": "d2-slides-am",
           "kind": "slides",
           "title": "Problems worth solving",
-          "href": null,
-          "status": "coming_soon"
+          "summary": "Read a plant P&L, find the account's strategic position and the bottleneck, and size a leak in euros. 36 slides.",
+          "read": "d2-am-problems-worth-solving.deck.md",
+          "href": "/resources/d2-am-problems-worth-solving.deck.md",
+          "status": "available"
+        },
+        {
+          "id": "d2-exercises-am",
+          "kind": "exercise",
+          "title": "Morning exercises",
+          "summary": "Read the Polymex P&L in twenty minutes, then price the leaks found on Day 1 in a leak register and a one-page memo to Hervé.",
+          "read": "d2-am-problems-worth-solving.exercises.md",
+          "href": "/resources/d2-am-problems-worth-solving.exercises.md",
+          "status": "available"
         },
         {
           "id": "d2-slides-pm",
           "kind": "slides",
           "title": "Leading an FDE project",
-          "href": null,
-          "status": "coming_soon"
+          "summary": "The six-phase method, impact-first scoping, governance and the gains validation protocol. 36 slides.",
+          "read": "d2-pm-leading-an-fde-project.deck.md",
+          "href": "/resources/d2-pm-leading-an-fde-project.deck.md",
+          "status": "available"
         },
         {
-          "id": "d2-gains-template",
-          "kind": "template",
-          "title": "Gains case and validation protocol template",
-          "href": null,
-          "status": "coming_soon"
+          "id": "d2-exercises-pm",
+          "kind": "exercise",
+          "title": "Afternoon exercises",
+          "summary": "Write the Polymex project charter, the Ferralux counting rules, and a validation protocol another team tests as the controller.",
+          "read": "d2-pm-leading-an-fde-project.exercises.md",
+          "href": "/resources/d2-pm-leading-an-fde-project.exercises.md",
+          "status": "available"
         },
         {
           "id": "d2-recording",
@@ -145,23 +160,46 @@
         {
           "id": "d3-slides-am",
           "kind": "slides",
-          "title": "IT and infrastructure fundamentals",
-          "href": null,
-          "status": "coming_soon"
+          "title": "Plant systems and data",
+          "summary": "The systems a plant runs on, ISA-95, integration, one source of truth per data object, and security. 26 slides.",
+          "read": "d3-am-plant-systems-and-data.deck.md",
+          "href": "/resources/d3-am-plant-systems-and-data.deck.md",
+          "status": "available"
+        },
+        {
+          "id": "d3-exercises-am",
+          "kind": "exercise",
+          "title": "Morning exercises",
+          "summary": "The Polymex IT landscape: draw the systems and data-flow map, then write the access plan and the request to Nadia.",
+          "read": "d3-am-plant-systems-and-data.exercises.md",
+          "href": "/resources/d3-am-plant-systems-and-data.exercises.md",
+          "status": "available"
         },
         {
           "id": "d3-slides-pm",
           "kind": "slides",
-          "title": "AI fundamentals",
-          "href": null,
-          "status": "coming_soon"
+          "title": "AI fundamentals and the build lab",
+          "summary": "From tokens to agents: retrieval, tools, evals and the ontology, then the build lab. 27 slides.",
+          "read": "d3-pm-ai-fundamentals.deck.md",
+          "href": "/resources/d3-pm-ai-fundamentals.deck.md",
+          "status": "available"
+        },
+        {
+          "id": "d3-exercises-pm",
+          "kind": "exercise",
+          "title": "Afternoon worksheets",
+          "summary": "The lab in one page, the rules found without the code, five eval questions of your own and the paragraph for Hervé.",
+          "read": "d3-pm-ai-fundamentals.exercises.md",
+          "href": "/resources/d3-pm-ai-fundamentals.exercises.md",
+          "status": "available"
         },
         {
           "id": "d3-lab",
           "kind": "dataset",
-          "title": "Build lab dataset and brief",
-          "href": null,
-          "status": "coming_soon",
+          "title": "Lab kit: Plant Pulse v1",
+          "summary": "The schedule checker: week 19's plan, the changeover rules, Corinne's interview, Jean-Pierre's notebooks and an eval set.",
+          "href": "/resources/fde-school-day3-participant-kit.zip",
+          "status": "available",
           "tracks": [
             "manager",
             "fde"
@@ -217,7 +255,7 @@
     {
       "id": "day-5",
       "title": "Day 5: The full motion",
-      "summary": "Two simulations drawn from real engagements, a plastics compounder and a sock manufacturer, then operating principles, a self-assessment and a 30/60/90-day deployment plan.",
+      "summary": "Two real engagements, disguised, run in parallel by teams: a plastics compounder and a sock manufacturer. Then the debrief, the operating principles, your 30/60/90-day plan and the FDE Certification exam.",
       "tracks": [
         "manager",
         "fde"
@@ -231,25 +269,57 @@
       ],
       "items": [
         {
+          "id": "d5-slides-am",
+          "kind": "slides",
+          "title": "The full motion",
+          "summary": "The brief for Friday morning: two real engagements, disguised, run in parallel by teams. 10 slides.",
+          "read": "d5-am-the-full-motion.deck.md",
+          "href": "/resources/d5-am-the-full-motion.deck.md",
+          "status": "available"
+        },
+        {
           "id": "d5-case-1",
           "kind": "reading",
-          "title": "Case pack: the plastics compounder",
-          "href": null,
-          "status": "coming_soon"
+          "title": "Case pack A: the plastics compounder",
+          "summary": "Teams 1 to 3. Changeovers eat the week at a four-plant compounder; the steering committee meets at 11:30.",
+          "read": "d5-am-case-pack-a-plastics-compounder.md",
+          "href": "/resources/d5-am-case-pack-a-plastics-compounder.md",
+          "status": "available"
         },
         {
           "id": "d5-case-2",
           "kind": "reading",
-          "title": "Case pack: the sock manufacturer",
+          "title": "Case pack B: the sock manufacturer",
+          "summary": "Teams 4 and 5. A knitter inspects everything and the defect rate has not moved in years; the steering committee meets at 11:30.",
+          "read": "d5-am-case-pack-b-sock-manufacturer.md",
+          "href": "/resources/d5-am-case-pack-b-sock-manufacturer.md",
+          "status": "available"
+        },
+        {
+          "id": "d5-exercises-am",
+          "kind": "exercise",
+          "title": "Morning exercises",
+          "summary": "The timing of the morning, the five-slide readout template and the checklist before the steering committee.",
+          "read": "d5-am-the-full-motion.exercises.md",
+          "href": "/resources/d5-am-the-full-motion.exercises.md",
+          "status": "available"
+        },
+        {
+          "id": "d5-slides-pm",
+          "kind": "slides",
+          "title": "Debrief, principles and the exam",
+          "summary": "What really happened in both engagements, the ten operating principles of the week, and the close.",
           "href": null,
           "status": "coming_soon"
         },
         {
           "id": "d5-plan",
           "kind": "template",
-          "title": "30/60/90-day deployment plan template",
-          "href": null,
-          "status": "coming_soon"
+          "title": "Your 30/60/90 plan, feedback and exam rules",
+          "summary": "The 30/60/90 template for your first deployment, the feedback form and the exam rules read aloud at 14:40.",
+          "read": "d5-pm-debrief-and-exam.exercises.md",
+          "href": "/resources/d5-pm-debrief-and-exam.exercises.md",
+          "status": "available"
         }
       ]
     }
